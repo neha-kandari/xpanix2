@@ -130,9 +130,9 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <svg className="w-4 h-4 flex-shrink-0 text-[#3b82f6]" fill="currentColor" viewBox="0 0 24 24">
+                {/* <svg className="w-4 h-4 flex-shrink-0 text-[#3b82f6]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.2 2.2Z" />
-                </svg>
+                </svg> */}
                 {/* <a href="tel:+919215015157" className="text-gray-400 text-sm hover:text-white transition-colors">
                   +91 9215015157
                 </a> */}
