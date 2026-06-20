@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 import ContactFormCard from "./ContactFormCard";
@@ -29,28 +29,28 @@ const foundationCards = [
 
 const solutions = [
   {
-    title: "Full-Stack Apps",
-    desc: "Complex web applications with robust backends and dynamic real-time frontends.",
-    tags: ["React", "Node.js", "API"],
-    icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
-  },
-  {
     title: "E-Commerce",
-    desc: "High-converting Shopify or custom storefronts built for serious online sellers.",
-    tags: ["Shopify", "Headless", "Cart"],
+    desc: "High-converting custom storefronts and online stores built to scale — fast checkout, smart product pages, and seamless payments.",
+    tags: ["Custom Store", "Payments", "Cart"],
     icon: "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z",
   },
   {
-    title: "API Development",
-    desc: "Secure and scalable REST or GraphQL APIs your whole product can build on.",
-    tags: ["REST", "GraphQL", "Auth"],
-    icon: "M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z",
+    title: "Shopify",
+    desc: "Expert Shopify development — custom themes, app integrations, and headless storefronts that turn browsers into buyers.",
+    tags: ["Shopify", "Liquid", "Headless"],
+    icon: "M16 11c0 2.209-1.791 4-4 4s-4-1.791-4-4 1.791-4 4-4 4 1.791 4 4zm5-5H3v13a2 2 0 002 2h14a2 2 0 002-2V6zm-9-4H3v2h18V2h-9z",
   },
   {
-    title: "Web3 & DApps",
-    desc: "Blockchain-enabled applications built on Ethereum or modern L2 chains.",
-    tags: ["Solidity", "Smart Contracts", "Wallets"],
-    icon: "M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4",
+    title: "Framer",
+    desc: "Stunning, interactive websites built in Framer — pixel-perfect animations, no-code CMS, and blazing-fast delivery.",
+    tags: ["Framer", "Motion", "CMS"],
+    icon: "M5 3h14l-7 7-7-7zm7 7l7 11H5l7-11z",
+  },
+  {
+    title: "Full Stack",
+    desc: "End-to-end web applications with robust backends, real-time frontends, APIs, and cloud infrastructure — built to last.",
+    tags: ["React", "Node.js", "API"],
+    icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
   },
 ];
 

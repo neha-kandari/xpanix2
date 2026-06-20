@@ -146,7 +146,7 @@ export default function ContactContent() {
                     <Field label="Company / brand">
                       <input type="text" name="company" placeholder="Acme Inc." className={inputCls} />
                     </Field>
-                    <Field label="Phone (optional)">
+                    <Field label="Phone">
                       <input type="tel" name="phone" placeholder="+91 ..." className={inputCls} />
                     </Field>
                   </div>
@@ -160,8 +160,8 @@ export default function ContactContent() {
                           key={s}
                           onClick={() => setService(s)}
                           className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${service === s
-                              ? "gradient-bg text-white shadow-[0_4px_14px_rgba(91,43,232,0.3)]"
-                              : "bg-white dark:bg-[#0f0f18] text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-white/10 hover:border-[#764ba2]/40 hover:text-[#764ba2] dark:hover:text-[#667eea]"
+                            ? "gradient-bg text-white shadow-[0_4px_14px_rgba(91,43,232,0.3)]"
+                            : "bg-white dark:bg-[#0f0f18] text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-white/10 hover:border-[#764ba2]/40 hover:text-[#764ba2] dark:hover:text-[#667eea]"
                             }`}
                         >
                           {s}
