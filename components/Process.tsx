@@ -86,7 +86,9 @@ export default function Process() {
                   and watch your growth compound in real time.
                 </p>
                 <a
-                  href="#contact"
+                  href="https://wa.me/918930005190?text=Hi%20Xpanix!%20I'm%20ready%20to%20start%20growing%20my%20brand.%20Let's%20build%20something%20my%20competitors%20will%20envy!"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 gradient-bg text-white px-7 py-3.5 rounded-full font-semibold text-sm hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 >
                   Start Growing

@@ -1,32 +1,37 @@
 ﻿"use client";
 import AnimateOnScroll from "./AnimateOnScroll";
 
-type Project = { name: string; tag: string; img: string; gradient: string; h: string };
+type Project = { name: string; tag: string; img: string; gradient: string; h: string; url?: string };
 
 const columns: Project[][] = [
   [
-    { name: "Chinar Logistics", tag: "Logistics website", img: "/projects/Chinar.webp", gradient: "from-emerald-300 to-teal-400", h: "h-52" },
+    { name: "Chinar Logistics", tag: "Logistics website", img: "/projects/Chinar.webp", gradient: "from-emerald-300 to-teal-400", h: "h-52", url: "https://chinarroadlines.com/" },
     { name: "Finance App", tag: "Mobile app UI", img: "/projects/Finance%20App%20UI.webp", gradient: "from-blue-300 to-indigo-400", h: "h-72" },
-    { name: "Ruhani Trips", tag: "Travel website", img: "/projects/RuhaniTrips%20(1).webp", gradient: "from-sky-300 to-blue-400", h: "h-56" },
-    { name: "WoodyPolo", tag: "E-commerce store", img: "/projects/WoodyPolo.webp", gradient: "from-amber-200 to-orange-300", h: "h-64" },
+    { name: "Ruhani Trips", tag: "Travel website", img: "/projects/RuhaniTrips%20(1).webp", gradient: "from-sky-300 to-blue-400", h: "h-56", url: "https://www.ruhanitrips.com/" },
+    { name: "WoodyPolo", tag: "E-commerce store", img: "/projects/WoodyPolo.webp", gradient: "from-amber-200 to-orange-300", h: "h-64", url: "https://neha-kandari.github.io/photoframe/" },
   ],
   [
-    { name: "Opal Institute", tag: "Education website", img: "/projects/Opal.webp", gradient: "from-rose-300 to-pink-400", h: "h-64" },
+    { name: "Opal Institute", tag: "Education website", img: "/projects/Opal.webp", gradient: "from-rose-300 to-pink-400", h: "h-64", url: "https://crush-album-78322793.figma.site" },
     { name: "Travel Explorer", tag: "Travel app UI", img: "/projects/Travel%20Ui.webp", gradient: "from-cyan-300 to-sky-400", h: "h-72" },
-    { name: "Perfect Group", tag: "Corporate website", img: "/projects/Perfect.webp", gradient: "from-violet-300 to-indigo-400", h: "h-56" },
+    { name: "Perfect Group", tag: "Corporate website", img: "/projects/Perfect.webp", gradient: "from-violet-300 to-indigo-400", h: "h-56", url: "https://www.perfectplastotech.com/" },
     { name: "Shopfront", tag: "E-commerce UI", img: "/projects/ecomerce%20ui.webp", gradient: "from-fuchsia-300 to-pink-400", h: "h-60" },
   ],
   [
-    { name: "Tripsee", tag: "Travel platform", img: "/projects/Tripsee%20(3).webp", gradient: "from-sky-300 to-blue-400", h: "h-60" },
-    { name: "Photographer Studio", tag: "Portfolio UI", img: "/projects/PhotographerUi%20Design.webp", gradient: "from-orange-400 to-red-500", h: "h-72" },
-    { name: "Nagpal Tours", tag: "Travel website", img: "/projects/NagpalToursTravels.webp", gradient: "from-blue-300 to-indigo-400", h: "h-56" },
+    { name: "Tripsee", tag: "Travel platform", img: "/projects/Tripsee%20(3).webp", gradient: "from-sky-300 to-blue-400", h: "h-60", url: "https://www.tripseetravel.in/" },
+    { name: "Nagpal Tours", tag: "Travel website", img: "/projects/NagpalToursTravels.webp", gradient: "from-blue-300 to-indigo-400", h: "h-56", url: "https://nagpal-tour-travel.vercel.app/" },
     { name: "Wanderlust", tag: "Landing page UI", img: "/projects/Travel%20landaing%20Ui%20Design.webp", gradient: "from-cyan-300 to-sky-400", h: "h-60" },
   ],
 ];
 
 function Card({ p }: { p: Project }) {
+  const external = Boolean(p.url);
   return (
-    <div className={`group relative ${p.h} w-full rounded-2xl overflow-hidden bg-gradient-to-br ${p.gradient} shadow-sm`}>
+    <a
+      href={p.url || "/portfolio"}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      aria-label={`View ${p.name}`}
+      className={`group relative block ${p.h} w-full rounded-2xl overflow-hidden bg-gradient-to-br ${p.gradient} shadow-sm`}
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={p.img}
@@ -46,7 +51,7 @@ function Card({ p }: { p: Project }) {
           View →
         </span>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -77,7 +82,7 @@ export default function Portfolio() {
             </div>
             {/* view full portfolio CTA */}
             <a
-              href="#"
+              href="/portfolio"
               className="inline-flex items-center gap-2 gradient-bg text-white font-semibold px-6 py-3 rounded-full text-sm hover:opacity-90 transition-all shadow-md hover:shadow-lg self-start sm:self-auto"
             >
               View full portfolio

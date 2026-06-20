@@ -7,8 +7,8 @@ const services = ["Web Development", "UI/UX Design", "Meta Ads", "SEO", "Product
 const contactChannels = [
   {
     title: "Email us",
-    value: "we.xpanix@gmail.com",
-    href: "mailto:we.xpanix@gmail.com",
+    value: "info.xpanix@gmail.com",
+    href: "mailto:info.xpanix@gmail.com",
     icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
   },
   {
@@ -159,11 +159,10 @@ export default function ContactContent() {
                           type="button"
                           key={s}
                           onClick={() => setService(s)}
-                          className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
-                            service === s
+                          className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${service === s
                               ? "gradient-bg text-white shadow-[0_4px_14px_rgba(91,43,232,0.3)]"
                               : "bg-white dark:bg-[#0f0f18] text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-white/10 hover:border-[#764ba2]/40 hover:text-[#764ba2] dark:hover:text-[#667eea]"
-                          }`}
+                            }`}
                         >
                           {s}
                         </button>

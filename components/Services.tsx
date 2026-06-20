@@ -52,7 +52,7 @@ const services = [
       "Funnel optimization",
       "ROAS-focused reporting",
     ],
-    img: "/projects/ecomerce%20ui.webp",
+    img: "/services/metaAds.webp",
   },
   {
     n: "04",
@@ -69,7 +69,7 @@ const services = [
       "Content strategy",
       "Monthly performance reports",
     ],
-    img: "/projects/Perfect.webp",
+    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
   },
   {
     n: "05",
@@ -86,7 +86,7 @@ const services = [
       "Ad-ready variations",
       "Brand-consistent styling",
     ],
-    img: "/projects/Opal.webp",
+    img: "https://images.unsplash.com/photo-1520390138845-fd2d229dd553?auto=format&fit=crop&w=900&q=80",
   },
 ];
 

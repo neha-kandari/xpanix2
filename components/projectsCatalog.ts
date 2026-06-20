@@ -18,7 +18,6 @@ export const projectsCatalog: Project[] = [
   { name: "Tripsee", category: "Web Dev", tag: "Travel platform", img: "/projects/Tripsee%20(3).webp" },
   { name: "WoodyPolo", category: "Web Dev", tag: "E-commerce store", img: "/projects/WoodyPolo.webp" },
   { name: "Finance App", category: "UI/UX", tag: "Mobile app UI", img: "/projects/Finance%20App%20UI.webp" },
-  { name: "Photographer Studio", category: "UI/UX", tag: "Portfolio UI", img: "/projects/PhotographerUi%20Design.webp" },
   { name: "Travel Explorer", category: "UI/UX", tag: "Travel app UI", img: "/projects/Travel%20Ui.webp" },
   { name: "Wanderlust", category: "UI/UX", tag: "Landing page UI", img: "/projects/Travel%20landaing%20Ui%20Design.webp" },
   { name: "Shopfront", category: "UI/UX", tag: "E-commerce UI", img: "/projects/ecomerce%20ui.webp" },

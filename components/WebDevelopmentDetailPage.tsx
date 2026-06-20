@@ -113,12 +113,14 @@ const boldProjects = [
     desc: "A conversion-focused logistics website with service enquiry flows and a clean, trust-building brand presence.",
     img: "/projects/Chinar.webp",
     tag: "Logistics / Website",
+    url: "https://chinarroadlines.com/",
   },
   {
-    name: "WoodyPolo Store",
-    desc: "A polished e-commerce storefront engineered for fast browsing, smooth checkout, and a premium product feel.",
-    img: "/projects/WoodyPolo.webp",
-    tag: "E-Commerce",
+    name: "Rudraksh Travel",
+    desc: "An immersive travel website with curated tour packages and a story-driven layout that turns visitors into booked trips.",
+    img: "/projects/Rudraksh%20Travles.webp",
+    tag: "Travel / Website",
+    url: "https://www.rudrakshtravelspnp.com/",
   },
 ];
 
@@ -505,7 +507,12 @@ export default function WebDevelopmentDetailPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {boldProjects.map((p, i) => (
               <AnimateOnScroll key={p.name} delay={i * 0.1}>
-                <article className="group relative rounded-[1.75rem] overflow-hidden bg-white/[0.06] backdrop-blur-2xl border border-white/10 hover:border-white/25 transition-all cursor-pointer">
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative block rounded-[1.75rem] overflow-hidden bg-white/[0.06] backdrop-blur-2xl border border-white/10 hover:border-white/25 transition-all cursor-pointer"
+                >
                   <div className="relative aspect-[16/10] overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
@@ -529,7 +536,7 @@ export default function WebDevelopmentDetailPage() {
                       </svg>
                     </span>
                   </div>
-                </article>
+                </a>
               </AnimateOnScroll>
             ))}
           </div>

@@ -110,7 +110,7 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10"
         >
           <a
-            href="#contact"
+            href="/contact"
             className="gradient-bg text-white px-8 py-3.5 rounded-xl font-semibold text-base hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
             Book a Call

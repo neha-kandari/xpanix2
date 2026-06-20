@@ -22,6 +22,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Xpanix – Stop Scaling. Start Xpanding.",
   description: "Digital growth services built for ambitious brands — web, SEO, Meta ads, product shoots, and UI/UX.",
+  icons: {
+    icon: [{ url: "/assests/fevicon.webp", type: "image/webp" }],
+    shortcut: "/assests/fevicon.webp",
+    apple: "/assests/fevicon.webp",
+  },
 };
 
 export default function RootLayout({

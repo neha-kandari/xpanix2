@@ -154,6 +154,7 @@ const RECENT_WEB_PROJECTS: RecentProject[] = [
     desc: "A fast, conversion-focused logistics platform with a quote-request flow and shipment tracking — built to turn visitors into booked shipments.",
     accent: "#10B981",
     img: "/projects/Chinar.webp",
+    url: "https://chinarroadlines.com/",
   },
   {
     name: "Tripsee",
@@ -169,13 +170,14 @@ const RECENT_WEB_PROJECTS: RecentProject[] = [
     desc: "A modern education platform with course discovery and an admissions funnel designed to grow student enrollment.",
     accent: "#EC4899",
     img: "/projects/Opal.webp",
+    url: "https://crush-album-78322793.figma.site",
   },
 ];
 
 const ALL_PROJECTS = [
-  { id: "p1", name: "Chinar Logistics", cat: "Web Dev", tag: "Logistics website", color: "#10B981", img: "/projects/Chinar.webp" },
+  { id: "p1", name: "Chinar Logistics", cat: "Web Dev", tag: "Logistics website", color: "#10B981", img: "/projects/Chinar.webp", url: "https://chinarroadlines.com/" },
   { id: "p2", name: "Nagpal Tours", cat: "Web Dev", tag: "Travel website", color: "#667eea", img: "/projects/NagpalToursTravels.webp", url: "https://nagpal-tour-travel.vercel.app/" },
-  { id: "p3", name: "Opal Institute", cat: "Web Dev", tag: "Education website", color: "#EC4899", img: "/projects/Opal.webp" },
+  { id: "p3", name: "Opal Institute", cat: "Web Dev", tag: "Education website", color: "#EC4899", img: "/projects/Opal.webp", url: "https://crush-album-78322793.figma.site" },
   { id: "p4", name: "Perfect Group", cat: "Web Dev", tag: "Corporate website", color: "#764ba2", img: "/projects/Perfect.webp", url: "https://www.perfectplastotech.com/" },
   { id: "p5", name: "Pmake", cat: "Web Dev", tag: "Brand website", color: "#0EA5E9", img: "/projects/Pmake.webp" },
   { id: "p6", name: "Rajasthan Auto", cat: "Web Dev", tag: "Distributor website", color: "#F59E0B", img: "/projects/RajasthanAutoDistributor.webp", url: "https://www.rajasthanautodistributors.com/" },
@@ -183,7 +185,6 @@ const ALL_PROJECTS = [
   { id: "p8", name: "Tripsee", cat: "Web Dev", tag: "Travel platform", color: "#667eea", img: "/projects/Tripsee%20(3).webp", url: "https://www.tripseetravel.in/" },
   { id: "p9", name: "WoodyPolo", cat: "Web Dev", tag: "E-commerce store", color: "#EF4444", img: "/projects/WoodyPolo.webp", url: "https://neha-kandari.github.io/photoframe/" },
   { id: "p10", name: "Finance App", cat: "UI/UX", tag: "Mobile app UI", color: "#4B6BFB", img: "/projects/Finance%20App%20UI.webp" },
-  { id: "p11", name: "Photographer Studio", cat: "UI/UX", tag: "Portfolio UI", color: "#8B5CF6", img: "/projects/PhotographerUi%20Design.webp", url: "https://crush-album-78322793.figma.site" },
   { id: "p12", name: "Travel Explorer", cat: "UI/UX", tag: "Travel app UI", color: "#06B6D4", img: "/projects/Travel%20Ui.webp" },
   { id: "p13", name: "Wanderlust", cat: "UI/UX", tag: "Landing page UI", color: "#7C3AED", img: "/projects/Travel%20landaing%20Ui%20Design.webp" },
   { id: "p14", name: "Shopfront", cat: "UI/UX", tag: "E-commerce UI", color: "#F97316", img: "/projects/ecomerce%20ui.webp" },
