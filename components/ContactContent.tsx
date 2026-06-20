@@ -135,19 +135,19 @@ export default function ContactContent() {
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <Field label="Your name *">
-                      <input type="text" name="name" required placeholder="Jane Smith" className={inputCls} />
+                      <input type="text" name="name" required placeholder="Your name" className={inputCls} />
                     </Field>
                     <Field label="Email address *">
-                      <input type="email" name="email" required placeholder="jane@company.com" className={inputCls} />
+                      <input type="email" name="email" required placeholder="Your email address" className={inputCls} />
                     </Field>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <Field label="Company / brand">
-                      <input type="text" name="company" placeholder="Acme Inc." className={inputCls} />
+                      <input type="text" name="company" placeholder="Company name" className={inputCls} />
                     </Field>
                     <Field label="Phone">
-                      <input type="tel" name="phone" placeholder="+91 ..." className={inputCls} />
+                      <input type="tel" name="phone" placeholder="Phone number" className={inputCls} />
                     </Field>
                   </div>
 
