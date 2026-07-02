@@ -41,7 +41,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3 mt-6">
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/share/1E6KLsexqu/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -52,7 +52,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/xpandwithxpanix?igsh=d3ZodXk0Mjcybzd2"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
