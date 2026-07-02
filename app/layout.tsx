@@ -20,13 +20,19 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Xpanix – Stop Scaling. Start Xpanding.",
-  description: "Digital growth services built for ambitious brands — web, SEO, Meta ads, product shoots, and UI/UX.",
-  icons: {
-    icon: [{ url: "/assests/fevicon.webp", type: "image/webp" }],
-    shortcut: "/assests/fevicon.webp",
-    apple: "/assests/fevicon.webp",
-  },
+  title: "Xpanix | Premium Web Development, SEO & Digital Growth Agency",
+  description: "Scale your business with Xpanix. We provide expert web development, custom UI/UX design, SEO services, and data-driven Meta ads for ambitious brands.",
+  keywords: [
+    "Web Development Agency",
+    "SEO Services",
+    "UI/UX Design Company",
+    "Digital Marketing Agency",
+    "Meta Ads Management",
+    "Custom Web Design",
+    "Digital Growth",
+    "Ecommerce Development",
+    "Brand Scaling"
+  ],
 };
 
 export default function RootLayout({
