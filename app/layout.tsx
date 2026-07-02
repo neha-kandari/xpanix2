@@ -33,6 +33,11 @@ export const metadata: Metadata = {
     "Ecommerce Development",
     "Brand Scaling"
   ],
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
