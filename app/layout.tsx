@@ -33,14 +33,6 @@ export const metadata: Metadata = {
     "Ecommerce Development",
     "Brand Scaling"
   ],
-  icons: {
-    icon: [{ url: "/assests/fevicon.webp", type: "image/webp" }],
-    shortcut: "/assests/fevicon.webp",
-    apple: "/assests/fevicon.webp",
-  },
-  openGraph: {
-    images: [{ url: "/assests/fevicon.webp", width: 800, height: 600, alt: "Xpanix Site Icon" }]
-  }
 };
 
 export default function RootLayout({
