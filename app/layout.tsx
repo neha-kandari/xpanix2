@@ -33,10 +33,34 @@ export const metadata: Metadata = {
     "Ecommerce Development",
     "Brand Scaling"
   ],
+  metadataBase: new URL("https://www.xpanix.com"),
+  verification: {
+    google: "bm9CY7-9IixTyeDimvyvI-hGaevtzb0y6Ff_ee2i3ts",
+  },
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: [
+      { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icon.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon-48.png",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  openGraph: {
+    title: "Xpanix | Premium Web Development, SEO & Digital Growth Agency",
+    description: "Scale your business with Xpanix. We provide expert web development, custom UI/UX design, SEO services, and data-driven Meta ads for ambitious brands.",
+    url: "https://www.xpanix.com",
+    siteName: "Xpanix",
+    images: [{ url: "/icon-512.png", width: 512, height: 512 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Xpanix | Premium Web Development, SEO & Digital Growth Agency",
+    description: "Scale your business with Xpanix.",
+    images: ["/icon-512.png"],
   },
 };
 
