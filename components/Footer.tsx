@@ -105,12 +105,12 @@ export default function Footer() {
                   <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" />
                 </svg>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=2%2C%20Eadgah%20Road%20Model%20Town%20Panipat%20Haryana"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  // href="https://www.google.com/maps/search/?api=1&query=2%2C%20Eadgah%20Road%20Model%20Town%20Panipat%20Haryana"
+                  // target="_blank"
+                  // rel="noopener noreferrer"
                   className="text-gray-400 text-sm leading-relaxed hover:text-white transition-colors"
                 >
-                  2, Eadgah Road Model Town Panipat Haryana
+                  Delhi/Haryana
                 </a>
               </li>
               <li className="flex items-center gap-3">
