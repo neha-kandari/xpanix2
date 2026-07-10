@@ -30,11 +30,11 @@ export default function BlogsContent() {
   return (
     <main className="bg-white dark:bg-[#0a0a0f]">
       {/* HERO */}
-      <section className="relative pt-32 pb-14 px-6 overflow-hidden">
+      <section className="relative pt-32 pb-14 px-4 overflow-hidden">
         <div className="absolute inset-0 dot-grid dot-fade pointer-events-none" />
         <div className="pointer-events-none absolute -top-24 right-0 w-[30rem] h-[30rem] rounded-full bg-gradient-to-bl from-[#764ba2]/20 via-[#667eea]/10 to-transparent blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <span className="inline-block px-4 py-1.5 mb-5 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-xs font-bold tracking-[0.2em] uppercase gradient-text shadow-sm">
               Insights
@@ -52,8 +52,8 @@ export default function BlogsContent() {
 
       {/* FEATURED POST */}
       {showFeatured && (
-        <section className="px-6 pb-16">
-          <div className="max-w-7xl mx-auto">
+        <section className="px-4 pb-16">
+          <div className="max-w-5xl mx-auto px-6">
             <AnimateOnScroll>
               <a
                 href={`/blogs/${featured.slug}`}
@@ -107,8 +107,8 @@ export default function BlogsContent() {
       )}
 
       {/* FILTER + GRID */}
-      <section className="px-6 pb-24">
-        <div className="max-w-7xl mx-auto">
+      <section className="px-4 pb-24">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="flex flex-wrap gap-2 mb-12">
               {blogCategories.map((c) => (
@@ -170,8 +170,8 @@ export default function BlogsContent() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 pb-24">
-        <div className="max-w-5xl mx-auto">
+      <section className="px-4 pb-24">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="relative overflow-hidden rounded-[2rem] gradient-bg p-12 md:p-16 text-center text-white">
               <div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-white/10 blur-3xl" />

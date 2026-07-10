@@ -33,15 +33,15 @@ export default function Process() {
   const doubled = [...metrics, ...metrics];
 
   return (
-    <section className="relative py-24 px-6 bg-white dark:bg-[#0a0a0f] overflow-hidden">
+    <section className="relative py-24 px-4 bg-white dark:bg-[#0a0a0f] overflow-hidden">
       {/* dot-grid background that fades out from the edges */}
       <div className="absolute inset-0 dot-grid dot-fade pointer-events-none" />
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative max-w-5xl mx-auto px-6">
         <AnimateOnScroll>
           {/* gradient border wrapper */}
           <div className="rounded-[2rem] p-[1.5px] bg-gradient-to-br from-[#667eea] to-[#764ba2] shadow-[0_30px_80px_rgba(111,91,222,0.18)]">
             <div className="rounded-[2rem] bg-white dark:bg-[#131320] p-6 md:p-12 grid md:grid-cols-2 gap-10 items-center">
-              {/* Left: live dashboard mockup */}
+              {/* Left: live performance mockup */}
               <div className="rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-xl bg-white dark:bg-[#0f0f18]">
                 {/* browser top bar */}
                 <div className="bg-gray-900 px-4 py-3 flex items-center gap-3">
@@ -51,7 +51,7 @@ export default function Process() {
                     <div className="w-3 h-3 rounded-full bg-green-400" />
                   </div>
                   <div className="flex-1 bg-gray-700/60 rounded-md px-3 py-1 text-xs text-gray-300">
-                    app.xpanix.com/dashboard
+                    yourbrand.com/performance
                   </div>
                   <span className="flex items-center gap-1.5 text-[10px] font-semibold text-green-400">
                     <span className="relative flex w-2 h-2">
@@ -75,14 +75,14 @@ export default function Process() {
               {/* Right: copy */}
               <div className="text-center md:text-left">
                 <p className="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-4">
-                  Real-time Dashboard
+                  Real-Time Results
                 </p>
                 <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white leading-tight mb-5">
                   Your digital growth,{" "}
                   <span className="gradient-text">always Xpanding.</span>
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-8 max-w-md mx-auto md:mx-0">
-                  Track every campaign, build, and metric in one clean dashboard —
+                  Track every campaign, build, and metric for your website —
                   and watch your growth compound in real time.
                 </p>
                 <a

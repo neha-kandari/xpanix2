@@ -113,8 +113,8 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
       </section>
 
       {/* HERO IMAGE */}
-      <section className="px-6 pb-12">
-        <div className="max-w-5xl mx-auto">
+      <section className="px-4 pb-12">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="relative aspect-[21/9] rounded-[1.75rem] overflow-hidden border border-gray-200 dark:border-gray-800 shadow-xl">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -159,8 +159,8 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
       </article>
 
       {/* RELATED POSTS */}
-      <section className="px-6 pb-24 bg-gray-50 dark:bg-[#0d0d15] pt-20">
-        <div className="max-w-7xl mx-auto">
+      <section className="px-4 pb-24 bg-gray-50 dark:bg-[#0d0d15] pt-20">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="flex items-end justify-between gap-4 mb-10">
               <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">

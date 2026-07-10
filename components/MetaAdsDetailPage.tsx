@@ -161,12 +161,12 @@ export default function MetaAdsDetailPage() {
   return (
     <>
       {/* 1. HERO */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-white dark:bg-[#0a0a0f]">
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-white dark:bg-[#0a0a0f]">
         <div className="absolute inset-0 dot-grid dot-fade pointer-events-none" />
         <div className="pointer-events-none absolute -top-24 right-0 w-[34rem] h-[34rem] rounded-full bg-gradient-to-bl from-[#764ba2]/25 via-[#667eea]/15 to-transparent blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-gradient-to-tr from-[#667eea]/20 to-transparent blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-3 gap-12 items-start">
+        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start">
           <div className="lg:col-span-2">
 
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white leading-[0.98] mb-3">
@@ -175,20 +175,11 @@ export default function MetaAdsDetailPage() {
             <p className="font-serif-display italic gradient-text font-medium text-3xl md:text-5xl mb-7">
               that scale revenue.
             </p>
-            <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed mb-9">
+            <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed">
               Precision-targeted Facebook & Instagram advertising. We transform browsers into
               loyal customers through rigorous testing, scroll-stopping creative, and
               ROAS-led optimization.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a href="#growth" className="gradient-bg text-white px-7 py-3.5 rounded-xl font-semibold text-base hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-lg">
-                See how we scale
-              </a>
-              <a href="/portfolio" className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700 px-7 py-3.5 rounded-xl font-semibold text-base hover:border-[#764ba2] hover:text-[#764ba2] hover:-translate-y-0.5 transition-all">
-                View success stories
-              </a>
-            </div>
           </div>
 
           <div className="lg:col-span-1 lg:sticky lg:top-28">
@@ -198,8 +189,8 @@ export default function MetaAdsDetailPage() {
       </section>
 
       {/* 2. WHY META ADS MATTER */}
-      <section className="py-24 px-6 bg-gray-50 dark:bg-[#0d0d15]">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="py-24 px-4 bg-gray-50 dark:bg-[#0d0d15]">
+        <div className="max-w-5xl mx-auto px-6 text-center">
           <AnimateOnScroll>
             <SectionKicker>The Edge</SectionKicker>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-4">
@@ -231,8 +222,8 @@ export default function MetaAdsDetailPage() {
       </section>
 
       {/* 3. FULL-SPECTRUM AD MANAGEMENT */}
-      <section className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-12 items-center">
+      <section className="py-24 px-4 bg-white dark:bg-[#0a0a0f]">
+        <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-5 gap-12 items-center">
           <div className="lg:col-span-2">
             <AnimateOnScroll direction="left">
               <SectionKicker>Services</SectionKicker>
@@ -270,8 +261,8 @@ export default function MetaAdsDetailPage() {
       </section>
 
       {/* 4. TAILORED STRATEGIES (interactive tabs) */}
-      <section className="py-24 px-6 bg-gray-50 dark:bg-[#0d0d15]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 px-4 bg-gray-50 dark:bg-[#0d0d15]">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="text-center">
               <SectionKicker>Industries</SectionKicker>
@@ -332,8 +323,8 @@ export default function MetaAdsDetailPage() {
       </section>
 
       {/* 5. HOW WE DRIVE GROWTH */}
-      <section id="growth" className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+      <section id="growth" className="py-24 px-4 bg-white dark:bg-[#0a0a0f]">
+        <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
           <div>
             <AnimateOnScroll direction="left">
               <SectionKicker>Process</SectionKicker>
@@ -382,8 +373,8 @@ export default function MetaAdsDetailPage() {
       </section>
 
       {/* 6. EVERYTHING YOU NEED TO WIN */}
-      <section className="py-24 px-6 bg-gray-50 dark:bg-[#0d0d15]">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="py-24 px-4 bg-gray-50 dark:bg-[#0d0d15]">
+        <div className="max-w-5xl mx-auto px-6 text-center">
           <AnimateOnScroll>
             <SectionKicker>Included</SectionKicker>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-16">
@@ -434,8 +425,8 @@ export default function MetaAdsDetailPage() {
       </section>
 
       {/* 8. DATA OVER INTUITION (violet band) */}
-      <section className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 px-4 bg-white dark:bg-[#0a0a0f]">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="relative overflow-hidden rounded-[2rem] gradient-bg p-10 md:p-14 text-white">
               <div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
@@ -488,7 +479,38 @@ export default function MetaAdsDetailPage() {
         subtitle="Real results, in the words of the brands we've grown."
       />
 
-      {/* 10. FAQ */}
+      {/* 10. CTA */}
+      <section className="py-24 px-4 bg-gray-50 dark:bg-[#0d0d15]">
+        <div className="max-w-5xl mx-auto px-6">
+          <AnimateOnScroll>
+            <div className="relative overflow-hidden rounded-[2rem] gradient-bg p-12 md:p-20 text-center text-white shadow-2xl">
+              <div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
+              <h2 className="relative text-3xl md:text-5xl font-extrabold leading-tight mb-4">
+                Ready to Scale Your Business?
+              </h2>
+              <p className="relative text-base md:text-lg opacity-90 max-w-xl mx-auto mb-9">
+                Stop guessing and start growing. Book your free ad account audit today and see the potential hidden in your data.
+              </p>
+              <div className="relative flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a
+                  href="https://wa.me/918930005190?text=Hi%20Xpanix!%20%F0%9F%91%8B%20I'm%20ready%20to%20skyrocket%20my%20brand's%20digital%20presence.%20Let's%20connect!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-gray-900 px-8 py-3.5 rounded-full font-bold text-base hover:bg-gray-100 hover:-translate-y-0.5 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center gap-2.5"
+                >
+                  Let&rsquo;s Connect
+                  <svg className="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* 11. FAQ */}
       <section className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
         <div className="max-w-3xl mx-auto">
           <AnimateOnScroll>
@@ -519,37 +541,6 @@ export default function MetaAdsDetailPage() {
               </AnimateOnScroll>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* 11. CTA */}
-      <section className="py-24 px-6 bg-gray-50 dark:bg-[#0d0d15]">
-        <div className="max-w-5xl mx-auto">
-          <AnimateOnScroll>
-            <div className="relative overflow-hidden rounded-[2rem] gradient-bg p-12 md:p-20 text-center text-white shadow-2xl">
-              <div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
-              <h2 className="relative text-3xl md:text-5xl font-extrabold leading-tight mb-4">
-                Ready to Scale Your Business?
-              </h2>
-              <p className="relative text-base md:text-lg opacity-90 max-w-xl mx-auto mb-9">
-                Stop guessing and start growing. Book your free ad account audit today and see the potential hidden in your data.
-              </p>
-              <div className="relative flex flex-col sm:flex-row items-center justify-center gap-3">
-                <a
-                  href="https://wa.me/918930005190?text=Hi%20Xpanix!%20%F0%9F%91%8B%20I'm%20ready%20to%20skyrocket%20my%20brand's%20digital%20presence.%20Let's%20connect!"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-gray-900 px-8 py-3.5 rounded-full font-bold text-base hover:bg-gray-100 hover:-translate-y-0.5 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center gap-2.5"
-                >
-                  Let&rsquo;s Connect
-                  <svg className="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </AnimateOnScroll>
         </div>
       </section>
     </>

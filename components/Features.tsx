@@ -57,11 +57,11 @@ export default function Features() {
   const isMobile = useIsMobile();
   return (
     <section id="benefits" className="py-24 px-6 bg-gradient-to-b from-white to-gray-50 dark:from-[#0a0a0f] dark:to-[#0a0a0f]">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <AnimateOnScroll>
           <div className="flex justify-center mb-5">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-sm font-semibold gradient-text shadow-sm">
-              Benefits
+            <span className="inline-block px-4 py-1.5 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-m font-bold gradient-text shadow-sm">
+              Why choose Xpanix
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 dark:text-white max-w-3xl mx-auto leading-tight mb-5">

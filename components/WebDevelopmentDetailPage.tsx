@@ -54,24 +54,6 @@ const solutions = [
   },
 ];
 
-const purposes = [
-  {
-    title: "Corporate Websites",
-    desc: "Authoritative digital headquarters for established businesses.",
-    icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5m14 0h2m-2 0v-9a2 2 0 00-2-2h-2M5 21H3m2 0v-9a2 2 0 012-2h2m0-4h6m-6 4h6m-3 4v6",
-  },
-  {
-    title: "Startup Landing Pages",
-    desc: "High-impact, single-page sites built to validate and launch fast.",
-    icon: "M13 10V3L4 14h7v7l9-11h-7z",
-  },
-  {
-    title: "SEO-First Blogs",
-    desc: "Content platforms structured to rank and compound organic traffic.",
-    icon: "M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z",
-  },
-];
-
 const blueprint = [
   { n: "01", title: "Discovery & Strategy", desc: "We dig into your business model, audience, and competitors to map a winning approach." },
   { n: "02", title: "Architecture & UX", desc: "Sitemaps, user flows, and wireframes that lock structure before a pixel is styled." },
@@ -121,6 +103,20 @@ const boldProjects = [
     img: "/projects/Rudraksh%20Travles.webp",
     tag: "Travel / Website",
     url: "https://www.rudrakshtravelspnp.com/",
+  },
+  {
+    name: "Perfect Group",
+    desc: "A polished corporate website that positions the brand as an authority in its industry.",
+    img: "/projects/Perfect.webp",
+    tag: "Corporate / Website",
+    url: "https://www.perfectplastotech.com/",
+  },
+  {
+    name: "WoodyPolo",
+    desc: "A custom e-commerce storefront built for fast browsing and frictionless checkout.",
+    img: "/projects/WoodyPolo.webp",
+    tag: "E-commerce / Website",
+    url: "https://neha-kandari.github.io/photoframe/",
   },
 ];
 
@@ -182,12 +178,12 @@ export default function WebDevelopmentDetailPage() {
   return (
     <>
       {/* ── 1. HERO ───────────────────────────── */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-white dark:bg-[#0a0a0f]">
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-white dark:bg-[#0a0a0f]">
         <div className="absolute inset-0 dot-grid dot-fade pointer-events-none" />
         <div className="pointer-events-none absolute -top-24 right-0 w-[34rem] h-[34rem] rounded-full bg-gradient-to-bl from-[#764ba2]/25 via-[#667eea]/15 to-transparent blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-gradient-to-tr from-[#667eea]/20 to-transparent blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-3 gap-12 items-start">
+        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start">
           <div className="lg:col-span-2">
 
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white leading-[0.98] mb-3">
@@ -196,20 +192,11 @@ export default function WebDevelopmentDetailPage() {
             <p className="font-serif-display italic gradient-text font-medium text-3xl md:text-5xl mb-7">
               that converts.
             </p>
-            <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed mb-9">
+            <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed">
               Professional web development services for growing brands. Custom websites,
               e-commerce stores, landing pages, and full-stack web apps — built fast,
               SEO-friendly, and mobile-first.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a href="#cta" className="gradient-bg text-white px-7 py-3.5 rounded-xl font-semibold text-base hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-lg">
-                See packages
-              </a>
-              <a href="/portfolio" className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700 px-7 py-3.5 rounded-xl font-semibold text-base hover:border-[#764ba2] hover:text-[#764ba2] hover:-translate-y-0.5 transition-all">
-                View recent work
-              </a>
-            </div>
           </div>
 
           <div className="lg:col-span-1 lg:sticky lg:top-28">
@@ -219,8 +206,8 @@ export default function WebDevelopmentDetailPage() {
       </section>
 
       {/* ── 2. WHY YOUR DIGITAL FOUNDATION MATTERS ── */}
-      <section className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="py-24 px-4 bg-white dark:bg-[#0a0a0f]">
+        <div className="max-w-5xl mx-auto px-6 text-center">
           <AnimateOnScroll>
             <SectionKicker>Foundation</SectionKicker>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-4">
@@ -263,8 +250,8 @@ export default function WebDevelopmentDetailPage() {
       </section>
 
       {/* ── 3. END-TO-END WEB SOLUTIONS ───────── */}
-      <section className="py-24 px-6 bg-gray-50 dark:bg-[#0d0d15]">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="py-24 px-4 bg-gray-50 dark:bg-[#0d0d15]">
+        <div className="max-w-5xl mx-auto px-6 text-center">
           <AnimateOnScroll>
             <SectionKicker>Services</SectionKicker>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-4">
@@ -300,96 +287,68 @@ export default function WebDevelopmentDetailPage() {
         </div>
       </section>
 
-      {/* ── 4. WEBSITES FOR EVERY PURPOSE ─────── */}
-      <section className="relative py-16 px-6 overflow-hidden bg-white dark:bg-[#0a0a0f]">
-        <div className="pointer-events-none absolute top-0 right-0 w-[26rem] h-[26rem] rounded-full bg-gradient-to-bl from-[#667eea]/15 to-transparent blur-3xl" />
-        <div className="relative max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-stretch">
-          <div className="flex flex-col">
-            <AnimateOnScroll>
-              <SectionKicker>Niche</SectionKicker>
-              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-3">
-                Websites for Every <span className="gradient-text">Purpose</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 mb-6">
-                You don&rsquo;t believe in one-size-fits-all. Every project gets a custom blueprint.
-              </p>
-            </AnimateOnScroll>
-
-            <div className="flex flex-col gap-3">
-              {purposes.map((p, i) => (
-                <AnimateOnScroll key={p.title} delay={i * 0.1} direction="left">
-                  <div className="group flex items-start gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-[#131320] border border-gray-200 dark:border-gray-800 hover:border-[#764ba2]/40 hover:translate-x-1.5 transition-all duration-300 cursor-default">
-                    <span className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d={p.icon} />
-                      </svg>
-                    </span>
-                    <div>
-                      <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{p.title}</h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{p.desc}</p>
-                    </div>
-                  </div>
-                </AnimateOnScroll>
-              ))}
+      {/* ── 5. OUR 6-STEP BLUEPRINT ───────────── */}
+      <section className="py-24 px-4 bg-gray-50 dark:bg-[#0d0d15]">
+        <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-5 gap-14">
+          {/* LEFT: heading — sticky while the timeline scrolls past */}
+          <div className="lg:col-span-2">
+            <div className="lg:sticky lg:top-28">
+              <AnimateOnScroll direction="left">
+                <SectionKicker>Process</SectionKicker>
+                <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-4">
+                  Our 6-Step <span className="gradient-text">Blueprint</span>
+                </h2>
+                <p className="text-gray-500 dark:text-gray-400 text-lg">
+                  A disciplined approach to ensure quality, transparency, and timely delivery.
+                </p>
+              </AnimateOnScroll>
             </div>
           </div>
 
-          <AnimateOnScroll direction="right" className="lg:h-full">
-            <div className="relative group h-full">
-              <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-[#667eea]/20 to-[#764ba2]/20 blur-xl opacity-70 group-hover:opacity-100 transition-opacity" />
-              <div className="relative aspect-[4/3] lg:aspect-auto lg:h-full min-h-[260px] rounded-[1.75rem] overflow-hidden border border-gray-200 dark:border-gray-800 shadow-2xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
-                  alt="Team planning a custom website build"
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-            </div>
-          </AnimateOnScroll>
-        </div>
-      </section>
-
-      {/* ── 5. OUR 6-STEP BLUEPRINT ───────────── */}
-      <section className="py-24 px-6 bg-gray-50 dark:bg-[#0d0d15]">
-        <div className="max-w-6xl mx-auto">
-          <AnimateOnScroll>
-            <div className="text-center">
-              <SectionKicker>Process</SectionKicker>
-              <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-4">
-                Our 6-Step <span className="gradient-text">Blueprint</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-16 text-lg">
-                A disciplined approach to ensure quality, transparency, and timely delivery.
-              </p>
-            </div>
-          </AnimateOnScroll>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {blueprint.map((b, i) => (
-              <AnimateOnScroll key={b.n} delay={i * 0.07}>
-                <article className="group relative h-full p-7 rounded-2xl bg-white dark:bg-[#131320] border border-gray-200 dark:border-gray-800 hover:border-[#764ba2]/40 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                  <span className="absolute top-4 right-6 text-5xl font-black text-gray-100 dark:text-white/5 group-hover:gradient-text transition-all select-none">
+          {/* RIGHT: vertical timeline on desktop, horizontal swipe on mobile */}
+          <div className="lg:col-span-3">
+            {/* Mobile: horizontally scrollable cards */}
+            <div className="flex lg:hidden gap-4 overflow-x-auto snap-x snap-mandatory pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {blueprint.map((b) => (
+                <div
+                  key={b.n}
+                  className="shrink-0 snap-start w-[78%] sm:w-[45%] p-6 rounded-2xl bg-white dark:bg-[#131320] border border-gray-200 dark:border-gray-800"
+                >
+                  <span className="inline-flex w-9 h-9 rounded-lg gradient-bg items-center justify-center mb-4 text-white text-xs font-bold">
                     {b.n}
                   </span>
-                  <div className="relative w-9 h-9 rounded-lg gradient-bg flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <h3 className="relative text-lg font-bold text-gray-900 dark:text-white mb-2">{b.title}</h3>
-                  <p className="relative text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{b.desc}</p>
-                </article>
-              </AnimateOnScroll>
-            ))}
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{b.title}</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{b.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop: vertical timeline */}
+            <div className="hidden lg:block relative">
+              <span aria-hidden className="absolute left-[19px] top-2 bottom-2 w-px bg-gradient-to-b from-[#667eea] via-[#764ba2] to-transparent" />
+              <div className="flex flex-col gap-8">
+                {blueprint.map((b, i) => (
+                  <AnimateOnScroll key={b.n} delay={i * 0.08} direction="right">
+                    <div className="group relative flex items-start gap-6">
+                      <span className="relative z-10 w-10 h-10 rounded-full gradient-bg flex items-center justify-center flex-shrink-0 text-white text-xs font-bold shadow-lg shadow-[#764ba2]/25 group-hover:scale-110 transition-transform">
+                        {b.n}
+                      </span>
+                      <div className="flex-1 p-6 rounded-2xl bg-white dark:bg-[#131320] border border-gray-200 dark:border-gray-800 group-hover:border-[#764ba2]/40 group-hover:translate-x-1.5 transition-all duration-300">
+                        <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1.5">{b.title}</h3>
+                        <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{b.desc}</p>
+                      </div>
+                    </div>
+                  </AnimateOnScroll>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── 6. STANDARD IN EVERY PROJECT ──────── */}
-      <section className="py-24 px-6 bg-gray-100 dark:bg-[#0d0d15]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 px-4 bg-gray-100 dark:bg-[#0d0d15]">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="relative rounded-[2rem] bg-white dark:bg-[#131320] border border-gray-100 dark:border-gray-800 px-8 md:px-14 py-12 md:py-16 overflow-hidden">
               {/* faint code icon top-right (plain icon, no tile) */}
@@ -442,46 +401,54 @@ export default function WebDevelopmentDetailPage() {
       </section>
 
       {/* ── 7. THE ENGINE UNDER THE HOOD ──────── */}
-      <section className="py-24 px-6 bg-gray-50 dark:bg-[#0d0d15]">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="relative py-24 overflow-hidden bg-gray-50 dark:bg-[#0d0d15]">
+        <div className="max-w-5xl mx-auto px-6 text-center mb-16">
           <AnimateOnScroll>
             <SectionKicker>Stack</SectionKicker>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-4">
               The Engine Under the <span className="gradient-text">Hood</span>
             </h2>
-            <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-16 text-lg">
+            <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">
               We use the world&rsquo;s most powerful technologies to build future-proof platforms.
             </p>
           </AnimateOnScroll>
+        </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {techStack.map((t, i) => (
-              <AnimateOnScroll key={t.name} delay={i * 0.04}>
-                <div className="group p-5 rounded-2xl bg-white dark:bg-[#131320] border border-gray-200 dark:border-gray-800 hover:border-[#764ba2]/40 hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 cursor-default">
-                  <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={t.logo}
-                      alt={`${t.name} logo`}
-                      loading="lazy"
-                      className={`w-10 h-10 object-contain ${t.invertDark ? "dark:invert" : ""}`}
-                    />
-                  </div>
-                  <p className="text-sm font-bold text-gray-900 dark:text-white">{t.name}</p>
-                  <p className="text-[10px] text-gray-400 dark:text-gray-500 uppercase tracking-wider mt-0.5">{t.group}</p>
+        {/* horizontal auto-scrolling strip */}
+        <div className="relative w-full">
+          <div className="flex gap-4 w-max animate-marquee">
+            {[...techStack, ...techStack].map((t, i) => (
+              <div
+                key={`${t.name}-${i}`}
+                className="group w-32 sm:w-36 flex-shrink-0 p-5 rounded-2xl bg-white dark:bg-[#131320] border border-gray-200 dark:border-gray-800 hover:border-[#764ba2]/40 hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 cursor-default text-center"
+              >
+                <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={t.logo}
+                    alt={`${t.name} logo`}
+                    loading="lazy"
+                    className={`w-10 h-10 object-contain ${t.invertDark ? "dark:invert" : ""}`}
+                  />
                 </div>
-              </AnimateOnScroll>
+                <p className="text-sm font-bold text-gray-900 dark:text-white">{t.name}</p>
+                <p className="text-[10px] text-gray-400 dark:text-gray-500 uppercase tracking-wider mt-0.5">{t.group}</p>
+              </div>
             ))}
           </div>
+
+          {/* edge fades */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-gray-50 dark:from-[#0d0d15] to-transparent pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-gray-50 dark:from-[#0d0d15] to-transparent pointer-events-none" />
         </div>
       </section>
 
       {/* ── 8. BUILT FOR THE BOLD ─────────────── */}
-      <section className="relative py-24 px-6 overflow-hidden bg-gradient-to-b from-[#0a0a0f] via-[#15082a] to-[#0a0a0f]">
+      <section className="relative py-24 px-4 overflow-hidden bg-gradient-to-b from-[#0a0a0f] via-[#15082a] to-[#0a0a0f]">
         <div className="pointer-events-none absolute top-1/4 -left-32 w-[30rem] h-[30rem] rounded-full bg-[#667eea]/15 blur-[120px]" />
         <div className="pointer-events-none absolute bottom-0 -right-32 w-[30rem] h-[30rem] rounded-full bg-[#764ba2]/20 blur-[120px]" />
 
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-14">
               <div>
@@ -504,16 +471,16 @@ export default function WebDevelopmentDetailPage() {
             </div>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {boldProjects.map((p, i) => (
               <AnimateOnScroll key={p.name} delay={i * 0.1}>
                 <a
                   href={p.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative block rounded-[1.75rem] overflow-hidden bg-white/[0.06] backdrop-blur-2xl border border-white/10 hover:border-white/25 transition-all cursor-pointer"
+                  className="group relative block rounded-2xl overflow-hidden bg-white/[0.06] backdrop-blur-2xl border border-white/10 hover:border-white/25 transition-all cursor-pointer"
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden">
+                  <div className="relative aspect-[4/3] overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={p.img}
@@ -522,16 +489,16 @@ export default function WebDevelopmentDetailPage() {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/80 via-transparent to-transparent" />
-                    <span className="absolute top-4 left-4 text-[10px] font-bold tracking-[0.2em] uppercase text-white bg-white/15 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full">
+                    <span className="absolute top-2.5 left-2.5 text-[9px] font-bold tracking-[0.15em] uppercase text-white bg-white/15 backdrop-blur-md border border-white/20 px-2 py-0.5 rounded-full">
                       {p.tag}
                     </span>
                   </div>
-                  <div className="p-7">
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:gradient-text transition-all">{p.name}</h3>
-                    <p className="text-sm text-gray-400 leading-relaxed mb-5">{p.desc}</p>
-                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#667eea] group-hover:gap-3 transition-all">
+                  <div className="p-4">
+                    <h3 className="text-sm font-bold text-white mb-1.5 group-hover:gradient-text transition-all">{p.name}</h3>
+                    <p className="text-xs text-gray-400 leading-relaxed mb-3 line-clamp-2">{p.desc}</p>
+                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#667eea] group-hover:gap-2.5 transition-all">
                       View project
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
                     </span>
@@ -544,8 +511,8 @@ export default function WebDevelopmentDetailPage() {
       </section>
 
       {/* ── 9. YOUR TECHNICAL PARTNER ─────────── */}
-      <section className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+      <section className="py-24 px-4 bg-white dark:bg-[#0a0a0f]">
+        <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
           {/* Stats */}
           <AnimateOnScroll direction="left">
             <div className="grid grid-cols-2 gap-5">
@@ -596,7 +563,40 @@ export default function WebDevelopmentDetailPage() {
         subtitle="Don't take our word for it — here's what the businesses we've built for say."
       />
 
-      {/* ── 11. COMMON QUESTIONS ─────────────── */}
+      {/* ── 11. CTA ──────────────────────────── */}
+      <section id="cta" className="py-24 px-4 bg-white dark:bg-[#0a0a0f]">
+        <div className="max-w-5xl mx-auto px-6">
+          <AnimateOnScroll>
+            <div className="relative overflow-hidden rounded-[2rem] gradient-bg p-12 md:p-20 text-center text-white shadow-2xl">
+              {/* decorative glow */}
+              <div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
+
+              <h2 className="relative text-3xl md:text-5xl font-extrabold leading-tight mb-4">
+                Ready to build your digital empire?
+              </h2>
+              <p className="relative text-base md:text-lg opacity-90 max-w-xl mx-auto mb-9">
+                Join 150+ brands that have trusted their digital presence with our world-class engineering team.
+              </p>
+              <div className="relative flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a
+                  href="https://wa.me/918930005190?text=Hi%20Xpanix!%20%F0%9F%91%8B%20I'm%20ready%20to%20skyrocket%20my%20brand's%20digital%20presence.%20Let's%20connect!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-gray-900 px-8 py-3.5 rounded-full font-bold text-base hover:bg-gray-100 hover:-translate-y-0.5 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center gap-2.5"
+                >
+                  Let&rsquo;s Connect
+                  <svg className="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* ── 12. COMMON QUESTIONS ─────────────── */}
       <section className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
         <div className="max-w-3xl mx-auto">
           <AnimateOnScroll>
@@ -645,39 +645,6 @@ export default function WebDevelopmentDetailPage() {
               </AnimateOnScroll>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── 12. CTA ──────────────────────────── */}
-      <section id="cta" className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
-        <div className="max-w-5xl mx-auto">
-          <AnimateOnScroll>
-            <div className="relative overflow-hidden rounded-[2rem] gradient-bg p-12 md:p-20 text-center text-white shadow-2xl">
-              {/* decorative glow */}
-              <div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
-
-              <h2 className="relative text-3xl md:text-5xl font-extrabold leading-tight mb-4">
-                Ready to build your digital empire?
-              </h2>
-              <p className="relative text-base md:text-lg opacity-90 max-w-xl mx-auto mb-9">
-                Join 150+ brands that have trusted their digital presence with our world-class engineering team.
-              </p>
-              <div className="relative flex flex-col sm:flex-row items-center justify-center gap-3">
-                <a
-                  href="https://wa.me/918930005190?text=Hi%20Xpanix!%20%F0%9F%91%8B%20I'm%20ready%20to%20skyrocket%20my%20brand's%20digital%20presence.%20Let's%20connect!"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-gray-900 px-8 py-3.5 rounded-full font-bold text-base hover:bg-gray-100 hover:-translate-y-0.5 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center gap-2.5"
-                >
-                  Let&rsquo;s Connect
-                  <svg className="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </AnimateOnScroll>
         </div>
       </section>
     </>

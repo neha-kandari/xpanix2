@@ -85,6 +85,11 @@ html {
   background-position: 0 0;
 }
 
+.dot-grid-sm {
+  background-image: radial-gradient(circle, var(--dot-color) 0.6px, transparent 0.8px);
+  opacity: 0.55;
+}
+
 .dot-fade {
   -webkit-mask-image:
     linear-gradient(to right, transparent 0%, #000 16%, #000 84%, transparent 100%),
@@ -139,6 +144,16 @@ html {
 .portfolio-fade {
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%);
   mask-image: linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%);
+}
+
+@keyframes progress-fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.animate-progress-fill {
+  transform-origin: left;
+  animation: progress-fill 4.5s linear forwards;
 }
 
 * {

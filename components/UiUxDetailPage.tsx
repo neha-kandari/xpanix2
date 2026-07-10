@@ -3,33 +3,10 @@ import { useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 import ReviewsCarousel from "./ReviewsCarousel";
 import ContactFormCard from "./ContactFormCard";
-import TiltCard from "./TiltCard";
 
 /* ─────────────────────────────────────────────
    DATA
 ───────────────────────────────────────────── */
-
-const ambassadorPoints = [
-  {
-    title: "First Impressions",
-    desc: "Users form an opinion of your site in about 50 milliseconds. We make every one of those count.",
-  },
-  {
-    title: "Reduced Friction",
-    desc: "Intuitive navigation leads to higher conversion rates and dramatically fewer drop-offs.",
-  },
-  {
-    title: "User Loyalty",
-    desc: "Consistency and accessibility build trust, turning one-time visitors into lifetime users.",
-  },
-];
-
-const impactStats = [
-  { value: "400%", label: "ROI delivered by design-led companies" },
-  { value: "75%", label: "Of credibility judgments come from design" },
-  { value: "88%", label: "Of users won't return after a bad experience" },
-  { value: "2.5s", label: "Average attention span for first impressions" },
-];
 
 const designSolutions = [
   {
@@ -97,31 +74,28 @@ const designTools = [
 
 const transformations = [
   {
-    name: "FitTrack Dashboard",
-    type: "SaaS / Health",
-    desc: "A complete redesign of a fitness analytics platform — task success rate up 64%, support tickets cut in half.",
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+    name: "Finance App UI",
+    type: "Mobile App UI",
+    desc: "A clean, data-dense mobile finance dashboard designed for clarity and trust at a glance.",
+    img: "/projects/Finance%20App%20UI.webp",
   },
   {
-    name: "LuxeWear Mobile",
-    type: "E-commerce / Fashion",
-    desc: "A mobile-first shopping experience for a premium fashion label — checkout completion improved 2.1x.",
-    img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80",
-  },
-];
-
-const convertPoints = [
-  {
-    title: "Data-Backed Decisions",
-    desc: "We don't guess. Every pixel placement is informed by user testing and analytics — not opinions.",
+    name: "Travel Explorer",
+    type: "Travel App UI",
+    desc: "An immersive travel app UI that turns trip planning into a visual, inspiring experience.",
+    img: "/projects/Travel%20Ui.webp",
   },
   {
-    title: "Pixel Perfection",
-    desc: "Our obsessive attention to spacing, hierarchy, and rhythm is what separates good from unforgettable.",
+    name: "Shopfront",
+    type: "E-commerce UI",
+    desc: "A polished e-commerce interface built to guide shoppers smoothly from browse to checkout.",
+    img: "/projects/ecomerce%20ui.webp",
   },
   {
-    title: "Long-Term Scalability",
-    desc: "Token-based systems mean your design evolves with your product instead of breaking under it.",
+    name: "Wanderlust",
+    type: "Landing Page UI",
+    desc: "A story-driven landing page design crafted to convert first-time visitors into leads.",
+    img: "/projects/Travel%20landaing%20Ui%20Design.webp",
   },
 ];
 
@@ -170,12 +144,12 @@ export default function UiUxDetailPage() {
   return (
     <>
       {/* ── 1. HERO (same layout as web dev page) ── */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-white dark:bg-[#0a0a0f]">
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-white dark:bg-[#0a0a0f]">
         <div className="absolute inset-0 dot-grid dot-fade pointer-events-none" />
         <div className="pointer-events-none absolute -top-24 right-0 w-[34rem] h-[34rem] rounded-full bg-gradient-to-bl from-[#764ba2]/25 via-[#667eea]/15 to-transparent blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-gradient-to-tr from-[#667eea]/20 to-transparent blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-3 gap-12 items-start">
+        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start">
           <div className="lg:col-span-2">
 
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white leading-[0.98] mb-3">
@@ -184,20 +158,11 @@ export default function UiUxDetailPage() {
             <p className="font-serif-display italic gradient-text font-medium text-3xl md:text-5xl mb-7">
               that feels right.
             </p>
-            <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed mb-9">
+            <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed">
               We create human-centric design experiences that bridge the gap between your
               brand and business objectives. Beautiful, functional, and intuitive —
               from first wireframe to final pixel.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a href="#package" className="gradient-bg text-white px-7 py-3.5 rounded-xl font-semibold text-base hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-lg">
-                Explore our process
-              </a>
-              <a href="/portfolio" className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700 px-7 py-3.5 rounded-xl font-semibold text-base hover:border-[#764ba2] hover:text-[#764ba2] hover:-translate-y-0.5 transition-all">
-                View recent work
-              </a>
-            </div>
           </div>
 
           <div className="lg:col-span-1 lg:sticky lg:top-28">
@@ -206,62 +171,9 @@ export default function UiUxDetailPage() {
         </div>
       </section>
 
-      {/* ── 2. DESIGN IS THE SILENT AMBASSADOR ── */}
-      <section className="py-24 px-6 bg-gray-50 dark:bg-[#0d0d15]">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
-          {/* Left: copy + bullets */}
-          <div>
-            <AnimateOnScroll direction="left">
-              <SectionKicker>Value</SectionKicker>
-              <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-4">
-                Design is the Silent Ambassador of{" "}
-                <span className="gradient-text">Your Brand</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 mb-10 text-lg">
-                In a digital-first world, your interface is often the first interaction a
-                customer has with your business. Good design isn&rsquo;t a luxury — it&rsquo;s a
-                competitive necessity.
-              </p>
-            </AnimateOnScroll>
-
-            <div className="flex flex-col gap-4">
-              {ambassadorPoints.map((p, i) => (
-                <AnimateOnScroll key={p.title} delay={i * 0.1} direction="left">
-                  <div className="group flex items-start gap-4 p-5 rounded-2xl bg-white dark:bg-[#131320] border border-gray-200 dark:border-gray-800 hover:border-[#764ba2]/40 hover:translate-x-1.5 transition-all duration-300 cursor-default">
-                    <span className="w-9 h-9 rounded-full gradient-bg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </span>
-                    <div>
-                      <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{p.title}</h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{p.desc}</p>
-                    </div>
-                  </div>
-                </AnimateOnScroll>
-              ))}
-            </div>
-          </div>
-
-          {/* Right: impact stats with tilt */}
-          <AnimateOnScroll direction="right">
-            <div className="grid grid-cols-2 gap-5">
-              {impactStats.map((s, i) => (
-                <TiltCard key={s.label} className={i % 2 === 1 ? "mt-8" : ""}>
-                  <div className="p-7 rounded-2xl bg-white dark:bg-[#131320] border border-gray-200 dark:border-gray-800 text-center hover:border-[#764ba2]/40 hover:shadow-[0_20px_40px_rgba(91,43,232,0.1)] transition-all">
-                    <div className="text-4xl font-extrabold gradient-text mb-2">{s.value}</div>
-                    <div className="text-xs font-medium text-gray-500 dark:text-gray-400 leading-snug">{s.label}</div>
-                  </div>
-                </TiltCard>
-              ))}
-            </div>
-          </AnimateOnScroll>
-        </div>
-      </section>
-
       {/* ── 3. COMPREHENSIVE DESIGN SOLUTIONS ── */}
-      <section className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="py-24 px-4 bg-white dark:bg-[#0a0a0f]">
+        <div className="max-w-5xl mx-auto px-6 text-center">
           <AnimateOnScroll>
             <SectionKicker>Solutions</SectionKicker>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-4">
@@ -291,11 +203,11 @@ export default function UiUxDetailPage() {
       </section>
 
       {/* ── 4. DESIGN FOR EVERY ECOSYSTEM ────── */}
-      <section className="relative py-24 px-6 overflow-hidden bg-gray-50 dark:bg-[#0d0d15]">
+      <section className="relative py-24 px-4 overflow-hidden bg-gray-50 dark:bg-[#0d0d15]">
         <div className="pointer-events-none absolute top-0 left-1/4 w-[26rem] h-[26rem] rounded-full bg-gradient-to-br from-[#667eea]/15 to-transparent blur-3xl" />
         <div className="pointer-events-none absolute bottom-0 right-1/4 w-[26rem] h-[26rem] rounded-full bg-gradient-to-br from-[#764ba2]/15 to-transparent blur-3xl" />
 
-        <div className="relative max-w-6xl mx-auto text-center">
+        <div className="relative max-w-5xl mx-auto px-6 text-center">
           <AnimateOnScroll>
             <SectionKicker>Versatility</SectionKicker>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-4">
@@ -325,8 +237,8 @@ export default function UiUxDetailPage() {
       </section>
 
       {/* ── 5. HOW WE BUILD YOUR VISION ──────── */}
-      <section className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 px-4 bg-white dark:bg-[#0a0a0f]">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="text-center">
               <SectionKicker>Process</SectionKicker>
@@ -356,8 +268,8 @@ export default function UiUxDetailPage() {
       </section>
 
       {/* ── 6. WHAT YOU GET WITH OUR PACKAGE ─── */}
-      <section id="package" className="py-16 px-6 bg-gray-50 dark:bg-[#0d0d15]">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-stretch">
+      <section id="package" className="py-16 px-4 bg-gray-50 dark:bg-[#0d0d15]">
+        <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-stretch">
           {/* Left: image — matches the height of the right column */}
           <AnimateOnScroll direction="left" className="lg:h-full">
             <div className="relative group h-full">
@@ -406,8 +318,8 @@ export default function UiUxDetailPage() {
       </section>
 
       {/* ── 7. TOOLS BAND ─────────────────────── */}
-      <section className="py-16 px-6 bg-white dark:bg-[#0a0a0f] border-y border-gray-100 dark:border-gray-800/60">
-        <div className="max-w-5xl mx-auto text-center">
+      <section className="py-16 px-4 bg-white dark:bg-[#0a0a0f] border-y border-gray-100 dark:border-gray-800/60">
+        <div className="max-w-5xl mx-auto px-6 text-center">
           <AnimateOnScroll>
             <p className="text-xs font-semibold tracking-[0.35em] uppercase text-gray-400 dark:text-gray-500 mb-10">
               Powered by industry-leading design tools
@@ -431,8 +343,8 @@ export default function UiUxDetailPage() {
       </section>
 
       {/* ── 8. RECENT DESIGN TRANSFORMATIONS ─── */}
-      <section className="py-24 px-6 bg-gray-50 dark:bg-[#0d0d15]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 px-4 bg-gray-50 dark:bg-[#0d0d15]">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-14">
               <div>
@@ -453,11 +365,14 @@ export default function UiUxDetailPage() {
             </div>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {transformations.map((p, i) => (
               <AnimateOnScroll key={p.name} delay={i * 0.1}>
-                <article className="group rounded-[1.75rem] overflow-hidden bg-white dark:bg-[#131320] border border-gray-200 dark:border-gray-800 hover:border-[#764ba2]/40 hover:-translate-y-1 hover:shadow-[0_25px_60px_rgba(0,0,0,0.12)] transition-all duration-300 cursor-pointer">
-                  <div className="relative aspect-[16/10] overflow-hidden">
+                <a
+                  href="/portfolio"
+                  className="group block rounded-2xl overflow-hidden bg-white dark:bg-[#131320] border border-gray-200 dark:border-gray-800 hover:border-[#764ba2]/40 hover:-translate-y-1 hover:shadow-[0_25px_60px_rgba(0,0,0,0.12)] transition-all duration-300 cursor-pointer"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={p.img}
@@ -465,73 +380,24 @@ export default function UiUxDetailPage() {
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
-                    <span className="absolute top-4 left-4 text-[10px] font-bold tracking-[0.2em] uppercase text-white bg-black/40 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full">
+                    <span className="absolute top-2.5 left-2.5 text-[9px] font-bold tracking-[0.15em] uppercase text-white bg-black/40 backdrop-blur-md border border-white/20 px-2 py-0.5 rounded-full">
                       {p.type}
                     </span>
                   </div>
-                  <div className="p-7">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:gradient-text transition-all">{p.name}</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-5">{p.desc}</p>
-                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#764ba2] dark:text-[#667eea] group-hover:gap-3 transition-all">
+                  <div className="p-4">
+                    <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-1.5 group-hover:gradient-text transition-all">{p.name}</h3>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3 line-clamp-2">{p.desc}</p>
+                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#764ba2] dark:text-[#667eea] group-hover:gap-2.5 transition-all">
                       View project
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
                     </span>
                   </div>
-                </article>
+                </a>
               </AnimateOnScroll>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── 9. WHY OUR DESIGNS CONVERT BETTER ── */}
-      <section className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-stretch">
-          {/* Left: points */}
-          <div>
-            <AnimateOnScroll direction="left">
-              <SectionKicker>Conversion</SectionKicker>
-              <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-10">
-                Why Our Designs <span className="gradient-text">Convert Better</span>
-              </h2>
-            </AnimateOnScroll>
-
-            <div className="flex flex-col gap-4">
-              {convertPoints.map((p, i) => (
-                <AnimateOnScroll key={p.title} delay={i * 0.1} direction="left">
-                  <div className="group flex items-start gap-4 p-5 rounded-2xl bg-gray-50 dark:bg-[#131320] border border-gray-200 dark:border-gray-800 hover:border-[#764ba2]/40 hover:translate-x-1.5 transition-all duration-300">
-                    <span className="w-9 h-9 rounded-xl gradient-bg flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    </span>
-                    <div>
-                      <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{p.title}</h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{p.desc}</p>
-                    </div>
-                  </div>
-                </AnimateOnScroll>
-              ))}
-            </div>
-          </div>
-
-          {/* Right: violet quote card */}
-          <AnimateOnScroll direction="right">
-            <div className="relative h-full min-h-[22rem] rounded-[2rem] gradient-bg p-10 md:p-12 flex flex-col justify-center overflow-hidden group">
-              <div className="pointer-events-none absolute -top-20 -right-20 w-64 h-64 rounded-full bg-white/10 blur-3xl group-hover:bg-white/15 transition-colors" />
-              <div className="pointer-events-none absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-white/10 blur-3xl" />
-
-              <svg className="relative w-10 h-10 text-white/40 mb-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <blockquote className="relative text-2xl md:text-3xl font-bold text-white leading-snug mb-6">
-                &ldquo;Design is the intermediary between information and understanding.&rdquo;
-              </blockquote>
-              <p className="relative text-white/70 text-sm font-semibold">— Hans Hofmann</p>
-            </div>
-          </AnimateOnScroll>
         </div>
       </section>
 
@@ -543,9 +409,42 @@ export default function UiUxDetailPage() {
         subtitle="The brands we've designed and built for, in their own words."
       />
 
-      {/* ── 11. FAQ (split layout) ────────────── */}
-      <section className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-12">
+      {/* ── 11. CTA ──────────────────────────── */}
+      <section className="py-24 px-4 bg-gray-50 dark:bg-[#0d0d15]">
+        <div className="max-w-5xl mx-auto px-6">
+          <AnimateOnScroll>
+            <div className="relative overflow-hidden rounded-[2rem] bg-white dark:bg-[#131320] border border-gray-200 dark:border-gray-800 p-12 md:p-20 text-center">
+              <div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-gradient-to-br from-[#667eea]/20 to-transparent blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-gradient-to-tr from-[#764ba2]/20 to-transparent blur-3xl" />
+
+              <h2 className="relative text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-4">
+                Ready to build something{" "}
+                <span className="font-serif-display italic gradient-text font-medium">extraordinary?</span>
+              </h2>
+              <p className="relative text-base md:text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto mb-9">
+                Let&rsquo;s craft an experience that gives your product the edge your competitors will envy.
+              </p>
+              <div className="relative flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a
+                  href="https://wa.me/918930005190?text=Hi%20Xpanix!%20%F0%9F%91%8B%20I'm%20ready%20to%20skyrocket%20my%20brand's%20digital%20presence.%20Let's%20connect!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-gray-900 px-8 py-3.5 rounded-full font-bold text-base hover:bg-gray-100 hover:-translate-y-0.5 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center gap-2.5"
+                >
+                  Let&rsquo;s Connect
+                  <svg className="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* ── 12. FAQ (split layout) ────────────── */}
+      <section className="py-24 px-4 bg-white dark:bg-[#0a0a0f]">
+        <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-5 gap-12">
           {/* Left: heading + support card */}
           <div className="lg:col-span-2">
             <AnimateOnScroll direction="left">
@@ -607,39 +506,6 @@ export default function UiUxDetailPage() {
               </AnimateOnScroll>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── 12. CTA ──────────────────────────── */}
-      <section className="py-24 px-6 bg-gray-50 dark:bg-[#0d0d15]">
-        <div className="max-w-5xl mx-auto">
-          <AnimateOnScroll>
-            <div className="relative overflow-hidden rounded-[2rem] bg-white dark:bg-[#131320] border border-gray-200 dark:border-gray-800 p-12 md:p-20 text-center">
-              <div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-gradient-to-br from-[#667eea]/20 to-transparent blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-gradient-to-tr from-[#764ba2]/20 to-transparent blur-3xl" />
-
-              <h2 className="relative text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-4">
-                Ready to build something{" "}
-                <span className="font-serif-display italic gradient-text font-medium">extraordinary?</span>
-              </h2>
-              <p className="relative text-base md:text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto mb-9">
-                Let&rsquo;s craft an experience that gives your product the edge your competitors will envy.
-              </p>
-              <div className="relative flex flex-col sm:flex-row items-center justify-center gap-3">
-                <a
-                  href="https://wa.me/918930005190?text=Hi%20Xpanix!%20%F0%9F%91%8B%20I'm%20ready%20to%20skyrocket%20my%20brand's%20digital%20presence.%20Let's%20connect!"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-gray-900 px-8 py-3.5 rounded-full font-bold text-base hover:bg-gray-100 hover:-translate-y-0.5 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center gap-2.5"
-                >
-                  Let&rsquo;s Connect
-                  <svg className="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </AnimateOnScroll>
         </div>
       </section>
     </>

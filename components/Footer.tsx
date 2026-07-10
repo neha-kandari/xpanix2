@@ -28,7 +28,7 @@ export default function Footer() {
       {/* ambient glow */}
       <div className="pointer-events-none absolute -top-32 -left-24 w-[28rem] h-[28rem] rounded-full bg-[#4f46e5]/20 blur-3xl" />
 
-      <div className="relative max-w-7xl mx-auto px-6 py-16">
+      <div className="relative max-w-5xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10">
           {/* Brand */}
           <div className="lg:col-span-4">
@@ -130,12 +130,12 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                {/* <svg className="w-4 h-4 flex-shrink-0 text-[#3b82f6]" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 flex-shrink-0 text-[#3b82f6]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.2 2.2Z" />
-                </svg> */}
-                {/* <a href="tel:+919215015157" className="text-gray-400 text-sm hover:text-white transition-colors">
-                  +91 9215015157
-                </a> */}
+                </svg>
+                <a href="tel:+918920944784" className="text-gray-400 text-sm hover:text-white transition-colors">
+                  +91 8920944784
+                </a>
               </li>
             </ul>
           </div>

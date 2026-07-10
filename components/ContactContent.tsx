@@ -80,11 +80,11 @@ export default function ContactContent() {
   return (
     <main className="bg-white dark:bg-[#0a0a0f]">
       {/* HERO */}
-      <section className="relative pt-32 pb-12 px-6 overflow-hidden">
+      <section className="relative pt-32 pb-12 px-4 overflow-hidden">
         <div className="absolute inset-0 dot-grid dot-fade pointer-events-none" />
         <div className="pointer-events-none absolute -top-24 right-0 w-[30rem] h-[30rem] rounded-full bg-gradient-to-bl from-[#764ba2]/20 via-[#667eea]/10 to-transparent blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <span className="inline-block px-4 py-1.5 mb-5 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-xs font-bold tracking-[0.2em] uppercase gradient-text shadow-sm">
               Contact
@@ -101,8 +101,8 @@ export default function ContactContent() {
       </section>
 
       {/* FORM + INFO */}
-      <section className="px-6 pb-24">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-5 gap-10 items-stretch">
+      <section className="px-4 pb-24">
+        <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-5 gap-10 items-stretch">
           {/* FORM */}
           <AnimateOnScroll className="lg:col-span-3" direction="left">
             <div className="relative h-full rounded-[2rem] bg-gray-50 dark:bg-[#131320] border border-gray-200 dark:border-gray-800 p-7 md:p-10 overflow-hidden">
@@ -251,8 +251,8 @@ export default function ContactContent() {
       </section>
 
       {/* WHAT HAPPENS NEXT */}
-      <section className="px-6 pb-24">
-        <div className="max-w-7xl mx-auto">
+      <section className="px-4 pb-24">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="rounded-[2rem] bg-gray-50 dark:bg-[#0d0d15] border border-gray-200 dark:border-gray-800 p-8 md:p-12">
               <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-10">

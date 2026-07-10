@@ -295,8 +295,8 @@ function RecentWebProjects() {
         zIndex: 2,
       }}
     >
-      {/* Section heading — aligned to the navbar/hero 1280px container */}
-      <div style={{ padding: mobile ? "40px 20px 24px" : "56px max(24px, calc((100vw - 1280px) / 2 + 24px)) 32px", boxSizing: "border-box" }}>
+      {/* Section heading — aligned to the navbar/hero 1024px container */}
+      <div style={{ padding: mobile ? "40px 20px 24px" : "56px max(24px, calc((100vw - 1024px) / 2 + 24px)) 32px", boxSizing: "border-box" }}>
         <p style={{
           fontSize: 13,
           fontWeight: 600,
@@ -335,7 +335,7 @@ function RecentWebProjects() {
         height: mobile ? "82vh" : "64vh",
         display: "flex",
         flexDirection: mobile ? "column" : "row",
-        padding: mobile ? "0 20px" : "0 max(24px, calc((100vw - 1280px) / 2 + 24px))",
+        padding: mobile ? "0 20px" : "0 max(24px, calc((100vw - 1024px) / 2 + 24px))",
         gap: mobile ? "1rem" : "1.5rem",
         boxSizing: "border-box",
       }}>
@@ -474,8 +474,8 @@ function AllProjectsSection() {
   const filtered = active === "All" ? ALL_PROJECTS : ALL_PROJECTS.filter(p => p.cat === active);
 
   return (
-    <section style={{ background: t.pageBg, padding: mobile ? "60px 20px" : "100px 60px", boxSizing: "border-box" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+    <section style={{ background: t.pageBg, padding: mobile ? "60px 0" : "100px 0", boxSizing: "border-box" }}>
+      <div style={{ maxWidth: 1024, margin: "0 auto", padding: mobile ? "0 20px" : "0 24px", boxSizing: "border-box" }}>
         <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.15em", color: t.textMuted, textTransform: "uppercase", margin: "0 0 8px" }}>Browse all work</p>
         <h2 style={{ fontSize: 38, fontWeight: 700, color: t.text, margin: "0 0 32px", letterSpacing: "-0.02em" }}>All Projects</h2>
         <div style={{ display: "flex", gap: 8, marginBottom: 36, flexWrap: "wrap" }}>
@@ -551,8 +551,8 @@ function WhyChooseUs() {
   const t = getTheme(dark);
   const { mobile } = useViewport();
   return (
-    <section style={{ background: t.sectionAlt, padding: mobile ? "60px 20px" : "100px 60px", boxSizing: "border-box" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+    <section style={{ background: t.sectionAlt, padding: mobile ? "60px 0" : "100px 0", boxSizing: "border-box" }}>
+      <div style={{ maxWidth: 1024, margin: "0 auto", padding: mobile ? "0 20px" : "0 24px", boxSizing: "border-box" }}>
         <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.15em", color: t.textMuted, textTransform: "uppercase", margin: "0 0 8px" }}>Why us</p>
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 16, marginBottom: 52 }}>
           <div>
@@ -675,7 +675,7 @@ export default function HeroScrollEffect() {
         dangerouslySetInnerHTML={{
           __html: `
             .xpx-hero { position: relative; display: flex; flex-direction: row; height: 82vh; min-height: 620px; padding: 80px 0 0; box-sizing: border-box; overflow: hidden; }
-            .xpx-hero-left { position: relative; z-index: 1; width: 40%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: flex-start; padding: 28px 44px 0 max(24px, calc((100vw - 1280px) / 2 + 24px)); box-sizing: border-box; }
+            .xpx-hero-left { position: relative; z-index: 1; width: 40%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: flex-start; padding: 28px 44px 0 max(24px, calc((100vw - 1024px) / 2 + 24px)); box-sizing: border-box; }
             .xpx-hero-h1 { font-size: clamp(40px, 4.2vw, 60px); }
             .xpx-hero-right { flex: 1; position: relative; z-index: 1; overflow: visible; }
             .xpx-hero-fan { display: none; }

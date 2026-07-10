@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
@@ -8,19 +8,13 @@ import { servicesData } from "./servicesData";
 type LinkItem = { name: string; href: string; hasDropdown?: boolean };
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const links: LinkItem[] = [
+    { name: "Home", href: "/" },
     { name: "Services", href: "/services", hasDropdown: true },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Blogs", href: "/blogs" },
@@ -44,29 +38,25 @@ export default function Navbar() {
 
   // shared classes — text stays VISIBLE on hover/click (color shift + subtle bg, no white-on-white)
   const linkBase =
-    "text-sm font-medium px-4 py-2 rounded-full transition-all whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-[#764ba2]";
+    "text-base font-medium px-4 py-2 rounded-lg transition-all whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-[#764ba2]";
   const linkInactive =
     "text-gray-700 dark:text-gray-300 hover:text-[#764ba2] dark:hover:text-[#667eea] hover:bg-gray-100 dark:hover:bg-gray-800 active:text-[#764ba2] dark:active:text-[#667eea]";
   const linkActive =
-    "gradient-bg text-white shadow-[0_4px_14px_rgba(91,43,232,0.35)]";
+    "text-[#764ba2] dark:text-[#667eea] underline underline-offset-4 decoration-2";
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/70 dark:bg-[#0a0a0f]/70 backdrop-blur-md" : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-4">
+      <div className="relative mx-auto flex items-center justify-between max-w-5xl mt-3 px-6 py-3 rounded-full bg-white/80 dark:bg-[#0a0a0f]/80 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition-all duration-300">
         {/* Logo */}
         <a href="/" className="flex items-center leading-none" aria-label="Xpanix home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assests/Logo.webp" alt="Xpanix" className="h-9 w-auto block dark:hidden" />
+          <img src="/assests/Logo.webp" alt="Xpanix" className="h-11 w-auto block dark:hidden" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assests/LogoDark.webp" alt="Xpanix" className="h-9 w-auto hidden dark:block" />
+          <img src="/assests/LogoDark.webp" alt="Xpanix" className="h-11 w-auto hidden dark:block" />
         </a>
 
-        {/* Center pill nav */}
-        <div className="hidden md:flex items-center gap-1 bg-white dark:bg-gray-900 rounded-full px-2 py-2 shadow-[0_4px_24px_rgba(0,0,0,0.08)] border border-gray-100 dark:border-gray-800">
+        {/* Center nav */}
+        <div className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
           {links.map((link) => {
             const active = isActive(link.href);
 
@@ -218,7 +208,7 @@ export default function Navbar() {
                 aria-current={active ? "page" : undefined}
                 className={`block text-sm font-medium py-2 px-3 rounded-lg transition-colors ${
                   active
-                    ? "gradient-text font-semibold"
+                    ? "text-[#764ba2] dark:text-[#667eea] underline underline-offset-4 decoration-2 font-semibold"
                     : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                 }`}
                 onClick={() => setMenuOpen(false)}

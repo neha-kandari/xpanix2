@@ -7,36 +7,21 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
   return (
     <>
       {/* HERO with floating glass contact card on the right */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-white dark:bg-[#0a0a0f]">
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-white dark:bg-[#0a0a0f]">
         <div className="absolute inset-0 dot-grid dot-fade pointer-events-none" />
         {/* ambient gradient blobs (give the glass card something to refract) */}
         <div className="pointer-events-none absolute -top-20 -left-20 w-[28rem] h-[28rem] rounded-full bg-gradient-to-br from-[#667eea]/20 to-transparent blur-3xl" />
         <div className="pointer-events-none absolute -bottom-20 right-1/3 w-[26rem] h-[26rem] rounded-full bg-gradient-to-br from-[#764ba2]/20 to-transparent blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-3 gap-12 items-start">
+        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start">
           <div className="lg:col-span-2">
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900 dark:text-white leading-[0.95] mb-6">
               {service.title}
             </h1>
-            <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed mb-9">
+            <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed">
               {service.long}
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="#features"
-                className="gradient-bg text-white px-7 py-3.5 rounded-xl font-semibold text-base hover:opacity-90 transition-all shadow-lg"
-              >
-                See what we offer
-              </a>
-              <a
-                href="/portfolio"
-                className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700 px-7 py-3.5 rounded-xl font-semibold text-base hover:border-[#764ba2] hover:text-[#764ba2] transition-all"
-              >
-                View work
-              </a>
-            </div>
           </div>
 
           {/* Floating glass contact card */}
@@ -47,8 +32,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
       </section>
 
       {/* HERO IMAGE BAND */}
-      <section className="px-6 pb-24 bg-white dark:bg-[#0a0a0f]">
-        <div className="max-w-7xl mx-auto">
+      <section className="px-4 pb-24 bg-white dark:bg-[#0a0a0f]">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="relative aspect-[21/9] rounded-3xl overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -72,8 +57,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
       </section>
 
       {/* FEATURES */}
-      <section id="features" className="py-24 px-6 bg-gray-50 dark:bg-[#0a0a0f]">
-        <div className="max-w-7xl mx-auto">
+      <section id="features" className="py-24 px-4 bg-gray-50 dark:bg-[#0a0a0f]">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 dark:text-gray-400 mb-3">
               What you get
@@ -104,8 +89,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
       </section>
 
       {/* PROCESS */}
-      <section className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 px-4 bg-white dark:bg-[#0a0a0f]">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 dark:text-gray-400 mb-3">
               How we deliver
@@ -131,8 +116,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-white dark:bg-[#0a0a0f]">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-24 px-4 bg-white dark:bg-[#0a0a0f]">
+        <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="relative overflow-hidden rounded-[2rem] gradient-bg p-12 md:p-16 text-center text-white">
               <p className="text-sm font-semibold uppercase tracking-widest opacity-75 mb-3">

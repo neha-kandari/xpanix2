@@ -48,7 +48,7 @@ const projects = [
   { src: "/projects/NagpalToursTravels.webp", label: "Nagpal Tours & Travels" },
   { src: "/projects/Opal.webp", label: "Opal" },
   { src: "/projects/Perfect.webp", label: "Perfect" },
-  { src: "/projects/PhotographerUi Design.webp", label: "Photographer UI" },
+  // { src: "/projects/PhotographerUi Design.webp", label: "Photographer UI" },
   { src: "/projects/Pmake.webp", label: "Pmake" },
   { src: "/projects/RajasthanAutoDistributor.webp", label: "Rajasthan Auto Distributor" },
   { src: "/projects/RuhaniTrips (1).webp", label: "Ruhani Trips" },
@@ -79,9 +79,12 @@ export default function Hero() {
   const doubled = [...projects, ...projects];
 
   return (
-    <section id="home" className="relative bg-white dark:bg-[#0a0a0f] pt-24 pb-0 overflow-hidden">
+    <section id="home" className="relative bg-white dark:bg-[#0a0a0f] pt-32 pb-0 overflow-hidden">
       {/* dot-grid background that fades out from the top, left and right edges */}
-      <div className="absolute inset-0 dot-grid dot-fade pointer-events-none" />
+      <div className="absolute inset-0 dot-grid dot-grid-sm dot-fade pointer-events-none" />
+      {/* soft gradient glow, matching the services detail pages */}
+      <div className="pointer-events-none absolute -top-24 right-0 w-[34rem] h-[34rem] rounded-full bg-gradient-to-bl from-[#764ba2]/25 via-[#667eea]/15 to-transparent blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-gradient-to-tr from-[#667eea]/20 to-transparent blur-3xl" />
       {/* soft fade just above the carousel */}
       <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-b from-transparent to-white dark:to-[#0a0a0f] pointer-events-none" />
 
@@ -99,9 +102,11 @@ export default function Hero() {
         {/* Sub */}
         <motion.p
           {...fadeUp(0.2)}
-          className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-6"
+          className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl mx-auto mb-6"
         >
-          Smart IT solutions that power your growth — from web and app development to design and digital ads.
+          Where bold ideas meet flawless execution —
+          <br />
+          we build digital experiences that drive growth.
         </motion.p>
 
         {/* CTAs */}
@@ -111,13 +116,13 @@ export default function Hero() {
         >
           <a
             href="/contact"
-            className="gradient-bg text-white px-8 py-3.5 rounded-xl font-semibold text-base hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            className="gradient-bg text-white px-9 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
             Book a Call
           </a>
           <a
             href="#services"
-            className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700 px-8 py-3.5 rounded-xl font-semibold text-base hover:border-[#667eea] hover:text-[#667eea] transition-all shadow-sm"
+            className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700 px-9 py-4 rounded-full font-semibold text-lg hover:border-[#667eea] hover:text-[#667eea] transition-all shadow-sm"
           >
             Our Services
           </a>
