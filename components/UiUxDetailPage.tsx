@@ -11,7 +11,7 @@ import ContactFormCard from "./ContactFormCard";
 const designSolutions = [
   {
     title: "User Research",
-    desc: "Interviews, surveys, and analytics that uncover what your users actually need — not what we assume.",
+    desc: "Interviews, surveys, and analytics that uncover what your users actually need, not what we assume.",
     icon: "M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z",
   },
   {
@@ -21,37 +21,37 @@ const designSolutions = [
   },
   {
     title: "Interaction Design",
-    desc: "Micro-animations and transitions that guide attention and make every action feel effortless.",
+    desc: "Micro animations and transitions that guide attention and make every action feel effortless.",
     icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
   },
   {
     title: "Design Systems",
-    desc: "Reusable token-based component libraries that keep your product consistent as it scales.",
+    desc: "Reusable token based component libraries that keep your product consistent as it scales.",
     icon: "M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z",
   },
   {
-    title: "Mobile-First Design",
+    title: "Mobile First Design",
     desc: "Seamless experiences designed for the smallest screen first, then scaled up gracefully.",
     icon: "M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z",
   },
   {
     title: "Accessibility (a11y)",
-    desc: "WCAG-compliant color, contrast, and keyboard flows so every user can use your product.",
+    desc: "WCAG compliant color, contrast, and keyboard flows so every user can use your product.",
     icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
   },
 ];
 
 const ecosystems = [
-  { title: "SaaS Dashboards", desc: "Data-dense UIs that stay clear", icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" },
-  { title: "E-commerce", desc: "Checkout flows that convert", icon: "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" },
-  { title: "Mobile Apps", desc: "Native-feeling iOS & Android", icon: "M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z" },
+  { title: "SaaS Dashboards", desc: "Data dense UIs that stay clear", icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" },
+  { title: "Ecommerce", desc: "Checkout flows that convert", icon: "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" },
+  { title: "Mobile Apps", desc: "Native feeling iOS & Android", icon: "M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z" },
   { title: "Marketing Sites", desc: "Stories that sell your brand", icon: "M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" },
 ];
 
 const visionSteps = [
   { n: "01", title: "Discovery", desc: "Stakeholder interviews, user research, and competitive audits to define the problem space." },
   { n: "02", title: "Strategy", desc: "User personas, journey maps, and flows that turn the research into a clear direction." },
-  { n: "03", title: "Design", desc: "Wireframes evolving into polished, high-fidelity UI with motion and interaction detail." },
+  { n: "03", title: "Design", desc: "Wireframes evolving into polished, high fidelity UI with motion and interaction detail." },
   { n: "04", title: "Iteration", desc: "Usability testing and refinement loops until the experience performs in the real world." },
 ];
 
@@ -60,7 +60,7 @@ const packageItems = [
   "Full design system & component library",
   "User research & interview documentation",
   "Accessibility & compliance report",
-  "High-fidelity UI mockups for developers",
+  "High fidelity UI mockups for developers",
   "Style guides & typography scales",
 ];
 
@@ -76,7 +76,7 @@ const transformations = [
   {
     name: "Finance App UI",
     type: "Mobile App UI",
-    desc: "A clean, data-dense mobile finance dashboard designed for clarity and trust at a glance.",
+    desc: "A clean, data dense mobile finance dashboard designed for clarity and trust at a glance.",
     img: "/projects/Finance%20App%20UI.webp",
   },
   {
@@ -87,14 +87,14 @@ const transformations = [
   },
   {
     name: "Shopfront",
-    type: "E-commerce UI",
-    desc: "A polished e-commerce interface built to guide shoppers smoothly from browse to checkout.",
+    type: "Ecommerce UI",
+    desc: "A polished ecommerce interface built to guide shoppers smoothly from browse to checkout.",
     img: "/projects/ecomerce%20ui.webp",
   },
   {
     name: "Wanderlust",
     type: "Landing Page UI",
-    desc: "A story-driven landing page design crafted to convert first-time visitors into leads.",
+    desc: "A story driven landing page design crafted to convert first-time visitors into leads.",
     img: "/projects/Travel%20landaing%20Ui%20Design.webp",
   },
 ];
@@ -102,23 +102,23 @@ const transformations = [
 const faqs = [
   {
     q: "How long does a typical UI/UX project take?",
-    a: "A focused app or website design takes 2–4 weeks. Larger products with research, testing, and a full design system typically run 4–8 weeks. You get a clear timeline before we start.",
+    a: "A focused app or website design takes 2 to 4 weeks. Larger products with research, testing, and a full design system typically run 4 to 8 weeks. You get a clear timeline before we start.",
   },
   {
     q: "Will we own the design source files?",
-    a: "Yes — 100%. You get the complete Figma files, the design system, all assets, and full IP ownership at handoff.",
+    a: "Yes, 100%. You get the complete Figma files, the design system, all assets, and full IP ownership at handoff.",
   },
   {
     q: "Do you provide development services too?",
-    a: "We do. Our in-house engineering team can take the designs straight to production, or we hand off developer-ready specs to your own team.",
+    a: "We do. Our in house engineering team can take the designs straight to production, or we hand off developer ready specs to your own team.",
   },
   {
     q: "How do you handle revisions and feedback?",
-    a: "Design is shared in weekly review sessions with structured feedback rounds. Each milestone includes revision cycles, so nothing moves forward without your sign-off.",
+    a: "Design is shared in weekly review sessions with structured feedback rounds. Each milestone includes revision cycles, so nothing moves forward without your sign off.",
   },
   {
     q: "Can you design for existing products?",
-    a: "Absolutely. We frequently audit and redesign live products — improving usability and conversion without disrupting your existing users.",
+    a: "Absolutely. We frequently audit and redesign live products, improving usability and conversion without disrupting your existing users.",
   },
 ];
 
@@ -149,8 +149,8 @@ export default function UiUxDetailPage() {
         <div className="pointer-events-none absolute -top-24 right-0 w-[34rem] h-[34rem] rounded-full bg-gradient-to-bl from-[#764ba2]/25 via-[#667eea]/15 to-transparent blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-gradient-to-tr from-[#667eea]/20 to-transparent blur-3xl" />
 
-        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start">
-          <div className="lg:col-span-2">
+        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-5 gap-12 items-start">
+          <div className="lg:col-span-3">
 
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white leading-[0.98] mb-3">
               UI/UX Design
@@ -159,13 +159,12 @@ export default function UiUxDetailPage() {
               that feels right.
             </p>
             <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed">
-              We create human-centric design experiences that bridge the gap between your
-              brand and business objectives. Beautiful, functional, and intuitive —
-              from first wireframe to final pixel.
+              We create human centric design experiences that bridge the gap between your
+              brand and business objectives. Beautiful, functional, and intuitive, from first wireframe to final pixel.
             </p>
           </div>
 
-          <div className="lg:col-span-1 lg:sticky lg:top-28">
+          <div className="lg:col-span-2 lg:sticky lg:top-28">
             <ContactFormCard service="UI/UX Design" />
           </div>
         </div>
@@ -180,7 +179,7 @@ export default function UiUxDetailPage() {
               Comprehensive Design <span className="gradient-text">Solutions</span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-16 text-lg">
-              From initial user research to pixel-perfect high-fidelity prototypes, we cover every stage of the design lifecycle.
+              From initial user research to pixel perfect high fidelity prototypes, we cover every stage of the design lifecycle.
             </p>
           </AnimateOnScroll>
 
@@ -270,7 +269,7 @@ export default function UiUxDetailPage() {
       {/* ── 6. WHAT YOU GET WITH OUR PACKAGE ─── */}
       <section id="package" className="py-16 px-4 bg-gray-50 dark:bg-[#0d0d15]">
         <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-stretch">
-          {/* Left: image — matches the height of the right column */}
+          {/* Left: image, matches the height of the right column */}
           <AnimateOnScroll direction="left" className="lg:h-full">
             <div className="relative group h-full">
               <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-[#667eea]/20 to-[#764ba2]/20 blur-xl opacity-70 group-hover:opacity-100 transition-opacity" />
@@ -322,7 +321,7 @@ export default function UiUxDetailPage() {
         <div className="max-w-5xl mx-auto px-6 text-center">
           <AnimateOnScroll>
             <p className="text-xs font-semibold tracking-[0.35em] uppercase text-gray-400 dark:text-gray-500 mb-10">
-              Powered by industry-leading design tools
+              Powered by industry leading design tools
             </p>
             <div className="flex flex-wrap items-center justify-center gap-x-14 gap-y-8">
               {designTools.map((t) => (
@@ -353,7 +352,7 @@ export default function UiUxDetailPage() {
                   Recent Design <span className="gradient-text">Transformations</span>
                 </h2>
                 <p className="text-gray-500 dark:text-gray-400 max-w-xl text-lg">
-                  A glimpse into the digital experiences we&rsquo;ve crafted for world-class brands.
+                  A glimpse into the digital experiences we&rsquo;ve crafted for world class brands.
                 </p>
               </div>
               <a href="/portfolio" className="group inline-flex items-center gap-2 text-sm font-semibold text-gray-900 dark:text-white whitespace-nowrap hover:gap-3 transition-all">
@@ -401,7 +400,7 @@ export default function UiUxDetailPage() {
         </div>
       </section>
 
-      {/* ── 10. TESTIMONIALS — portfolio brands ── */}
+      {/* ── 10. TESTIMONIALS, portfolio brands ── */}
       <ReviewsCarousel
         variant="muted"
         kicker="Social Proof"
@@ -432,9 +431,6 @@ export default function UiUxDetailPage() {
                   className="bg-white text-gray-900 px-8 py-3.5 rounded-full font-bold text-base hover:bg-gray-100 hover:-translate-y-0.5 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center gap-2.5"
                 >
                   Let&rsquo;s Connect
-                  <svg className="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                  </svg>
                 </a>
               </div>
             </div>

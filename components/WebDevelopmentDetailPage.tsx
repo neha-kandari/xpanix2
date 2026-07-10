@@ -12,7 +12,7 @@ import ReviewsCarousel from "./ReviewsCarousel";
 const foundationCards = [
   {
     title: "Conversion Focused",
-    desc: "We architect every layout, button, and flow around one goal — turning your visitors into paying customers.",
+    desc: "We architect every layout, button, and flow around one goal, turning your visitors into paying customers.",
     icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
   },
   {
@@ -22,7 +22,7 @@ const foundationCards = [
   },
   {
     title: "Scale & Security",
-    desc: "Built on enterprise-grade architecture that scales from 100 to 1 million users without missing a beat.",
+    desc: "Built on enterprise grade architecture that scales from 100 to 1 million users without missing a beat.",
     icon: "M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z",
   },
 ];
@@ -30,25 +30,25 @@ const foundationCards = [
 const solutions = [
   {
     title: "Full Stack",
-    desc: "End-to-end web applications with robust backends, real-time frontends, APIs, and cloud infrastructure — built to last.",
+    desc: "End-to-end web applications with robust backends, real time frontends, APIs, and cloud infrastructure, built to last.",
     tags: ["React", "Node.js", "API"],
     icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
   },
   {
     title: "Shopify",
-    desc: "Expert Shopify development — custom themes, app integrations, and headless storefronts that turn browsers into buyers.",
+    desc: "Expert Shopify development, custom themes, app integrations, and headless storefronts that turn browsers into buyers.",
     tags: ["Shopify", "Liquid", "Headless"],
     icon: "M16 11c0 2.209-1.791 4-4 4s-4-1.791-4-4 1.791-4 4-4 4 1.791 4 4zm5-5H3v13a2 2 0 002 2h14a2 2 0 002-2V6zm-9-4H3v2h18V2h-9z",
   },
   {
     title: "Wordpress",
-    desc: "High-converting custom storefronts and online stores built to scale — fast checkout, smart product pages, and seamless payments.",
+    desc: "High converting custom storefronts and online stores built to scale, fast checkout, smart product pages, and seamless payments.",
     tags: ["Custom Store", "Payments", "Cart"],
     icon: "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z",
   },
   {
     title: "Framer",
-    desc: "Stunning, interactive websites built in Framer — pixel-perfect animations, no-code CMS, and blazing-fast delivery.",
+    desc: "Stunning, interactive websites built in Framer, pixel perfect animations, no code CMS, and blazing fast delivery.",
     tags: ["Framer", "Motion", "CMS"],
     icon: "M5 3h14l-7 7-7-7zm7 7l7 11H5l7-11z",
   },
@@ -58,17 +58,17 @@ const solutions = [
 const blueprint = [
   { n: "01", title: "Discovery & Strategy", desc: "We dig into your business model, audience, and competitors to map a winning approach." },
   { n: "02", title: "Architecture & UX", desc: "Sitemaps, user flows, and wireframes that lock structure before a pixel is styled." },
-  { n: "03", title: "Design Approval", desc: "High-fidelity, on-brand designs reviewed and signed off — no surprises later." },
+  { n: "03", title: "Design Approval", desc: "High fidelity, on brand designs reviewed and signed off, no surprises later." },
   { n: "04", title: "Iterative Coding", desc: "Clean, typed, reviewed code shipped in weekly sprints you can see and test." },
   { n: "05", title: "QA & Performance", desc: "Rigorous testing across devices and browsers, tuned to a 95+ Lighthouse score." },
-  { n: "06", title: "Launch & Support", desc: "Zero-downtime deployment, analytics wiring, and ongoing care after go-live." },
+  { n: "06", title: "Launch & Support", desc: "Zero downtime deployment, analytics wiring, and ongoing care after go live." },
 ];
 
 const standards = [
   { title: "SSL Encryption", desc: "Security is paramount. Every site comes with free SSL setup." },
   { title: "Mobile Responsive", desc: "Seamless experience across mobile, tablet, and desktop." },
   { title: "Speed Optimization", desc: "90+ Google PageSpeed scores targeted by default." },
-  { title: "SEO Meta Tags", desc: "Built-in structured data and meta optimization." },
+  { title: "SEO Meta Tags", desc: "Built in structured data and meta optimization." },
   { title: "CMS Integration", desc: "Easy content editing via Sanity, Strapi, or Shopify." },
   { title: "Analytics Setup", desc: "Google Analytics and heatmap tracking pre-installed." },
 ];
@@ -84,7 +84,7 @@ const techStack = [
   { name: "Express", group: "Backend", logo: `${DEVICON}/express/express-original.svg`, invertDark: true },
   { name: "MongoDB", group: "Database", logo: `${DEVICON}/mongodb/mongodb-original.svg` },
   { name: "PostgreSQL", group: "Database", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
-  { name: "Shopify", group: "E-commerce", logo: "https://cdn.simpleicons.org/shopify" },
+  { name: "Shopify", group: "Ecommerce", logo: "https://cdn.simpleicons.org/shopify" },
   { name: "WordPress", group: "CMS", logo: `${DEVICON}/wordpress/wordpress-plain.svg`, invertDark: true },
   { name: "Vercel", group: "Hosting", logo: `${DEVICON}/vercel/vercel-original.svg`, invertDark: true },
   { name: "AWS", group: "Hosting", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg`, invertDark: true },
@@ -92,56 +92,50 @@ const techStack = [
 
 const boldProjects = [
   {
-    name: "Chinar Logistics",
-    desc: "A conversion-focused logistics website with service enquiry flows and a clean, trust-building brand presence.",
-    img: "/projects/Chinar.webp",
-    tag: "Logistics / Website",
-    url: "https://chinarroadlines.com/",
+    name: "Tripsee",
+    desc: "A modern travel platform with rich destination discovery and a seamless booking experience that keeps users exploring.",
+    img: "/projects/Tripsee%20(3).webp",
+    tag: "Travel / Website",
+    url: "https://www.tripseetravel.in/",
   },
   {
     name: "Rudraksh Travel",
-    desc: "An immersive travel website with curated tour packages and a story-driven layout that turns visitors into booked trips.",
+    desc: "An immersive travel website with curated tour packages and a story driven layout that turns visitors into booked trips.",
     img: "/projects/Rudraksh%20Travles.webp",
     tag: "Travel / Website",
     url: "https://www.rudrakshtravelspnp.com/",
   },
   {
-    name: "Perfect Group",
-    desc: "A polished corporate website that positions the brand as an authority in its industry.",
-    img: "/projects/Perfect.webp",
-    tag: "Corporate / Website",
-    url: "https://www.perfectplastotech.com/",
+    name: "Rajasthan Auto Distributors",
+    desc: "A distributor website built for clear product discovery and fast enquiry handling across a wide catalog.",
+    img: "/projects/RajasthanAutoDistributor.webp",
+    tag: "Distributor / Website",
+    url: "https://www.rajasthanautodistributors.com/",
   },
   {
-    name: "WoodyPolo",
-    desc: "A custom e-commerce storefront built for fast browsing and frictionless checkout.",
-    img: "/projects/WoodyPolo.webp",
-    tag: "E-commerce / Website",
-    url: "https://neha-kandari.github.io/photoframe/",
+    name: "Chinar Logistics",
+    desc: "A conversion focused logistics website with service enquiry flows and a clean, trust building brand presence.",
+    img: "/projects/Chinar.webp",
+    tag: "Logistics / Website",
+    url: "https://chinarroadlines.com/",
   },
 ];
 
 const partnerStats = [
   { value: "98%", label: "Client retention" },
-  { value: "12", label: "In-house engineers" },
+  { value: "12", label: "In house engineers" },
   { value: "150+", label: "Sites launched" },
   { value: "4.9", label: "Avg. rating" },
-];
-
-const partnerPoints = [
-  "Direct access to lead developers (no account managers)",
-  "Transparent weekly technical updates and demos",
-  "100% IP ownership and clean documentation",
 ];
 
 const faqs = [
   {
     q: "How long does a typical web project take?",
-    a: "A landing page ships in about a week. Business websites take 2–4 weeks, and complex web apps or e-commerce builds typically run 4–8 weeks. You get a clear timeline before we start.",
+    a: "A landing page ships in about a week. Business websites take 2 to 4 weeks, and complex web apps or ecommerce builds typically run 4 to 8 weeks. You get a clear timeline before we start.",
   },
   {
     q: "Do you provide hosting and maintenance?",
-    a: "Yes — we handle domain, hosting (Vercel, AWS, Hostinger, or your preference), SSL, deployment, and offer monthly maintenance plans covering updates, backups, and monitoring.",
+    a: "Yes, we handle domain, hosting (Vercel, AWS, Hostinger, or your preference), SSL, deployment, and offer monthly maintenance plans covering updates, backups, and monitoring.",
   },
   {
     q: "Will my site be easy to update myself?",
@@ -152,8 +146,8 @@ const faqs = [
     a: "Yes. We run a performance audit, fix the bottlenecks (images, scripts, hosting, code), and routinely take sites from failing scores to 90+ on Lighthouse.",
   },
   {
-    q: "Will the website be SEO-friendly?",
-    a: "Every build follows SEO best practices — semantic HTML, schema markup, fast load times, sitemaps, and on-page optimization for your target keywords.",
+    q: "Will the website be SEO friendly?",
+    a: "Every build follows SEO best practices, semantic HTML, schema markup, fast load times, sitemaps, and on page optimization for your target keywords.",
   },
 ];
 
@@ -184,8 +178,8 @@ export default function WebDevelopmentDetailPage() {
         <div className="pointer-events-none absolute -top-24 right-0 w-[34rem] h-[34rem] rounded-full bg-gradient-to-bl from-[#764ba2]/25 via-[#667eea]/15 to-transparent blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-gradient-to-tr from-[#667eea]/20 to-transparent blur-3xl" />
 
-        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start">
-          <div className="lg:col-span-2">
+        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-5 gap-12 items-start">
+          <div className="lg:col-span-3">
 
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white leading-[0.98] mb-3">
               Web Development
@@ -195,12 +189,12 @@ export default function WebDevelopmentDetailPage() {
             </p>
             <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed">
               Professional web development services for growing brands. Custom websites,
-              e-commerce stores, landing pages, and full-stack web apps — built fast,
-              SEO-friendly, and mobile-first.
+              ecommerce stores, landing pages, and full stack web apps, built fast,
+              SEO friendly, and mobile first.
             </p>
           </div>
 
-          <div className="lg:col-span-1 lg:sticky lg:top-28">
+          <div className="lg:col-span-2 lg:sticky lg:top-28">
             <ContactFormCard service="Web Development" />
           </div>
         </div>
@@ -216,7 +210,7 @@ export default function WebDevelopmentDetailPage() {
               <span className="gradient-text">Matters</span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-16 text-lg">
-              Your website is your 24/7 salesperson. We build platforms that don&rsquo;t just look pretty — they drive revenue.
+              Your website is your 24/7 salesperson. We build platforms that don&rsquo;t just look pretty. They drive revenue.
             </p>
           </AnimateOnScroll>
 
@@ -291,7 +285,7 @@ export default function WebDevelopmentDetailPage() {
       {/* ── 5. OUR 6-STEP BLUEPRINT ───────────── */}
       <section className="py-24 px-4 bg-gray-50 dark:bg-[#0d0d15]">
         <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-5 gap-14">
-          {/* LEFT: heading — sticky while the timeline scrolls past */}
+          {/* LEFT: heading, sticky while the timeline scrolls past */}
           <div className="lg:col-span-2">
             <div className="lg:sticky lg:top-28">
               <AnimateOnScroll direction="left">
@@ -410,7 +404,7 @@ export default function WebDevelopmentDetailPage() {
               The Engine Under the <span className="gradient-text">Hood</span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">
-              We use the world&rsquo;s most powerful technologies to build future-proof platforms.
+              We use the world&rsquo;s most powerful technologies to build future proof platforms.
             </p>
           </AnimateOnScroll>
         </div>
@@ -460,7 +454,7 @@ export default function WebDevelopmentDetailPage() {
                   Built for the <span className="gradient-text">Bold</span>
                 </h2>
                 <p className="text-gray-400 max-w-xl text-lg">
-                  Explore how we&rsquo;ve helped startups and Fortune 500s scale.
+                  Explore how we&rsquo;ve helped startups.
                 </p>
               </div>
               <a href="/portfolio" className="group inline-flex items-center gap-2 text-sm font-semibold text-white whitespace-nowrap hover:gap-3 transition-all">
@@ -539,29 +533,17 @@ export default function WebDevelopmentDetailPage() {
               <p className="text-gray-500 dark:text-gray-400 mb-8 text-lg">
                 We know how you trust your business success on much of your code quality. We&rsquo;re here for the long run.
               </p>
-              <ul className="flex flex-col gap-4">
-                {partnerPoints.map((p) => (
-                  <li key={p} className="group flex items-start gap-3">
-                    <span className="w-6 h-6 mt-0.5 rounded-full gradient-bg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </span>
-                    <span className="text-base font-medium text-gray-700 dark:text-gray-200">{p}</span>
-                  </li>
-                ))}
-              </ul>
             </AnimateOnScroll>
           </div>
         </div>
       </section>
 
-      {/* ── 10. TESTIMONIALS — portfolio brands ── */}
+      {/* ── 10. TESTIMONIALS, portfolio brands ── */}
       <ReviewsCarousel
         variant="muted"
         kicker="Testimonials"
         title={<>Trusted by the brands <span className="gradient-text">we build for.</span></>}
-        subtitle="Don't take our word for it — here's what the businesses we've built for say."
+        subtitle="Don't take our word for it, here's what the businesses we've built for say."
       />
 
       {/* ── 11. CTA ──────────────────────────── */}
@@ -577,7 +559,7 @@ export default function WebDevelopmentDetailPage() {
                 Ready to build your digital empire?
               </h2>
               <p className="relative text-base md:text-lg opacity-90 max-w-xl mx-auto mb-9">
-                Join 150+ brands that have trusted their digital presence with our world-class engineering team.
+                Join 150+ brands that have trusted their digital presence with our world class engineering team.
               </p>
               <div className="relative flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
@@ -587,9 +569,6 @@ export default function WebDevelopmentDetailPage() {
                   className="bg-white text-gray-900 px-8 py-3.5 rounded-full font-bold text-base hover:bg-gray-100 hover:-translate-y-0.5 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center gap-2.5"
                 >
                   Let&rsquo;s Connect
-                  <svg className="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                  </svg>
                 </a>
               </div>
             </div>

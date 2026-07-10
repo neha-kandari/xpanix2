@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 /** Resets scroll to the top on every route change and disables the browser's
-    scroll restoration, so pages always open from the top — not wherever the
+    scroll restoration, so pages always open from the top, not wherever the
     previous page (or a tall sticky section) left the scroll position. */
 export default function ScrollToTop() {
   const pathname = usePathname();

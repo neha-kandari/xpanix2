@@ -37,7 +37,7 @@ export default function Footer() {
               <img src="/assests/LogoDark.webp" alt="Xpanix" className="h-9 w-auto" />
             </a>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Empowering businesses through innovative digital solutions and cutting-edge technology services.
+              Empowering businesses through innovative digital solutions and cutting edge technology services.
             </p>
             <div className="flex gap-3 mt-6">
               <a

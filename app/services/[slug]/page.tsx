@@ -24,9 +24,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = getService(slug);
-  if (!service) return { title: "Service — Xpanix" };
+  if (!service) return { title: "Service, Xpanix" };
   return {
-    title: `${service.title} — Xpanix`,
+    title: `${service.title}, Xpanix`,
     description: service.short,
     alternates: { canonical: `/services/${service.slug}` },
   };

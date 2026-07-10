@@ -9,7 +9,7 @@ export default function Testimonials() {
         title={
           <>
             We love what we do, and{" "}
-            <span className="gradient-text">they love the results.</span>
+            <span className="gradient-text">you love the results.</span>
           </>
         }
         subtitle="Real words from the brands we've designed, built, and grown."

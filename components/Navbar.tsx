@@ -36,7 +36,7 @@ export default function Navbar() {
     closeTimer.current = setTimeout(() => setServicesOpen(false), 120);
   };
 
-  // shared classes — text stays VISIBLE on hover/click (color shift + subtle bg, no white-on-white)
+  // shared classes, text stays VISIBLE on hover/click (color shift + subtle bg, no white on white)
   const linkBase =
     "text-base font-medium px-4 py-2 rounded-lg transition-all whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-[#764ba2]";
   const linkInactive =
@@ -55,8 +55,10 @@ export default function Navbar() {
           <img src="/assests/LogoDark.webp" alt="Xpanix" className="h-11 w-auto hidden dark:block" />
         </a>
 
-        {/* Center nav */}
-        <div className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
+        {/* Center nav, a plain flex child (not absolutely centered) so
+            justify-between on the row gives equal gaps on both sides,
+            regardless of how wide the logo vs. the right-side group is. */}
+        <div className="hidden md:flex items-center gap-1">
           {links.map((link) => {
             const active = isActive(link.href);
 
@@ -193,7 +195,7 @@ export default function Navbar() {
                         className="text-xs text-gray-600 dark:text-gray-400 hover:text-[#764ba2] py-1 px-3"
                         onClick={() => setMenuOpen(false)}
                       >
-                        — {s.title}
+                        {s.title}
                       </a>
                     ))}
                   </div>

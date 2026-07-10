@@ -8,8 +8,8 @@ export type PortfolioReview = {
   to: string;
 };
 
-/** Genuine-sounding reviews from the brands whose projects appear in the
-    Xpanix portfolio. Company name only — no individual person names. */
+/** Genuine sounding reviews from the brands whose projects appear in the
+    Xpanix portfolio. Company name only, no individual person names. */
 export const portfolioReviews: PortfolioReview[] = [
   {
     company: "Rudraksh Travels",
@@ -33,7 +33,7 @@ export const portfolioReviews: PortfolioReview[] = [
     company: "Ruhani Trips",
     category: "Travel Agency",
     quote:
-      "They delivered a website that looks premium and loads quickly. Communication stayed smooth from the first call to launch — exactly the partner we needed.",
+      "They delivered a website that looks premium and loads quickly. Communication stayed smooth from the first call to launch, exactly the partner we needed.",
     initials: "RH",
     from: "#10B981",
     to: "#0EA5E9",
@@ -67,7 +67,7 @@ export const portfolioReviews: PortfolioReview[] = [
   },
   {
     company: "WoodyPolo",
-    category: "E-commerce",
+    category: "Ecommerce",
     quote:
       "Our online store looks premium and the shopping experience is smooth. Sales have grown steadily since launch and the site has been rock solid.",
     initials: "WP",
@@ -78,7 +78,7 @@ export const portfolioReviews: PortfolioReview[] = [
     company: "Chinar Logistics",
     category: "Logistics",
     quote:
-      "The quote-request flow they designed made it far easier for clients to reach us. Fast, conversion-focused, and exactly what our business needed.",
+      "The quote request flow they designed made it far easier for clients to reach us. Fast, conversion focused, and exactly what our business needed.",
     initials: "CL",
     from: "#10B981",
     to: "#059669",
@@ -96,7 +96,7 @@ export const portfolioReviews: PortfolioReview[] = [
     company: "Pmake",
     category: "Brand Studio",
     quote:
-      "A clean, fast website that gave our brand instant credibility. The team was easy to work with from start to finish — highly recommended.",
+      "A clean, fast website that gave our brand instant credibility. The team was easy to work with from start to finish, highly recommended.",
     initials: "PM",
     from: "#0EA5E9",
     to: "#6366F1",

@@ -144,7 +144,7 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
               <div className="flex-1">
                 <p className="text-base font-bold text-gray-900 dark:text-white">{post.author.name}</p>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {post.author.role} at Xpanix — writing from the trenches of real client projects.
+                  {post.author.role} at Xpanix, writing from the trenches of real client projects.
                 </p>
               </div>
               <a

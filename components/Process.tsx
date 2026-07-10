@@ -50,9 +50,9 @@ export default function Process() {
                     <div className="w-3 h-3 rounded-full bg-yellow-400" />
                     <div className="w-3 h-3 rounded-full bg-green-400" />
                   </div>
-                  <div className="flex-1 bg-gray-700/60 rounded-md px-3 py-1 text-xs text-gray-300">
+                  {/* <div className="flex-1 bg-gray-700/60 rounded-md px-3 py-1 text-xs text-gray-300">
                     yourbrand.com/performance
-                  </div>
+                  </div> */}
                   <span className="flex items-center gap-1.5 text-[10px] font-semibold text-green-400">
                     <span className="relative flex w-2 h-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
@@ -75,15 +75,14 @@ export default function Process() {
               {/* Right: copy */}
               <div className="text-center md:text-left">
                 <p className="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-4">
-                  Real-Time Results
+                  Real Time Results
                 </p>
                 <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white leading-tight mb-5">
                   Your digital growth,{" "}
                   <span className="gradient-text">always Xpanding.</span>
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-8 max-w-md mx-auto md:mx-0">
-                  Track every campaign, build, and metric for your website —
-                  and watch your growth compound in real time.
+                  Track every campaign, build, and metric for your website, and watch your growth compound in real time.
                 </p>
                 <a
                   href="https://wa.me/918930005190?text=Hi%20Xpanix!%20I'm%20ready%20to%20start%20growing%20my%20brand.%20Let's%20build%20something%20my%20competitors%20will%20envy!"

@@ -3,7 +3,7 @@ import HeroScrollEffect from "@/components/HeroScrollEffect";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Portfolio — Xpanix",
+  title: "Portfolio, Xpanix",
 };
 
 export default function PortfolioPage() {

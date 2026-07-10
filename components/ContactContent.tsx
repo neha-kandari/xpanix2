@@ -14,19 +14,20 @@ const contactChannels = [
   {
     title: "Call / WhatsApp",
     value: "+91 8930005190",
+    value2: "+91 8920944784",
     href: "https://wa.me/918930005190",
     icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
   },
   {
     title: "Visit us",
-    value: "2, Eadgah Road Model Town Panipat Haryana",
-    href: "https://www.google.com/maps/search/?api=1&query=2%2C%20Eadgah%20Road%20Model%20Town%20Panipat%20Haryana",
+    value: "Delhi/Haryana",
+    href: undefined as string | undefined,
     icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z",
   },
 ];
 
 const nextSteps = [
-  { n: "01", title: "We reply within 24 hours", desc: "A real person reads your message and responds with first thoughts — not an autoresponder." },
+  { n: "01", title: "We reply within 24 hours", desc: "A real person reads your message and responds with first thoughts, not an autoresponder." },
   { n: "02", title: "Free discovery call", desc: "A 30-minute call to understand your goals, constraints, and what success looks like." },
   { n: "03", title: "Clear proposal", desc: "Scope, timeline, and price in plain language. No surprises, no padded line items." },
 ];
@@ -90,8 +91,8 @@ export default function ContactContent() {
               Contact
             </span>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1] mb-4">
-              Let&rsquo;s start{" "}
-              <span className="font-serif-display italic gradient-text font-medium">something.</span>
+              Let&rsquo;s build what&rsquo;s{" "}
+              <span className="font-serif-display italic gradient-text font-medium">next.</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-2xl">
               Tell us where you want to go. We&rsquo;ll bring the map, the team, and the momentum.
@@ -117,7 +118,7 @@ export default function ContactContent() {
                   </div>
                   <h2 className="text-2xl font-extrabold text-gray-900 dark:text-white mb-2">Message received!</h2>
                   <p className="text-gray-500 dark:text-gray-400 mb-7 max-w-sm mx-auto">
-                    Thanks for reaching out — we&rsquo;ll get back to you within one business day.
+                    Thanks for reaching out, we&rsquo;ll get back to you within one business day.
                   </p>
                   <button
                     onClick={() => setSent(false)}
@@ -190,7 +191,7 @@ export default function ContactContent() {
                     </svg>
                   </button>
                   <p className="text-center text-xs text-gray-400 dark:text-gray-500">
-                    No spam, no sales pressure — just a thoughtful reply.
+                    No spam, no sales pressure, just a thoughtful reply.
                   </p>
                 </form>
               )}
@@ -199,12 +200,11 @@ export default function ContactContent() {
 
           {/* INFO SIDE */}
           <div className="lg:col-span-2 flex flex-col gap-5 lg:justify-between">
-            {contactChannels.map((c, i) => (
-              <AnimateOnScroll key={c.title} delay={i * 0.08} direction="right">
-                <a
-                  href={c.href}
-                  className="group flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-[#131320] border border-gray-200 dark:border-gray-800 hover:border-[#764ba2]/40 hover:-translate-y-0.5 hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-all duration-300"
-                >
+            {contactChannels.map((c, i) => {
+              const cardCls =
+                "group flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-[#131320] border border-gray-200 dark:border-gray-800 hover:border-[#764ba2]/40 hover:-translate-y-0.5 hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-all duration-300";
+              const inner = (
+                <>
                   <span className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 group-hover:rotate-6 transition-transform">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d={c.icon} />
@@ -213,10 +213,24 @@ export default function ContactContent() {
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">{c.title}</p>
                     <p className="text-base font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all">{c.value}</p>
+                    {c.value2 && (
+                      <p className="text-base font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all">{c.value2}</p>
+                    )}
                   </div>
-                </a>
-              </AnimateOnScroll>
-            ))}
+                </>
+              );
+              return (
+                <AnimateOnScroll key={c.title} delay={i * 0.08} direction="right">
+                  {c.href ? (
+                    <a href={c.href} className={cardCls}>
+                      {inner}
+                    </a>
+                  ) : (
+                    <div className={cardCls}>{inner}</div>
+                  )}
+                </AnimateOnScroll>
+              );
+            })}
 
             {/* Availability card */}
             <AnimateOnScroll delay={0.25} direction="right">
@@ -230,20 +244,51 @@ export default function ContactContent() {
                   <span className="text-xs font-bold tracking-[0.2em] uppercase">Currently accepting projects</span>
                 </div>
                 <p className="relative text-sm text-white/85 leading-relaxed">
-                  Only a handful of spots open each month — and they fill fast. Bring us your boldest idea and we&rsquo;ll give it our senior team, our full focus, and a launch that turns heads. The sooner you reach out, the sooner we start building something your competitors will wish they thought of first.
+                  Only a handful of spots open each month, and they fill fast. Bring us your boldest idea and we&rsquo;ll give it our senior team, our full focus, and a launch that turns heads. The sooner you reach out, the sooner we start building something your competitors will wish they thought of first.
                 </p>
               </div>
             </AnimateOnScroll>
 
             {/* Hours */}
             <AnimateOnScroll delay={0.3} direction="right">
-              <div className="p-5 rounded-2xl bg-gray-50 dark:bg-[#131320] border border-gray-200 dark:border-gray-800 text-sm">
-                <p className="font-bold text-gray-900 dark:text-white mb-2">Response hours</p>
-                {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].map((day) => (
-                  <div key={day} className="flex justify-between text-gray-500 dark:text-gray-400 mb-1 last:mb-0">
-                    <span>{day}</span><span>9:00 – 19:00 IST</span>
+              <div className="p-5 rounded-2xl bg-gray-50 dark:bg-[#131320] border border-gray-200 dark:border-gray-800">
+                <p className="font-bold text-gray-900 dark:text-white mb-4 text-sm">Response hours</p>
+
+                <div className="flex items-center justify-between gap-3 mb-3">
+                  <div className="flex items-center gap-3">
+                    <span className="w-9 h-9 rounded-xl gradient-bg flex items-center justify-center flex-shrink-0">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white">Mon to Fri</p>
+                      <p className="text-xs text-gray-400 dark:text-gray-500">Fastest replies</p>
+                    </div>
                   </div>
-                ))}
+                  <span className="text-sm font-semibold text-gray-700 dark:text-gray-200">9:00 to 19:00</span>
+                </div>
+
+                <div className="h-px bg-gray-200 dark:bg-white/10 my-3" />
+
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <span className="w-9 h-9 rounded-xl bg-gray-200 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white">Sat to Sun</p>
+                      <p className="text-xs text-gray-400 dark:text-gray-500">Limited availability</p>
+                    </div>
+                  </div>
+                  <span className="text-sm font-semibold text-gray-700 dark:text-gray-200">10:00 to 16:00</span>
+                </div>
+
+                <p className="mt-4 pt-3 border-t border-gray-200 dark:border-white/10 text-xs text-gray-400 dark:text-gray-500">
+                  All times in IST (GMT+5:30)
+                </p>
               </div>
             </AnimateOnScroll>
           </div>

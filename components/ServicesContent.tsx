@@ -8,10 +8,10 @@ const services = [
     n: "01",
     label: "Build",
     title: "Web Development",
-    description: "Fast, scalable websites and apps built on modern frameworks — the technical foundation your brand grows on.",
+    description: "Fast, scalable websites and apps built on modern frameworks, the technical foundation your brand grows on.",
     features: [
       "Landing pages that convert",
-      "Full-stack Next.js & React",
+      "Full stack Next.js & React",
       "Shopify stores that scale",
       "Web apps & dashboards",
       "API integrations",
@@ -23,13 +23,13 @@ const services = [
     n: "02",
     label: "Design",
     title: "UI/UX Design",
-    description: "Interfaces that convert. We design products your users love — from wireframes to polished, pixel-perfect UI.",
+    description: "Interfaces that convert. We design products your users love, from wireframes to polished, pixel perfect UI.",
     features: [
       "User research & journeys",
       "Wireframes & prototypes",
       "Polished Figma UI",
       "Reusable design systems",
-      "Developer-ready handoff",
+      "Developer ready handoff",
       "Usability testing",
     ],
     img: "/projects/Finance%20App%20UI.webp",
@@ -38,14 +38,14 @@ const services = [
     n: "03",
     label: "Reach",
     title: "Meta Ads",
-    description: "High-converting Facebook & Instagram campaigns — scroll-stopping creatives and data-driven targeting that scales ROI.",
+    description: "High converting Facebook & Instagram campaigns, scroll stopping creatives and data driven targeting that scales ROI.",
     features: [
       "Campaign strategy",
-      "Scroll-stopping creatives",
+      "Scroll stopping creatives",
       "Audience research",
       "A/B testing pipelines",
       "Funnel optimization",
-      "ROAS-focused reporting",
+      "ROAS focused reporting",
     ],
     img: "/projects/ecomerce%20ui.webp",
   },
@@ -53,10 +53,10 @@ const services = [
     n: "04",
     label: "Discover",
     title: "SEO",
-    description: "Rank higher and get found. We optimize your site end-to-end so the right customers discover you, month after month.",
+    description: "Rank higher and get found. We optimize your site end to end so the right customers discover you, month after month.",
     features: [
       "Technical SEO audit",
-      "On-page optimization",
+      "On page optimization",
       "Keyword research",
       "Quality link building",
       "Content strategy",
@@ -68,14 +68,14 @@ const services = [
     n: "05",
     label: "Capture",
     title: "Product Photography",
-    description: "Studio-grade product imagery that makes your brand look premium — crisp, styled, and ready for web, ads, and social.",
+    description: "Studio grade product imagery that makes your brand look premium, crisp, styled, and ready for web, ads, and social.",
     features: [
       "Studio product shoots",
       "Lifestyle scenes",
       "Professional retouching",
       "360° product spins",
-      "Ad-ready variations",
-      "Brand-consistent styling",
+      "Ad ready variations",
+      "Brand consistent styling",
     ],
     img: "/projects/Opal.webp",
   },
@@ -87,8 +87,7 @@ function ServicesBigHero() {
     <section className="relative pt-32 pb-8 px-6 overflow-hidden bg-white dark:bg-[#0a0a0f]">
       <div className="absolute inset-0 dot-grid dot-fade pointer-events-none" />
       <div className="relative max-w-7xl mx-auto">
-        <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 dark:text-gray-400 mb-4">
-          — Our offering
+        <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 dark:text-gray-400 mb-4">, Our offering
         </p>
         <h1 className="font-bold uppercase tracking-tighter leading-[0.85] text-gray-900 dark:text-white text-[20vw] md:text-[17vw]">
           SERVICES
@@ -101,11 +100,11 @@ function ServicesBigHero() {
   );
 }
 
-/* ─── SERVICE ROW (plain row — no card, no border, no shadow) ─── */
+/* ─── SERVICE ROW (plain row, no card, no border, no shadow) ─── */
 function ServiceRow({ s }: { s: (typeof services)[number] }) {
   return (
     <div className="bg-white dark:bg-[#0a0a0f]">
-      {/* GLASS TOP STRIP — backdrop spans full width, content aligns with hero container */}
+      {/* GLASS TOP STRIP, backdrop spans full width, content aligns with hero container */}
       <div className="relative backdrop-blur-2xl bg-white/70 dark:bg-[#0a0a0f]/70 pt-6 pb-0">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-end justify-between gap-6">
@@ -121,7 +120,7 @@ function ServiceRow({ s }: { s: (typeof services)[number] }) {
         </div>
       </div>
 
-      {/* BODY — same max-w-7xl px-6 container, so left edge aligns with hero "services" */}
+      {/* BODY, same max-w-7xl px-6 container, so left edge aligns with hero "services" */}
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-20">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1] mb-14">
           {s.title}
@@ -157,7 +156,7 @@ function ServiceRow({ s }: { s: (typeof services)[number] }) {
   );
 }
 
-/* ─── STICKY STACK — plain rows, sticky stacking ─── */
+/* ─── STICKY STACK, plain rows, sticky stacking ─── */
 function ServicesStack() {
   return (
     <section className="relative bg-white dark:bg-[#0a0a0f]">
@@ -179,8 +178,8 @@ function ServicesStack() {
 /* ─── WHY CHOOSE US (3D tilt cards) ─── */
 const reasons = [
   {
-    title: "Outcome-focused",
-    desc: "Every decision is tied to measurable growth — traffic, conversion, revenue — not just deliverables on a checklist.",
+    title: "Outcome focused",
+    desc: "Every decision is tied to measurable growth, traffic, conversion, revenue, not just deliverables on a checklist.",
     icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
     stat: "+48%",
     statLabel: "Avg traffic lift",
@@ -194,28 +193,28 @@ const reasons = [
   },
   {
     title: "Fast turnarounds",
-    desc: "Lean workflows let us ship in days, not months. No bureaucracy, no endless rounds — just polished work, fast.",
+    desc: "Lean workflows let us ship in days, not months. No bureaucracy, no endless rounds, just polished work, fast.",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
     stat: "48h",
     statLabel: "First draft",
   },
   {
-    title: "One team, end-to-end",
-    desc: "Brand, web, ads, content, and analytics under one roof. One point of contact, one bill, zero hand-off friction.",
+    title: "One team, end to end",
+    desc: "Brand, web, ads, content, and analytics under one roof. One point of contact, one bill, zero hand off friction.",
     icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2",
     stat: "5-in-1",
     statLabel: "Disciplines",
   },
   {
     title: "Transparent process",
-    desc: "Weekly check-ins, a live dashboard, and clear scopes mean you always know exactly where things stand.",
+    desc: "Weekly check ins, a live dashboard, and clear scopes mean you always know exactly where things stand.",
     icon: "M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z",
     stat: "100%",
     statLabel: "Visibility",
   },
   {
     title: "Built to compound",
-    desc: "Every project is engineered to keep paying off — SEO that ranks higher monthly, ads that learn, code that scales.",
+    desc: "Every project is engineered to keep paying off, SEO that ranks higher monthly, ads that learn, code that scales.",
     icon: "M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941",
     stat: "3.4x",
     statLabel: "Avg ROAS",
@@ -233,8 +232,7 @@ function WhyChooseUs() {
 
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 dark:text-gray-400 mb-4">
-            — Why Xpanix
+          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-gray-500 dark:text-gray-400 mb-4">, Why Xpanix
           </p>
           <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-[1.05] mb-5">
             Why teams choose{" "}
@@ -242,7 +240,7 @@ function WhyChooseUs() {
             with us.
           </h2>
           <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-            Six reasons ambitious brands keep coming back — and bring their friends.
+            Six reasons ambitious brands keep coming back, and bring their friends.
           </p>
         </div>
 

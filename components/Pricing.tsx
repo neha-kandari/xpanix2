@@ -57,7 +57,7 @@ export default function Pricing() {
             <span className="gradient-text">no hidden fees.</span>
           </h2>
           <p className="text-center text-gray-500 max-w-xl mx-auto mb-8 text-lg">
-            Pick a plan that fits your needs. Pause or cancel anytime — no questions asked.
+            Pick a plan that fits your needs. Pause or cancel anytime, no questions asked.
           </p>
 
           {/* Toggle */}
@@ -120,7 +120,7 @@ export default function Pricing() {
                     </div>
                     {isYearly && (
                       <p className="text-green-400 text-xs font-semibold mt-1">
-                        Billed annually — save ${((plan.price.monthly - plan.price.yearly) * 12).toLocaleString()}/yr
+                        Billed annually, save ${((plan.price.monthly - plan.price.yearly) * 12).toLocaleString()}/yr
                       </p>
                     )}
                   </div>

@@ -9,7 +9,7 @@ import ReviewsCarousel from "./ReviewsCarousel";
 
 const whyMatter = [
   {
-    title: "Hyper-Granular Targeting",
+    title: "Hyper Granular Targeting",
     desc: "Reach people by interest, behavior, and lookalike audiences with precision no other channel matches.",
     icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
   },
@@ -19,8 +19,8 @@ const whyMatter = [
     icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
   },
   {
-    title: "Full-Funnel Reach",
-    desc: "From cold discovery on Reels to retargeted checkout nudges — one platform covers the whole journey.",
+    title: "Full Funnel Reach",
+    desc: "From cold discovery on Reels to retargeted checkout nudges, one platform covers the whole journey.",
     icon: "M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z",
   },
 ];
@@ -28,17 +28,17 @@ const whyMatter = [
 const management = [
   {
     title: "Creative Production",
-    desc: "Scroll-stopping statics, video, and UGC-style creatives produced in-house.",
+    desc: "Scroll stopping statics, video, and UGC style creatives produced in house.",
     icon: "M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z",
   },
   {
     title: "Account Audits",
-    desc: "Deep, line-item reviews of your account structure, spend, and pixel health.",
+    desc: "Deep, line item reviews of your account structure, spend, and pixel health.",
     icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4",
   },
   {
     title: "Conversion API",
-    desc: "Server-side tracking that survives iOS updates and keeps your data accurate.",
+    desc: "Server side tracking that survives iOS updates and keeps your data accurate.",
     icon: "M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z",
   },
   {
@@ -51,41 +51,41 @@ const management = [
 const industries = [
   {
     key: "ecommerce",
-    label: "E-commerce",
-    heading: "Optimizing for E-commerce",
-    desc: "Catalog-driven campaigns engineered to push products into carts. We implement dynamic product ads and creative angles that show the right item to the right shopper at the right stage of the funnel.",
-    points: ["Dynamic Product Ads", "Custom Retention Loops", "CTR-focused creative testing"],
+    label: "Ecommerce",
+    heading: "Optimizing for Ecommerce",
+    desc: "Catalog driven campaigns engineered to push products into carts. We implement dynamic product ads and creative angles that show the right item to the right shopper at the right stage of the funnel.",
+    points: ["Dynamic Product Ads", "Custom Retention Loops", "CTR focused creative testing"],
     img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80",
   },
   {
     key: "saas",
     label: "SaaS",
     heading: "Optimizing for SaaS",
-    desc: "Demand-gen campaigns built around free trials and demo bookings. We qualify clicks before they cost you money, and feed CRM data back into the algorithm for compounding lead quality.",
-    points: ["Lead-quality scoring loops", "Demo & trial funnels", "CRM-integrated reporting"],
+    desc: "Demand gen campaigns built around free trials and demo bookings. We qualify clicks before they cost you money, and feed CRM data back into the algorithm for compounding lead quality.",
+    points: ["Lead quality scoring loops", "Demo & trial funnels", "CRM integrated reporting"],
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
   },
   {
     key: "leads",
     label: "Lead Gen",
     heading: "Optimizing for Lead Gen",
-    desc: "Instant forms and landing pages tuned for cost-per-qualified-lead, not vanity volume. Every lead is tracked through to close so spend follows revenue.",
-    points: ["Instant form optimization", "Qualified-lead tracking", "Speed-to-lead automations"],
+    desc: "Instant forms and landing pages tuned for cost per qualified lead, not vanity volume. Every lead is tracked through to close so spend follows revenue.",
+    points: ["Instant form optimization", "Qualified lead tracking", "Speed to lead automations"],
     img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80",
   },
   {
     key: "local",
     label: "Local Business",
     heading: "Optimizing for Local Business",
-    desc: "Radius-targeted campaigns that fill calendars and drive foot traffic. Click-to-call, directions, and bookings measured down to the storefront.",
-    points: ["Radius & geo targeting", "Click-to-call campaigns", "Store-visit measurement"],
+    desc: "Radius targeted campaigns that fill calendars and drive foot traffic. Click to call, directions, and bookings measured down to the storefront.",
+    points: ["Radius & geo targeting", "Click to call campaigns", "Store visit measurement"],
     img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80",
   },
 ];
 
 const growthSteps = [
-  { n: "01", title: "Deep-Dive Audit", desc: "We dissect your past spend, creatives, and pixel data to find what's leaking and what's working." },
-  { n: "02", title: "Creative Strategy", desc: "Custom angle map and creative batch designed for your audience — never recycled templates." },
+  { n: "01", title: "Deep Dive Audit", desc: "We dissect your past spend, creatives, and pixel data to find what's leaking and what's working." },
+  { n: "02", title: "Creative Strategy", desc: "Custom angle map and creative batch designed for your audience, never recycled templates." },
   { n: "03", title: "Precision Launch", desc: "Structured campaigns with clean naming, budgets, and exclusions from day one." },
   { n: "04", title: "Optimization Engine", desc: "Daily checks, weekly creative refreshes, and scaling rules driven by ROAS and CPA targets." },
 ];
@@ -93,7 +93,7 @@ const growthSteps = [
 const winItems = [
   { title: "Pixel Setup", desc: "Flawless tracking implementation across all events.", icon: "M13 10V3L4 14h7v7l9-11h-7z" },
   { title: "A/B Testing", desc: "Constant testing of headlines, images, and hooks.", icon: "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" },
-  { title: "Weekly Reporting", desc: "Clear, jargon-free dashboards on performance.", icon: "M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
+  { title: "Weekly Reporting", desc: "Clear, jargon free dashboards on performance.", icon: "M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
   { title: "24/7 Monitoring", desc: "Automated alerts watch your account around the clock.", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
 ];
 
@@ -113,7 +113,7 @@ const dataStats = [
 ];
 
 const dataPoints = [
-  { title: "No Long-Term Contracts", desc: "We earn your business month to month through performance." },
+  { title: "No Long Term Contracts", desc: "We earn your business month to month through performance." },
   { title: "Total Transparency", desc: "You own the ad account and see every number we see." },
   { title: "Proactive Communication", desc: "Weekly strategy calls, not just automated reports." },
 ];
@@ -121,15 +121,15 @@ const dataPoints = [
 const faqs = [
   {
     q: "What is your typical management fee?",
-    a: "We offer flat-fee and percentage-of-spend models depending on the scale of your business. You get a clear quote up front — no hidden costs, and you keep full ownership of the ad account.",
+    a: "We offer flat fee and percentage of spend models depending on the scale of your business. You get a clear quote up front, no hidden costs, and you keep full ownership of the ad account.",
   },
   {
     q: "Do you handle the creative production?",
-    a: "Yes — statics, motion graphics, video edits, and UGC-style content are all produced in-house and included in our management scope.",
+    a: "Yes, statics, motion graphics, video edits, and UGC style content are all produced in house and included in our management scope.",
   },
   {
     q: "How long does it take to see results?",
-    a: "Most accounts see meaningful signal within 2–4 weeks as testing concludes, with scaling typically beginning in month two.",
+    a: "Most accounts see meaningful signal within 2 to 4 weeks as testing concludes, with scaling typically beginning in month two.",
   },
   {
     q: "Will I own the ad account and creative assets?",
@@ -137,7 +137,7 @@ const faqs = [
   },
   {
     q: "How do you handle iOS 14.5+ tracking issues?",
-    a: "We implement the Conversions API alongside the pixel for server-side tracking, plus UTM frameworks and post-purchase surveys to recover lost attribution.",
+    a: "We implement the Conversions API alongside the pixel for server side tracking, plus UTM frameworks and post purchase surveys to recover lost attribution.",
   },
 ];
 
@@ -166,8 +166,8 @@ export default function MetaAdsDetailPage() {
         <div className="pointer-events-none absolute -top-24 right-0 w-[34rem] h-[34rem] rounded-full bg-gradient-to-bl from-[#764ba2]/25 via-[#667eea]/15 to-transparent blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-gradient-to-tr from-[#667eea]/20 to-transparent blur-3xl" />
 
-        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start">
-          <div className="lg:col-span-2">
+        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-5 gap-12 items-start">
+          <div className="lg:col-span-3">
 
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white leading-[0.98] mb-3">
               Meta Ads
@@ -176,13 +176,13 @@ export default function MetaAdsDetailPage() {
               that scale revenue.
             </p>
             <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed">
-              Precision-targeted Facebook & Instagram advertising. We transform browsers into
-              loyal customers through rigorous testing, scroll-stopping creative, and
-              ROAS-led optimization.
+              Precision targeted Facebook & Instagram advertising. We transform browsers into
+              loyal customers through rigorous testing, scroll stopping creative, and
+              ROAS led optimization.
             </p>
           </div>
 
-          <div className="lg:col-span-1 lg:sticky lg:top-28">
+          <div className="lg:col-span-2 lg:sticky lg:top-28">
             <ContactFormCard service="Meta Ads" />
           </div>
         </div>
@@ -231,7 +231,7 @@ export default function MetaAdsDetailPage() {
                 Full-Spectrum Ad <span className="gradient-text">Management</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 mb-8 text-lg">
-                We don&rsquo;t just &ldquo;set it and forget it.&rdquo; Our team provides end-to-end management — from creative concepting to technical implementation.
+                We don&rsquo;t just &ldquo;set it and forget it.&rdquo; Our team provides end to end management, from creative concepting to technical implementation.
               </p>
               <a href="/#services" className="group inline-flex items-center gap-2 text-sm font-semibold gradient-text hover:gap-3 transition-all">
                 Explore all services
@@ -363,7 +363,7 @@ export default function MetaAdsDetailPage() {
                   </div>
                   <h3 className="text-2xl font-extrabold text-gray-900 dark:text-white mb-3">Scaling Horizon</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed max-w-xs mx-auto">
-                    Systematic daily and weekly oversight, ensuring 24/7 ROAS — your spend efficiency never sleeps.
+                    Systematic daily and weekly oversight, ensuring 24/7 ROAS, your spend efficiency never sleeps.
                   </p>
                 </div>
               </div>
@@ -438,7 +438,7 @@ export default function MetaAdsDetailPage() {
                     Data Over Intuition.<br />Every Single Time.
                   </h2>
                   <p className="text-white/80 mb-9 max-w-md">
-                    Most agencies guess. We test. Our proprietary framework has been refined across $50M+ in ad spend, ensuring we don&rsquo;t just follow best practices — we set them.
+                    Most agencies guess. We test. Our proprietary framework has been refined across $50M+ in ad spend, ensuring we don&rsquo;t just follow best practices. We set them.
                   </p>
                   <div className="grid grid-cols-2 gap-6">
                     {dataStats.map((s) => (
@@ -471,7 +471,7 @@ export default function MetaAdsDetailPage() {
         </div>
       </section>
 
-      {/* 9. TESTIMONIALS — portfolio brands */}
+      {/* 9. TESTIMONIALS, portfolio brands */}
       <ReviewsCarousel
         variant="muted"
         kicker="Testimonials"
@@ -500,9 +500,6 @@ export default function MetaAdsDetailPage() {
                   className="bg-white text-gray-900 px-8 py-3.5 rounded-full font-bold text-base hover:bg-gray-100 hover:-translate-y-0.5 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center gap-2.5"
                 >
                   Let&rsquo;s Connect
-                  <svg className="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                  </svg>
                 </a>
               </div>
             </div>

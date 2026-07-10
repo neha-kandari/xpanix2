@@ -13,8 +13,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
         <div className="pointer-events-none absolute -top-20 -left-20 w-[28rem] h-[28rem] rounded-full bg-gradient-to-br from-[#667eea]/20 to-transparent blur-3xl" />
         <div className="pointer-events-none absolute -bottom-20 right-1/3 w-[26rem] h-[26rem] rounded-full bg-gradient-to-br from-[#764ba2]/20 to-transparent blur-3xl" />
 
-        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start">
-          <div className="lg:col-span-2">
+        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-5 gap-12 items-start">
+          <div className="lg:col-span-3">
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900 dark:text-white leading-[0.95] mb-6">
               {service.title}
@@ -25,7 +25,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
           </div>
 
           {/* Floating glass contact card */}
-          <div className="lg:col-span-1 lg:sticky lg:top-28">
+          <div className="lg:col-span-2 lg:sticky lg:top-28">
             <ContactFormCard service={service.title} />
           </div>
         </div>

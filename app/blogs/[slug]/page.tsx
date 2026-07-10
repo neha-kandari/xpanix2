@@ -11,7 +11,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getBlogPost(slug);
-  if (!post) return { title: "Article — Xpanix" };
+  if (!post) return { title: "Article, Xpanix" };
   return {
     title: `${post.title} | Xpanix Blog`,
     description: post.excerpt,

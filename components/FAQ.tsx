@@ -5,7 +5,7 @@ import AnimateOnScroll from "./AnimateOnScroll";
 const faqs = [
   {
     q: "How fast will I receive my designs?",
-    a: "Most requests are completed within 48 hours. More complex projects may take 3–5 business days. Pro plan members get priority with 24-hour turnarounds.",
+    a: "Most requests are completed within 48 hours. More complex projects may take 3 to 5 business days. Pro plan members get priority with 24 hour turnarounds.",
   },
   {
     q: "How does a design subscription work?",
@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "Is there a limit to how many requests I can make?",
-    a: "Absolutely not. Submit as many requests as you'd like — they get queued and worked through one by one at full quality.",
+    a: "Absolutely not. Submit as many requests as you'd like. They get queued and worked through one by one at full quality.",
   },
   {
     q: "What kind of design work can I request?",
@@ -25,11 +25,11 @@ const faqs = [
   },
   {
     q: "Can I pause or cancel my subscription?",
-    a: "Yes — pause or cancel anytime from your dashboard. No contracts, no cancellation fees. We're confident you'll love it though.",
+    a: "Yes, pause or cancel anytime from your dashboard. No contracts, no cancellation fees. We're confident you'll love it though.",
   },
   {
     q: "Can I get a refund if I don't like it?",
-    a: "We offer a 7-day money-back guarantee on your first payment. After that, you can pause or cancel, but refunds aren't available for past billing cycles.",
+    a: "We offer a 7-day money back guarantee on your first payment. After that, you can pause or cancel, but refunds aren't available for past billing cycles.",
   },
 ];
 

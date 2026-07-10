@@ -44,7 +44,7 @@ export default function BlogsContent() {
               <span className="font-serif-display italic gradient-text font-medium">xpand.</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-2xl">
-              Field notes on web development, design, SEO, and paid growth — written by the team that ships it every day.
+              Field notes on web development, design, SEO, and paid growth, written by the team that ships it every day.
             </p>
           </AnimateOnScroll>
         </div>
@@ -118,7 +118,7 @@ export default function BlogsContent() {
           </AnimateOnScroll>
 
           {filtered.length === 0 ? (
-            <p className="text-gray-500 dark:text-gray-400 py-12 text-center">No articles in this category yet — check back soon.</p>
+            <p className="text-gray-500 dark:text-gray-400 py-12 text-center">No articles in this category yet, check back soon.</p>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filtered.map((post, i) => (

@@ -46,7 +46,7 @@ type FAQ = {
   a: string;
 };
 
-/* Viewport helper — `mobile` < 768px, `tablet` < 1024px */
+/* Viewport helper, `mobile` < 768px, `tablet` < 1024px */
 function useViewport(): { mobile: boolean; tablet: boolean } {
   const [vp, setVp] = useState<{ mobile: boolean; tablet: boolean }>({ mobile: false, tablet: false });
   useEffect(() => {
@@ -78,7 +78,7 @@ type Theme = {
 };
 
 /* Values are CSS custom properties (defined in globals.css) that resolve
-   via the `.dark` class on <html> — set by the inline script in the root
+   via the `.dark` class on <html>, set by the inline script in the root
    layout before first paint. This makes theming purely CSS-driven, exactly
    like the rest of the site, so there's no JS-timing-dependent flash. */
 const THEME: Theme = {
@@ -104,16 +104,16 @@ const HERO_CARDS = [
   { id: "1", title: "Chinar Logistics", category: "Logistics website", color: "#10B981", img: "/projects/Chinar.webp" },
   { id: "2", title: "Finance App", category: "Mobile app UI", color: "#4B6BFB", img: "/projects/Finance%20App%20UI.webp" },
   { id: "3", title: "Opal Institute", category: "Education website", color: "#EC4899", img: "/projects/Opal.webp" },
-  { id: "4", title: "Shopfront", category: "E-commerce UI", color: "#F59E0B", img: "/projects/ecomerce%20ui.webp" },
+  { id: "4", title: "Shopfront", category: "Ecommerce UI", color: "#F59E0B", img: "/projects/ecomerce%20ui.webp" },
   { id: "5", title: "Tripsee", category: "Travel platform", color: "#06B6D4", img: "/projects/Tripsee%20(3).webp" },
-  { id: "6", title: "WoodyPolo", category: "E-commerce store", color: "#EF4444", img: "/projects/WoodyPolo.webp" },
+  { id: "6", title: "WoodyPolo", category: "Ecommerce store", color: "#EF4444", img: "/projects/WoodyPolo.webp" },
 ];
 
 const RECENT_WEB_PROJECTS: RecentProject[] = [
   {
     name: "Rudraksh Travel",
     tag: "Travel website",
-    desc: "An immersive travel website with curated tour packages and a story-driven layout that inspires visitors to book their next pilgrimage and journey.",
+    desc: "An immersive travel website with curated tour packages and a story driven layout that inspires visitors to book their next pilgrimage and journey.",
     accent: "#F59E0B",
     img: "/projects/Rudraksh%20Travles.webp",
     url: "https://www.rudrakshtravelspnp.com/",
@@ -121,7 +121,7 @@ const RECENT_WEB_PROJECTS: RecentProject[] = [
   {
     name: "Chinar Logistics",
     tag: "Logistics website",
-    desc: "A fast, conversion-focused logistics platform with a quote-request flow and shipment tracking — built to turn visitors into booked shipments.",
+    desc: "A fast, conversion focused logistics platform with a quote request flow and shipment tracking, built to turn visitors into booked shipments.",
     accent: "#10B981",
     img: "/projects/Chinar.webp",
     url: "https://chinarroadlines.com/",
@@ -153,14 +153,14 @@ const ALL_PROJECTS = [
   { id: "p6", name: "Rajasthan Auto", cat: "Web Dev", tag: "Distributor website", color: "#F59E0B", img: "/projects/RajasthanAutoDistributor.webp", url: "https://www.rajasthanautodistributors.com/" },
   { id: "p7", name: "Ruhani Trips", cat: "Web Dev", tag: "Travel website", color: "#06B6D4", img: "/projects/RuhaniTrips%20(1).webp", url: "https://www.ruhanitrips.com/" },
   { id: "p8", name: "Tripsee", cat: "Web Dev", tag: "Travel platform", color: "#667eea", img: "/projects/Tripsee%20(3).webp", url: "https://www.tripseetravel.in/" },
-  { id: "p9", name: "WoodyPolo", cat: "Web Dev", tag: "E-commerce store", color: "#EF4444", img: "/projects/WoodyPolo.webp", url: "https://neha-kandari.github.io/photoframe/" },
+  { id: "p9", name: "WoodyPolo", cat: "Web Dev", tag: "Ecommerce store", color: "#EF4444", img: "/projects/WoodyPolo.webp", url: "https://neha-kandari.github.io/photoframe/" },
   { id: "p10", name: "Finance App", cat: "UI/UX", tag: "Mobile app UI", color: "#4B6BFB", img: "/projects/Finance%20App%20UI.webp" },
   { id: "p12", name: "Travel Explorer", cat: "UI/UX", tag: "Travel app UI", color: "#06B6D4", img: "/projects/Travel%20Ui.webp" },
   { id: "p13", name: "Wanderlust", cat: "UI/UX", tag: "Landing page UI", color: "#7C3AED", img: "/projects/Travel%20landaing%20Ui%20Design.webp" },
-  { id: "p14", name: "Shopfront", cat: "UI/UX", tag: "E-commerce UI", color: "#F97316", img: "/projects/ecomerce%20ui.webp" },
+  { id: "p14", name: "Shopfront", cat: "UI/UX", tag: "Ecommerce UI", color: "#F97316", img: "/projects/ecomerce%20ui.webp" },
 ];
 
-/* Fan — shifted right, vertically centered to align with hero heading */
+/* Fan, shifted right, vertically centered to align with hero heading */
 const SCATTER = [
   { left: 10, top: 20, rotate: -22, z: 1 },
   { left: 19, top: 17, rotate: -13, z: 2 },
@@ -203,7 +203,7 @@ function CardFace({ card }: { card: typeof HERO_CARDS[0] }) {
 }
 
 /* ═══════════════════════════════════════════════════════
-   SCATTER CARD — static fan card in the hero
+   SCATTER CARD, static fan card in the hero
 ═══════════════════════════════════════════════════════ */
 function ScatterCard({ card, index }: { card: HeroCard; index: number }) {
   const s = SCATTER[index];
@@ -226,7 +226,7 @@ function ScatterCard({ card, index }: { card: HeroCard; index: number }) {
 }
 
 /* ═══════════════════════════════════════════════════════
-   RECENT WEB PROJECTS — scroll-driven showcase
+   RECENT WEB PROJECTS, scroll-driven showcase
 ═══════════════════════════════════════════════════════ */
 function RecentWebProjects() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -242,7 +242,7 @@ function RecentWebProjects() {
       const currentScrollY = window.scrollY;
       const scrollingDown = currentScrollY >= lastScrollY.current;
       lastScrollY.current = currentScrollY;
-      // Only advance the showcase while scrolling down — scrolling up
+      // Only advance the showcase while scrolling down, scrolling up
       // shouldn't reverse the animation back through prior projects.
       if (!scrollingDown) return;
       const sectionTop = sectionRef.current.getBoundingClientRect().top + window.scrollY;
@@ -271,7 +271,7 @@ function RecentWebProjects() {
         zIndex: 2,
       }}
     >
-      {/* Section heading — aligned to the navbar/hero 1024px container */}
+      {/* Section heading, aligned to the navbar/hero 1024px container */}
       <div style={{ padding: mobile ? "40px 20px 24px" : "56px max(24px, calc((100vw - 1024px) / 2 + 24px)) 32px", boxSizing: "border-box" }}>
         <p style={{
           fontSize: 13,
@@ -316,7 +316,7 @@ function RecentWebProjects() {
         boxSizing: "border-box",
       }}>
 
-        {/* LEFT — project info */}
+        {/* LEFT, project info */}
         <div style={{
           width: mobile ? "100%" : "38%",
           flexShrink: 0,
@@ -328,7 +328,7 @@ function RecentWebProjects() {
           flexDirection: "column",
           boxSizing: "border-box",
         }}>
-          {/* Stacked project info — active item flows in-place (defines
+          {/* Stacked project info, active item flows in-place (defines
               height), the rest stay absolutely overlaid for the crossfade */}
           <div style={{ position: "relative", flex: mobile ? "0 0 auto" : "1 1 auto", display: "flex", flexDirection: "column", justifyContent: "center", margin: mobile ? "0 0 1.25rem" : "1.5rem 0" }}>
             {RECENT_WEB_PROJECTS.map((p, i) => (
@@ -405,7 +405,7 @@ function RecentWebProjects() {
           </div>
         </div>
 
-        {/* RIGHT — project image */}
+        {/* RIGHT, project image */}
         <div style={{
           flex: 1,
           borderRadius: "1.25rem",
@@ -439,7 +439,7 @@ function RecentWebProjects() {
 }
 
 /* ═══════════════════════════════════════════════════════
-   ALL PROJECTS — filterable grid
+   ALL PROJECTS, filterable grid
 ═══════════════════════════════════════════════════════ */
 function AllProjectsSection() {
   const [active, setActive] = useState<string>("All");
@@ -553,9 +553,12 @@ function AllProjectsSection() {
 ═══════════════════════════════════════════════════════ */
 function WhyChooseUs() {
   const items = [
-    { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#667eea" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>, title: "Results-first approach", desc: "Every decision we make is tied to measurable outcomes — traffic, conversions, and revenue growth you can see." },
-    { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#764ba2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" /><polyline points="8 21 12 17 16 21" /></svg>, title: "Full-stack capability", desc: "Strategy, design, development, ads, photography — one team, no hand-offs, no miscommunication." },
-    { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#EC4899" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>, title: "Transparent process", desc: "Weekly updates, shared dashboards, and zero agency jargon. You always know exactly what's happening." },
+    { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#667eea" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2" /><polyline points="2 17 12 22 22 17" /><polyline points="2 12 12 17 22 12" /></svg>, title: "All-in-One Solutions", desc: "From websites and Shopify stores to SEO, Meta Ads, Google Ads, and social media management. We handle everything your business needs to grow online." },
+    { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#764ba2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg>, title: "Custom Strategies", desc: "Every business is different. We create tailored marketing and web solutions based on your industry, goals, and target audience." },
+    { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#EC4899" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></svg>, title: "Conversion First", desc: "We don't just build beautiful websites. We create experiences designed to generate leads, increase sales, and improve customer engagement." },
+    { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>, title: "Full Transparency", desc: "Stay informed with regular updates, performance reports, and a dedicated point of contact throughout your project." },
+    { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>, title: "Fast Delivery", desc: "Our streamlined process ensures timely delivery without compromising on quality, performance, or design." },
+    { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87" /><path d="M16 3.13a4 4 0 010 7.75" /></svg>, title: "Growth Partner", desc: "We're more than an agency. We work alongside your business, continuously optimizing and scaling your digital presence." },
   ];
   const t = THEME;
   const { mobile } = useViewport();
@@ -576,7 +579,7 @@ function WhyChooseUs() {
                 Xpanix?
               </span>
             </h2>
-            <p style={{ fontSize: 16, color: t.textSub, margin: 0, maxWidth: 440 }}>We&apos;re not just another agency — we&apos;re your growth partner.</p>
+            <p style={{ fontSize: 16, color: t.textSub, margin: 0, maxWidth: 440 }}>We&apos;re not just another agency, we&apos;re your growth partner.</p>
           </div>
           <a href="/#contact" style={{ display: "inline-block", background: "linear-gradient(135deg,#667eea,#764ba2)", color: "#fff", fontSize: 14, fontWeight: 600, padding: "12px 24px", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 16px rgba(102,126,234,0.30)" }}>Work with us →</a>
         </div>
@@ -620,7 +623,50 @@ function WhyChooseUs() {
 }
 
 /* ═══════════════════════════════════════════════════════
-   REVIEWS — shared portfolio-company carousel
+   CTA, above the footer
+═══════════════════════════════════════════════════════ */
+function CTASection() {
+  const { mobile } = useViewport();
+  return (
+    <section style={{ padding: mobile ? "0 20px 60px" : "0 24px 100px", boxSizing: "border-box" }}>
+      <div style={{ maxWidth: 1024, margin: "0 auto" }}>
+        <div style={{
+          position: "relative", overflow: "hidden", borderRadius: 32,
+          background: "linear-gradient(135deg,#667eea 0%,#764ba2 100%)",
+          padding: mobile ? "48px 28px" : "80px 60px",
+          textAlign: "center", color: "#fff",
+        }}>
+          <div aria-hidden style={{ position: "absolute", top: -90, right: -80, width: 260, height: 260, borderRadius: "50%", background: "rgba(255,255,255,0.12)", filter: "blur(30px)" }} />
+          <div aria-hidden style={{ position: "absolute", bottom: -100, left: -60, width: 260, height: 260, borderRadius: "50%", background: "rgba(255,255,255,0.10)", filter: "blur(30px)" }} />
+          <p style={{ position: "relative", fontSize: 13, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", opacity: 0.8, margin: "0 0 14px" }}>
+            Ready to start?
+          </p>
+          <h2 style={{ position: "relative", fontSize: "clamp(28px, 4vw, 46px)", fontWeight: 800, lineHeight: 1.15, margin: "0 0 16px", letterSpacing: "-0.02em" }}>
+            Let&apos;s build your next standout project.
+          </h2>
+          <p style={{ position: "relative", fontSize: 16, opacity: 0.9, maxWidth: 520, margin: "0 auto 32px" }}>
+            From concept to launch, we bring the strategy, design, and execution. You bring the ambition.
+          </p>
+          <a href="/#contact" style={{
+            position: "relative", display: "inline-flex", alignItems: "center", gap: 8,
+            background: "#fff", color: "#1a1530", fontWeight: 700, fontSize: 15,
+            padding: "14px 30px", borderRadius: 999, textDecoration: "none",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+          }}>
+            Get Started
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4.667 11.333L11.333 4.667" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M4.667 4.667H11.333V11.333" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════
+   REVIEWS, shared portfolio-company carousel
 ═══════════════════════════════════════════════════════ */
 function ReviewsSection() {
   return (
@@ -635,12 +681,12 @@ function ReviewsSection() {
    FAQ
 ═══════════════════════════════════════════════════════ */
 const FAQS = [
-  { q: "How long does a typical project take?", a: "Most websites take 2–4 weeks from brief to launch. UI/UX projects run 1–3 weeks depending on scope. Ad campaigns go live within 5–7 business days." },
-  { q: "Do you work with international clients?", a: "Yes — about 40% of our clients are based outside India. We've worked with teams across the UK, UAE, US, Singapore, and beyond." },
-  { q: "What does your design process look like?", a: "Discovery → Strategy → Design → Feedback → Delivery. You're involved at every key step, and we share progress weekly — no surprises, ever." },
-  { q: "Can you handle both design and development?", a: "Absolutely. We're a full-stack team — the same people who design your product also build it. No handoffs, no gaps in translation." },
+  { q: "How long does a typical project take?", a: "Most websites take 2 to 4 weeks from brief to launch. UI/UX projects run 1 to 3 weeks depending on scope. Ad campaigns go live within 5 to 7 business days." },
+  { q: "Do you work with international clients?", a: "Yes, about 40% of our clients are based outside India. We've worked with teams across the UK, UAE, US, Singapore, and beyond." },
+  { q: "What does your design process look like?", a: "Discovery → Strategy → Design → Feedback → Delivery. You're involved at every key step, and we share progress weekly, no surprises, ever." },
+  { q: "Can you handle both design and development?", a: "Absolutely. We're a full stack team, the same people who design your product also build it. No handoffs, no gaps in translation." },
   { q: "Do you offer ongoing support after launch?", a: "Yes. We offer monthly retainer packages for SEO, Meta ads management, and site maintenance. Many clients work with us for years." },
-  { q: "How does pricing work?", a: "We price per project, not per hour. Every engagement starts with a scoping call where we give you a clear, flat-fee quote — no hidden costs." },
+  { q: "How does pricing work?", a: "We price per project, not per hour. Every engagement starts with a scoping call where we give you a clear, flat-fee quote, no hidden costs." },
 ];
 
 function FAQSection() {
@@ -687,7 +733,7 @@ export default function HeroScrollEffect() {
     <div style={{ background: t.pageBg, fontFamily: "inherit" }}>
 
       {/* Hero responsive layout is CSS-driven so the first server-rendered
-          paint is already correct — avoids a desktop→mobile layout flash. */}
+          paint is already correct, avoids a desktop→mobile layout flash. */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -709,7 +755,7 @@ export default function HeroScrollEffect() {
 
       {/* ── HERO ── */}
       <section className="xpx-hero" style={{ backgroundColor: t.heroBg }}>
-        {/* Dot-grid overlay — kept separate so the section never mixes
+        {/* Dot-grid overlay, kept separate so the section never mixes
             `background` shorthand with background-image longhands */}
         <div
           aria-hidden
@@ -737,19 +783,19 @@ export default function HeroScrollEffect() {
           </h1>
 
           <p style={{ fontSize: 15, color: t.textSub, lineHeight: 1.75, margin: 0, maxWidth: 420 }}>
-            From pixel-perfect websites to conversion-driven UI/UX, SEO, and Meta
-            ads — Xpanix builds brands that refuse to blend in.
+            From pixel perfect websites to conversion-driven UI/UX, SEO, and Meta
+            ads, Xpanix builds brands that refuse to blend in.
           </p>
         </div>
 
-        {/* RIGHT COL — desktop scattered fan (CSS-hidden on mobile) */}
+        {/* RIGHT COL, desktop scattered fan (CSS-hidden on mobile) */}
         <div className="xpx-hero-right">
           {HERO_CARDS.map((card, i) => (
             <ScatterCard key={card.id} card={card} index={i} />
           ))}
         </div>
 
-        {/* Mobile fan — compact, centered (CSS-hidden on desktop) */}
+        {/* Mobile fan, compact, centered (CSS-hidden on desktop) */}
         <div className="xpx-hero-fan">
           <div style={{ position: "relative", width: "min(300px, 100%)", height: 168 }}>
             {HERO_CARDS.slice(0, 3).map((card, i) => (
@@ -774,6 +820,7 @@ export default function HeroScrollEffect() {
       <AllProjectsSection />
       <WhyChooseUs />
       <ReviewsSection />
+      <CTASection />
       <FAQSection />
 
     </div>

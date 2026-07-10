@@ -9,7 +9,7 @@ const services = [
     title: "Web Development",
     href: "/services/web-development",
     description:
-      "Fast, scalable websites and apps built on modern frameworks — the technical foundation your brand grows on.",
+      "Fast, scalable websites and apps built on modern frameworks, the technical foundation your brand grows on.",
     img: "/projects/Chinar.webp",
   },
   {
@@ -18,7 +18,7 @@ const services = [
     title: "UI/UX Design",
     href: "/services/ui-ux-design",
     description:
-      "Interfaces that convert. We design products your users love — from wireframes to polished, pixel-perfect UI.",
+      "Interfaces that convert. We design products your users love, from wireframes to polished, pixel perfect UI.",
     img: "/projects/Finance%20App%20UI.webp",
   },
   {
@@ -27,7 +27,7 @@ const services = [
     title: "Meta Ads",
     href: "/services/meta-ads",
     description:
-      "High-converting Facebook & Instagram campaigns — scroll-stopping creatives and data-driven targeting that scales ROI.",
+      "High converting Facebook & Instagram campaigns, scroll stopping creatives and data driven targeting that scales ROI.",
     img: "/services/metaAds.webp",
   },
   {
@@ -36,7 +36,7 @@ const services = [
     title: "SEO",
     href: "/services/seo",
     description:
-      "Rank higher and get found. We optimize your site end-to-end so the right customers discover you, month after month.",
+      "Rank higher and get found. We optimize your site end to end so the right customers discover you, month after month.",
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
   },
   {
@@ -45,7 +45,7 @@ const services = [
     title: "Product Photography",
     href: "/services/product-photography",
     description:
-      "Studio-grade product imagery that makes your brand look premium — crisp, styled, and ready for web, ads, and social.",
+      "Studio grade product imagery that makes your brand look premium, crisp, styled, and ready for web, ads, and social.",
     img: "https://images.unsplash.com/photo-1520390138845-fd2d229dd553?auto=format&fit=crop&w=900&q=80",
   },
 ];
@@ -54,7 +54,7 @@ function ServiceRow({ s }: { s: (typeof services)[number] }) {
   return (
     <div className="bg-white dark:bg-[#0a0a0f] px-4">
       <div className="max-w-5xl mx-auto pt-10 sm:pt-14 pb-10 sm:pb-16">
-        {/* Card — label, title, image, description and CTA all share one container */}
+        {/* Card, label, title, image, description and CTA all share one container */}
         <div className="group/row relative rounded-2xl sm:rounded-[2rem] bg-gray-50 dark:bg-[#0d0d15] border border-gray-100 dark:border-white/8 px-6 py-6 sm:py-8 md:py-10 hover:border-[#667eea]/30 hover:shadow-[0_20px_60px_rgba(102,126,234,0.12)] transition-all duration-500">
           {/* label + line + number */}
           <div className="flex items-end justify-between gap-6 mb-6 sm:mb-10">

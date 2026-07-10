@@ -104,8 +104,7 @@ export default function Hero() {
           {...fadeUp(0.2)}
           className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl mx-auto mb-6"
         >
-          Where bold ideas meet flawless execution —
-          <br />
+          Where bold ideas meet flawless execution, <br />
           we build digital experiences that drive growth.
         </motion.p>
 

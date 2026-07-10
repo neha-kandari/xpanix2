@@ -35,7 +35,7 @@ export default function ContactFormCard({ service }: { service: string }) {
           </p>
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">Let&rsquo;s talk.</h3>
           <p className="text-xs text-gray-500 dark:text-gray-400 mb-5">
-            Tell us about your {service.toLowerCase()} project — we&rsquo;ll reply within a day.
+            Tell us about your {service.toLowerCase()} project, we&rsquo;ll reply within a day.
           </p>
 
           {sent ? (

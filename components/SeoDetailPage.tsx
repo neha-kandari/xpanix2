@@ -9,12 +9,12 @@ import ReviewsCarousel from "./ReviewsCarousel";
 
 const whyMatters = [
   {
-    title: "Intent-Driven Traffic",
-    desc: "Capture users at the exact moment they're looking for your solution — the highest-converting traffic that exists.",
+    title: "Intent Driven Traffic",
+    desc: "Capture users at the exact moment they're looking for your solution, the highest converting traffic that exists.",
     icon: "M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z",
   },
   {
-    title: "Long-Term Equity",
+    title: "Long Term Equity",
     desc: "Unlike ads that stop when budgets do, SEO builds a compounding asset that grows in value every single month.",
     icon: "M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941",
   },
@@ -33,12 +33,12 @@ const ecosystemItems = [
   },
   {
     title: "Content Strategy",
-    desc: "Skyscraper-quality content mapped to real search intent — covering topics your buyers actually research.",
+    desc: "Skyscraper quality content mapped to real search intent, covering topics your buyers actually research.",
     icon: "M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z",
   },
   {
-    title: "High-Authority Backlinks",
-    desc: "Ethical, white-hat link building through digital PR and content outreach that boosts your domain authority.",
+    title: "High Authority Backlinks",
+    desc: "Ethical, white hat link building through digital PR and content outreach that boosts your domain authority.",
     icon: "M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1",
   },
   {
@@ -49,29 +49,29 @@ const ecosystemItems = [
 ];
 
 const architectures = [
-  "Shopify & E-commerce",
+  "Shopify & Ecommerce",
   "SaaS Platforms",
   "B2B Professional Services",
   "Custom Next.js Web Apps",
   "WordPress Corporate",
-  "Local Multi-location Brands",
+  "Local Multi location Brands",
 ];
 
 const roadmap = [
   {
     n: "01",
     title: "Discovery & Baseline Audit",
-    desc: "Month 1: We perform a comprehensive technical audit and establish baseline metrics, identifying the low-hanging fruit wins first.",
+    desc: "Month 1: We perform a comprehensive technical audit and establish baseline metrics, identifying the low hanging fruit wins first.",
   },
   {
     n: "02",
     title: "Strategic Architecture",
-    desc: "Month 2: Fixing technical errors, optimizing site speed, and implementing initial on-page optimizations across primary service pages.",
+    desc: "Month 2: Fixing technical errors, optimizing site speed, and implementing initial on page optimizations across primary service pages.",
   },
   {
     n: "03",
     title: "Content & Link Engine",
-    desc: "Month 3+: Launching monthly content clusters and outreach campaigns — this is where we start to see initial ranking movement for long-tail terms.",
+    desc: "Month 3+: Launching monthly content clusters and outreach campaigns, this is where we start to see initial ranking movement for long tail terms.",
   },
   {
     n: "04",
@@ -83,7 +83,7 @@ const roadmap = [
 const planIncludes = [
   "Monthly performance reports",
   "Dedicated SEO account lead",
-  "24/7 real-time dashboard",
+  "24/7 real time dashboard",
   "Google Search Console setup",
   "Competitor intelligence tracking",
   "Keyword rank monitoring",
@@ -94,27 +94,27 @@ const planIncludes = [
 
 const trustPoints = [
   { title: "0% Black Hat Tactics", desc: "We strictly follow Google's Webmaster Guidelines to ensure your site is never penalized and grows safely." },
-  { title: "ROI-Focused Approach", desc: "Rankings are vanity; revenue is sanity. We focus on keywords that actually drive conversions and sales." },
+  { title: "ROI Focused Approach", desc: "Rankings are vanity; revenue is sanity. We focus on keywords that actually drive conversions and sales." },
   { title: "Global & Local Expertise", desc: "Whether you need to win the neighborhood or the world, we have the strategies to scale across borders." },
-  { title: "Tech-First Optimization", desc: "We're built on a deep engineering background to implement fixes, not just recommend them." },
+  { title: "Tech First Optimization", desc: "We're built on a deep engineering background to implement fixes, not just recommend them." },
 ];
 
 const faqs = [
   {
     q: "How long does it take to see results from SEO?",
-    a: "SEO is a compounding channel. Quick technical wins land in the first month, meaningful ranking movement typically shows in months 2–4, and significant traffic growth compounds from month 4 onward.",
+    a: "SEO is a compounding channel. Quick technical wins land in the first month, meaningful ranking movement typically shows in months 2 to 4, and significant traffic growth compounds from month 4 onward.",
   },
   {
     q: "Do you guarantee #1 rankings on Google?",
-    a: "No honest agency can guarantee specific rankings — Google's algorithm isn't for sale. What we do guarantee is a proven, transparent process and measurable month-over-month growth.",
+    a: "No honest agency can guarantee specific rankings. Google's algorithm isn't for sale. What we do guarantee is a proven, transparent process and measurable month over month growth.",
   },
   {
     q: "How is SEO different from PPC (Google Ads)?",
-    a: "PPC buys visibility that stops the moment you stop paying. SEO earns visibility that keeps working — each month of effort builds permanent equity in your domain.",
+    a: "PPC buys visibility that stops the moment you stop paying. SEO earns visibility that keeps working. Each month of effort builds permanent equity in your domain.",
   },
   {
-    q: "What is the difference between On-Page and Technical SEO?",
-    a: "On-page SEO optimizes the content users see — titles, copy, internal links. Technical SEO optimizes what crawlers see — speed, structure, schema, and indexability. Winning requires both.",
+    q: "What is the difference between On Page and Technical SEO?",
+    a: "On page SEO optimizes the content users see: titles, copy, internal links. Technical SEO optimizes what crawlers see: speed, structure, schema, and indexability. Winning requires both.",
   },
 ];
 
@@ -141,8 +141,8 @@ export default function SeoDetailPage() {
         <div className="pointer-events-none absolute -top-24 right-0 w-[34rem] h-[34rem] rounded-full bg-gradient-to-bl from-[#764ba2]/25 via-[#667eea]/15 to-transparent blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-gradient-to-tr from-[#667eea]/20 to-transparent blur-3xl" />
 
-        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start">
-          <div className="lg:col-span-2">
+        <div className="relative max-w-5xl mx-auto px-6 grid lg:grid-cols-5 gap-12 items-start">
+          <div className="lg:col-span-3">
 
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white leading-[0.98] mb-3">
               SEO
@@ -151,13 +151,13 @@ export default function SeoDetailPage() {
               that compounds.
             </p>
             <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed">
-              Dominate search results organically. We don&rsquo;t just chase rankings — we drive
-              revenue with data-led SEO strategies that put your brand exactly where your
+              Dominate search results organically. We don&rsquo;t just chase rankings. We drive
+              revenue with data led SEO strategies that put your brand exactly where your
               customers are looking.
             </p>
           </div>
 
-          <div className="lg:col-span-1 lg:sticky lg:top-28">
+          <div className="lg:col-span-2 lg:sticky lg:top-28">
             <ContactFormCard service="SEO" />
           </div>
         </div>
@@ -260,7 +260,7 @@ export default function SeoDetailPage() {
                 Our Success <span className="gradient-text">Roadmap</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 mb-8 text-lg">
-                SEO isn&rsquo;t magic — it&rsquo;s a process. We follow a proven timeline that ensures every action leads toward sustainable growth.
+                SEO isn&rsquo;t magic, it&rsquo;s a process. We follow a proven timeline that ensures every action leads toward sustainable growth.
               </p>
               <a href="/contact" className="inline-flex items-center gap-2 gradient-bg text-white px-6 py-3 rounded-full text-sm font-semibold hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-lg">
                 Know More
@@ -306,7 +306,7 @@ export default function SeoDetailPage() {
                   Every Plan Includes
                 </h2>
                 <p className="text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
-                  We believe in full transparency and total accountability. No hidden fees, no black-box tactics.
+                  We believe in full transparency and total accountability. No hidden fees, no black box tactics.
                 </p>
               </div>
 
@@ -359,7 +359,7 @@ export default function SeoDetailPage() {
         </div>
       </section>
 
-      {/* 8. TESTIMONIALS — portfolio brands */}
+      {/* 8. TESTIMONIALS, portfolio brands */}
       <ReviewsCarousel
         variant="muted"
         kicker="Testimonials"
@@ -388,9 +388,6 @@ export default function SeoDetailPage() {
                   className="bg-white text-gray-900 px-8 py-3.5 rounded-full font-bold text-base hover:bg-gray-100 hover:-translate-y-0.5 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center gap-2.5"
                 >
                   Let&rsquo;s Connect
-                  <svg className="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
-                  </svg>
                 </a>
               </div>
             </div>

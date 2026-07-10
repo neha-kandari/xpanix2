@@ -16,40 +16,40 @@ function useIsMobile(): boolean {
 
 const benefits = [
   {
-    icon: "M13 10V3L4 14h7v7l9-11h-7z",
-    title: "Enhanced Brand Visibility",
+    icon: "M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z",
+    title: "All-in-One Solutions",
     description:
-      "Cut through the noise with bespoke websites, apps, and listings designed to make your brand impossible to miss.",
+      "From websites and Shopify stores to SEO, Meta Ads, Google Ads, and social media management, we handle everything your business needs to grow online.",
   },
   {
-    icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
-    title: "Better User Experience",
+    icon: "M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5",
+    title: "Custom Strategies",
     description:
-      "We craft intuitive, engaging interfaces that keep visitors hooked — from the first click all the way to conversion.",
-  },
-  {
-    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
-    title: "Round-the-Clock Reachability",
-    description:
-      "Your brand never goes offline. Optimized builds keep you accessible and high-performing, around the clock.",
-  },
-  {
-    icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
-    title: "Cost-Effective Solutions",
-    description:
-      "Smart tooling and lean workflows let us ship premium results without stretching your budget.",
+      "Every business is different. We create tailored marketing and web solutions based on your industry, goals, and target audience.",
   },
   {
     icon: "M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941",
-    title: "Performance-Focused Strategy",
+    title: "Conversion First",
     description:
-      "Every decision is backed by data — so you grow smarter, convert more, and scale faster.",
+      "We don't just build beautiful websites. We create experiences designed to generate leads, increase sales, and improve customer engagement.",
+  },
+  {
+    icon: "M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z M15 12a3 3 0 11-6 0 3 3 0 016 0z",
+    title: "Full Transparency",
+    description:
+      "Stay informed with regular updates, performance reports, and a dedicated point of contact throughout your project.",
+  },
+  {
+    icon: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z",
+    title: "Fast Delivery",
+    description:
+      "Our streamlined process ensures timely delivery without compromising on quality, performance, or design.",
   },
   {
     icon: "M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z",
-    title: "Scalable Digital Growth",
+    title: "Growth Partner",
     description:
-      "Whether you're just starting out or scaling fast, our solutions grow with you — seamlessly and sustainably.",
+      "We're more than an agency. We work alongside your business, continuously optimizing and scaling your digital presence.",
   },
 ];
 
@@ -59,17 +59,17 @@ export default function Features() {
     <section id="benefits" className="py-24 px-6 bg-gradient-to-b from-white to-gray-50 dark:from-[#0a0a0f] dark:to-[#0a0a0f]">
       <div className="max-w-5xl mx-auto">
         <AnimateOnScroll>
-          <div className="flex justify-center mb-5">
+          {/* <div className="flex justify-center mb-5">
             <span className="inline-block px-4 py-1.5 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-m font-bold gradient-text shadow-sm">
               Why choose Xpanix
             </span>
-          </div>
+          </div> */}
           <h2 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 dark:text-white max-w-3xl mx-auto leading-tight mb-5">
-            The Key Benefits of Building Your{" "}
-            <span className="gradient-text">Digital Presence</span> with Us
+           Why{" "}
+            <span className="gradient-text">Choose</span>Us
           </h2>
           <p className="text-center text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-16 text-lg">
-            See how our digital services elevate your brand online — boosting visibility,
+            See how our digital services elevate your brand online, boosting visibility,
             deepening engagement, and driving smart, lasting growth.
           </p>
         </AnimateOnScroll>
