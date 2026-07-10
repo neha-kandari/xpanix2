@@ -450,6 +450,20 @@ function AllProjectsSection() {
 
   return (
     <section style={{ background: t.pageBg, padding: mobile ? "60px 0" : "100px 0", boxSizing: "border-box" }}>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+            .xpx-pcard { transition: transform 0.35s cubic-bezier(0.25,0.1,0.25,1), box-shadow 0.35s ease, border-color 0.35s ease; }
+            .xpx-pcard:hover { transform: translateY(-8px); border-color: var(--card-accent) !important; box-shadow: 0 24px 44px -18px var(--card-accent) !important; }
+            .xpx-pcard-img { transition: transform 0.6s cubic-bezier(0.25,0.1,0.25,1); }
+            .xpx-pcard:hover .xpx-pcard-img { transform: scale(1.1); }
+            .xpx-pcard-scrim { opacity: 0.55; transition: opacity 0.35s ease; }
+            .xpx-pcard:hover .xpx-pcard-scrim { opacity: 0.75; }
+            .xpx-pcard-arrow { transition: transform 0.3s ease, background 0.3s ease; }
+            .xpx-pcard:hover .xpx-pcard-arrow { transform: translate(2px,-2px) scale(1.08); }
+          `,
+        }}
+      />
       <div style={{ maxWidth: 1024, margin: "0 auto", padding: mobile ? "0 20px" : "0 24px", boxSizing: "border-box" }}>
         <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.15em", color: t.textMuted, textTransform: "uppercase", margin: "0 0 8px" }}>Browse all work</p>
         <h2 style={{ fontSize: 38, fontWeight: 700, color: t.text, margin: "0 0 32px", letterSpacing: "-0.02em" }}>All Projects</h2>
@@ -464,34 +478,56 @@ function AllProjectsSection() {
             }}>{c}</button>
           ))}
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(240px,1fr))", gap: 20 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))", gap: 24 }}>
           {filtered.map(p => (
             <motion.div key={p.id} layout
               initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] as const }}
-              style={{ position: "relative", borderRadius: 14, overflow: "hidden", border: `1px solid ${t.cardBorder}`, height: 240, background: t.cardBg, boxShadow: "var(--xpx-shadow-grid-card)" }}>
-              <div style={{ height: "65%", background: p.color, position: "relative" }}>
-                <img src={p.img} alt={p.name} loading="lazy"
+              className="xpx-pcard"
+              style={{
+                position: "relative", borderRadius: 20, overflow: "hidden",
+                border: `1px solid ${t.cardBorder}`, background: t.cardBg,
+                boxShadow: "var(--xpx-shadow-grid-card)",
+                ["--card-accent" as string]: `${p.color}59`,
+              }}>
+              <div style={{ height: 168, position: "relative", overflow: "hidden", background: p.color }}>
+                <img src={p.img} alt={p.name} loading="lazy" className="xpx-pcard-img"
                   style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+                <div className="xpx-pcard-scrim" style={{
+                  position: "absolute", inset: 0,
+                  background: "linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.75) 100%)",
+                }} />
+                <span style={{
+                  position: "absolute", top: 12, left: 12, padding: "4px 10px", borderRadius: 999,
+                  fontSize: 10, fontWeight: 700, letterSpacing: "0.04em", textTransform: "uppercase",
+                  color: "#fff", background: "rgba(0,0,0,0.4)", backdropFilter: "blur(6px)",
+                  border: "1px solid rgba(255,255,255,0.25)",
+                }}>{p.cat}</span>
                 {p.url && (
-                  <span style={{ position: "absolute", top: 10, right: 10, width: 28, height: 28, borderRadius: "50%", background: "rgba(0,0,0,0.55)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 3 }}>
+                  <span className="xpx-pcard-arrow" style={{
+                    position: "absolute", top: 10, right: 10, width: 30, height: 30, borderRadius: "50%",
+                    background: "rgba(255,255,255,0.92)", color: "#111",
+                    display: "flex", alignItems: "center", justifyContent: "center", zIndex: 3,
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.25)",
+                  }}>
                     <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
                       <path d="M4.667 11.333L11.333 4.667" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
                       <path d="M4.667 4.667H11.333V11.333" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </span>
                 )}
+                <div style={{ position: "absolute", left: 14, right: 14, bottom: 10, zIndex: 2 }}>
+                  <div style={{ fontSize: 14, fontWeight: 700, color: "#fff", lineHeight: 1.25, textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}>{p.name}</div>
+                </div>
               </div>
-              <div style={{ height: "35%", padding: "12px 14px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                <div style={{ fontSize: 13, fontWeight: 600, color: t.text }}>{p.name}</div>
-                <div style={{ fontSize: 11, color: t.textMuted, marginTop: 2 }}>{p.tag} · {p.cat}</div>
+              <div style={{ padding: "12px 14px 14px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, minWidth: 0 }}>
+                  <span style={{ width: 6, height: 6, borderRadius: "50%", background: p.color, flexShrink: 0 }} />
+                  <span style={{ fontSize: 12, color: t.textMuted, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{p.tag}</span>
+                </div>
                 {p.url && (
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: 5, marginTop: 7, fontSize: 12, fontWeight: 600, background: "linear-gradient(135deg,#667eea,#764ba2)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                    Visit website
-                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" style={{ color: "#764ba2" }}>
-                      <path d="M4.667 11.333L11.333 4.667" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M4.667 4.667H11.333V11.333" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                  <span style={{ fontSize: 11, fontWeight: 600, flexShrink: 0, background: "linear-gradient(135deg,#667eea,#764ba2)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                    Visit →
                   </span>
                 )}
               </div>
@@ -520,7 +556,6 @@ function WhyChooseUs() {
     { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#667eea" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>, title: "Results-first approach", desc: "Every decision we make is tied to measurable outcomes — traffic, conversions, and revenue growth you can see." },
     { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#764ba2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" /><polyline points="8 21 12 17 16 21" /></svg>, title: "Full-stack capability", desc: "Strategy, design, development, ads, photography — one team, no hand-offs, no miscommunication." },
     { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#EC4899" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>, title: "Transparent process", desc: "Weekly updates, shared dashboards, and zero agency jargon. You always know exactly what's happening." },
-    { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>, title: "Proven track record", desc: "99+ happy clients, 250+ projects shipped, and a 4.9★ average rating across every service we offer." },
   ];
   const t = THEME;
   const { mobile } = useViewport();
@@ -530,7 +565,17 @@ function WhyChooseUs() {
         <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.15em", color: t.textMuted, textTransform: "uppercase", margin: "0 0 8px" }}>Why us</p>
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 16, marginBottom: 52 }}>
           <div>
-            <h2 style={{ fontSize: 38, fontWeight: 700, color: t.text, margin: "0 0 10px", letterSpacing: "-0.02em" }}>Why choose Xpanix?</h2>
+            <h2 style={{ fontSize: 38, fontWeight: 700, color: t.text, margin: "0 0 10px", letterSpacing: "-0.02em" }}>
+              Why choose{" "}
+              <span style={{
+                background: "linear-gradient(135deg,#667eea 0%,#764ba2 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}>
+                Xpanix?
+              </span>
+            </h2>
             <p style={{ fontSize: 16, color: t.textSub, margin: 0, maxWidth: 440 }}>We&apos;re not just another agency — we&apos;re your growth partner.</p>
           </div>
           <a href="/#contact" style={{ display: "inline-block", background: "linear-gradient(135deg,#667eea,#764ba2)", color: "#fff", fontSize: 14, fontWeight: 600, padding: "12px 24px", borderRadius: 999, textDecoration: "none", boxShadow: "0 4px 16px rgba(102,126,234,0.30)" }}>Work with us →</a>
