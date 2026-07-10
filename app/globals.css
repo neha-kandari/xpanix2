@@ -17,6 +17,26 @@
   /* legacy aliases kept for any leftover references */
   --brand-blue: #667eea;
   --brand-purple: #764ba2;
+
+  /* Portfolio hero/showcase theme tokens — resolved by CSS at paint time
+     (via the .dark class already set before first paint) so these sections
+     never depend on a JS effect running, and never flash the wrong theme. */
+  --xpx-page-bg: #fafafa;
+  --xpx-section-alt: #fafafa;
+  --xpx-hero-bg: #ffffff;
+  --xpx-dot: rgba(0, 0, 0, 0.07);
+  --xpx-text: #111111;
+  --xpx-text-sub: #666666;
+  --xpx-card-bg: #ffffff;
+  --xpx-card-border: #ebebeb;
+  --xpx-pill-bg: #f5f5f5;
+  --xpx-pill-text: #555555;
+  --xpx-icon-bg: #f5f3ff;
+  --xpx-divider: #eeeeee;
+  --xpx-shadow-card: 0 6px 24px rgba(0, 0, 0, 0.1);
+  --xpx-shadow-grid-card: 0 2px 12px rgba(0, 0, 0, 0.05);
+  --xpx-shadow-why-card: 0 2px 12px rgba(0, 0, 0, 0.04);
+  --xpx-badge-bg: rgba(255, 255, 255, 0.9);
 }
 
 .dark {
@@ -28,6 +48,23 @@
   --text-muted: #9ca3af;
   --dot-color: #2a2a40;
   color-scheme: dark;
+
+  --xpx-page-bg: #0a0a0f;
+  --xpx-section-alt: #0e0e16;
+  --xpx-hero-bg: #0a0a0f;
+  --xpx-dot: rgba(255, 255, 255, 0.06);
+  --xpx-text: #f5f5f7;
+  --xpx-text-sub: #a0a0b0;
+  --xpx-card-bg: #15151f;
+  --xpx-card-border: rgba(255, 255, 255, 0.08);
+  --xpx-pill-bg: #1a1a26;
+  --xpx-pill-text: #cfcfd8;
+  --xpx-icon-bg: #1d1733;
+  --xpx-divider: rgba(255, 255, 255, 0.1);
+  --xpx-shadow-card: 0 6px 24px rgba(0, 0, 0, 0.5);
+  --xpx-shadow-grid-card: 0 2px 12px rgba(0, 0, 0, 0.4);
+  --xpx-shadow-why-card: 0 2px 12px rgba(0, 0, 0, 0.4);
+  --xpx-badge-bg: rgba(255, 255, 255, 0.04);
 }
 
 @theme inline {

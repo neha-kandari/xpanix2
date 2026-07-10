@@ -46,22 +46,6 @@ type FAQ = {
   a: string;
 };
 
-/* ═══════════════════════════════════════════════════════
-   THEME — reacts to the `dark` class on <html>
-═══════════════════════════════════════════════════════ */
-function useDarkMode(): boolean {
-  const [dark, setDark] = useState(false);
-  useEffect(() => {
-    const el = document.documentElement;
-    const update = () => setDark(el.classList.contains("dark"));
-    update();
-    const obs = new MutationObserver(update);
-    obs.observe(el, { attributes: true, attributeFilter: ["class"] });
-    return () => obs.disconnect();
-  }, []);
-  return dark;
-}
-
 /* Viewport helper — `mobile` < 768px, `tablet` < 1024px */
 function useViewport(): { mobile: boolean; tablet: boolean } {
   const [vp, setVp] = useState<{ mobile: boolean; tablet: boolean }>({ mobile: false, tablet: false });
@@ -93,39 +77,25 @@ type Theme = {
   divider: string;
 };
 
-function getTheme(dark: boolean): Theme {
-  return dark
-    ? {
-        pageBg: "#0a0a0f",
-        sectionAlt: "#0e0e16",
-        heroBg: "#0a0a0f",
-        dot: "rgba(255,255,255,0.06)",
-        text: "#f5f5f7",
-        textMuted: "#9ca3af",
-        textSub: "#a0a0b0",
-        cardBg: "#15151f",
-        cardBorder: "rgba(255,255,255,0.08)",
-        pillBg: "#1a1a26",
-        pillText: "#cfcfd8",
-        iconBg: "#1d1733",
-        divider: "rgba(255,255,255,0.10)",
-      }
-    : {
-        pageBg: "#fafafa",
-        sectionAlt: "#fafafa",
-        heroBg: "#fff",
-        dot: "rgba(0,0,0,0.07)",
-        text: "#111",
-        textMuted: "#9ca3af",
-        textSub: "#666",
-        cardBg: "#fff",
-        cardBorder: "#ebebeb",
-        pillBg: "#f5f5f5",
-        pillText: "#555",
-        iconBg: "#f5f3ff",
-        divider: "#eee",
-      };
-}
+/* Values are CSS custom properties (defined in globals.css) that resolve
+   via the `.dark` class on <html> — set by the inline script in the root
+   layout before first paint. This makes theming purely CSS-driven, exactly
+   like the rest of the site, so there's no JS-timing-dependent flash. */
+const THEME: Theme = {
+  pageBg: "var(--xpx-page-bg)",
+  sectionAlt: "var(--xpx-section-alt)",
+  heroBg: "var(--xpx-hero-bg)",
+  dot: "var(--xpx-dot)",
+  text: "var(--xpx-text)",
+  textMuted: "#9ca3af",
+  textSub: "var(--xpx-text-sub)",
+  cardBg: "var(--xpx-card-bg)",
+  cardBorder: "var(--xpx-card-border)",
+  pillBg: "var(--xpx-pill-bg)",
+  pillText: "var(--xpx-pill-text)",
+  iconBg: "var(--xpx-icon-bg)",
+  divider: "var(--xpx-divider)",
+};
 
 /* ═══════════════════════════════════════════════════════
    DATA
@@ -207,15 +177,14 @@ const CARD_H = 215;
    CARD FACE
 ═══════════════════════════════════════════════════════ */
 function CardFace({ card }: { card: typeof HERO_CARDS[0] }) {
-  const dark = useDarkMode();
-  const t = getTheme(dark);
+  const t = THEME;
   return (
     <div style={{
       width: "100%", height: "100%",
       background: t.cardBg,
       borderRadius: 12,
       border: `1px solid ${t.cardBorder}`,
-      boxShadow: dark ? "0 6px 24px rgba(0,0,0,0.5)" : "0 6px 24px rgba(0,0,0,0.10)",
+      boxShadow: "var(--xpx-shadow-card)",
       overflow: "hidden",
       display: "flex", flexDirection: "column",
     }}>
@@ -262,13 +231,20 @@ function ScatterCard({ card, index }: { card: HeroCard; index: number }) {
 function RecentWebProjects() {
   const sectionRef = useRef<HTMLElement>(null);
   const [active, setActive] = useState<number>(0);
-  const dark = useDarkMode();
-  const t = getTheme(dark);
+  const lastScrollY = useRef(0);
+  const t = THEME;
   const { mobile } = useViewport();
 
   useEffect(() => {
+    lastScrollY.current = window.scrollY;
     const handleScroll = () => {
       if (!sectionRef.current) return;
+      const currentScrollY = window.scrollY;
+      const scrollingDown = currentScrollY >= lastScrollY.current;
+      lastScrollY.current = currentScrollY;
+      // Only advance the showcase while scrolling down — scrolling up
+      // shouldn't reverse the animation back through prior projects.
+      if (!scrollingDown) return;
       const sectionTop = sectionRef.current.getBoundingClientRect().top + window.scrollY;
       const scrollInSection = window.scrollY - sectionTop;
       const perStep = window.innerHeight * 0.6;
@@ -467,8 +443,7 @@ function RecentWebProjects() {
 ═══════════════════════════════════════════════════════ */
 function AllProjectsSection() {
   const [active, setActive] = useState<string>("All");
-  const dark = useDarkMode();
-  const t = getTheme(dark);
+  const t = THEME;
   const { mobile } = useViewport();
   const cats = ["All", "Web Dev", "UI/UX"];
   const filtered = active === "All" ? ALL_PROJECTS : ALL_PROJECTS.filter(p => p.cat === active);
@@ -494,7 +469,7 @@ function AllProjectsSection() {
             <motion.div key={p.id} layout
               initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] as const }}
-              style={{ position: "relative", borderRadius: 14, overflow: "hidden", border: `1px solid ${t.cardBorder}`, height: 240, background: t.cardBg, boxShadow: dark ? "0 2px 12px rgba(0,0,0,0.4)" : "0 2px 12px rgba(0,0,0,0.05)" }}>
+              style={{ position: "relative", borderRadius: 14, overflow: "hidden", border: `1px solid ${t.cardBorder}`, height: 240, background: t.cardBg, boxShadow: "var(--xpx-shadow-grid-card)" }}>
               <div style={{ height: "65%", background: p.color, position: "relative" }}>
                 <img src={p.img} alt={p.name} loading="lazy"
                   style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
@@ -547,8 +522,7 @@ function WhyChooseUs() {
     { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#EC4899" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>, title: "Transparent process", desc: "Weekly updates, shared dashboards, and zero agency jargon. You always know exactly what's happening." },
     { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>, title: "Proven track record", desc: "99+ happy clients, 250+ projects shipped, and a 4.9★ average rating across every service we offer." },
   ];
-  const dark = useDarkMode();
-  const t = getTheme(dark);
+  const t = THEME;
   const { mobile } = useViewport();
   return (
     <section style={{ background: t.sectionAlt, padding: mobile ? "60px 0" : "100px 0", boxSizing: "border-box" }}>
@@ -586,7 +560,7 @@ function WhyChooseUs() {
               transition={mobile ? { duration: 0 } : { duration: 0.5, delay: i * 0.1 }}
               style={{
                 background: t.cardBg, borderRadius: 16, padding: 28, border: `1px solid ${t.cardBorder}`,
-                boxShadow: dark ? "0 2px 12px rgba(0,0,0,0.4)" : "0 2px 12px rgba(0,0,0,0.04)",
+                boxShadow: "var(--xpx-shadow-why-card)",
                 ...(mobile ? { flex: "0 0 78%", scrollSnapAlign: "start", boxSizing: "border-box" as const } : {}),
               }}>
               <div style={{ width: 52, height: 52, borderRadius: 14, background: t.iconBg, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>{item.icon}</div>
@@ -626,8 +600,7 @@ const FAQS = [
 
 function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
-  const dark = useDarkMode();
-  const t = getTheme(dark);
+  const t = THEME;
   const { mobile } = useViewport();
   return (
     <section style={{ background: t.sectionAlt, padding: mobile ? "60px 20px" : "100px 60px", boxSizing: "border-box" }}>
@@ -664,8 +637,7 @@ function FAQSection() {
    MAIN
 ═══════════════════════════════════════════════════════ */
 export default function HeroScrollEffect() {
-  const dark = useDarkMode();
-  const t = getTheme(dark);
+  const t = THEME;
   return (
     <div style={{ background: t.pageBg, fontFamily: "inherit" }}>
 
@@ -708,7 +680,7 @@ export default function HeroScrollEffect() {
 
         {/* LEFT COL */}
         <div className="xpx-hero-left">
-          <span style={{ display: "inline-flex", alignItems: "center", gap: 6, width: "fit-content", fontSize: 12, color: t.textSub, border: `1px solid ${t.cardBorder}`, borderRadius: 999, padding: "5px 14px", marginBottom: 24, background: dark ? "rgba(255,255,255,0.04)" : "rgba(255,255,255,0.9)" }}>
+          <span style={{ display: "inline-flex", alignItems: "center", gap: 6, width: "fit-content", fontSize: 12, color: t.textSub, border: `1px solid ${t.cardBorder}`, borderRadius: 999, padding: "5px 14px", marginBottom: 24, background: "var(--xpx-badge-bg)" }}>
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#10B981", display: "inline-block" }} />
             Available for projects
           </span>
@@ -720,10 +692,8 @@ export default function HeroScrollEffect() {
           </h1>
 
           <p style={{ fontSize: 15, color: t.textSub, lineHeight: 1.75, margin: 0, maxWidth: 420 }}>
-            From pixel-perfect websites and conversion-driven UI/UX to SEO, Meta ads,
-            and studio-grade product photography — Xpanix brings every digital growth
-            service under one roof. We design, build, and scale brands that refuse to
-            blend in. Explore the work that made it happen.
+            From pixel-perfect websites to conversion-driven UI/UX, SEO, and Meta
+            ads — Xpanix builds brands that refuse to blend in.
           </p>
         </div>
 
