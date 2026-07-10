@@ -141,7 +141,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    
 
       {/* Bottom bar */}
       <div className="relative border-t border-white/10">

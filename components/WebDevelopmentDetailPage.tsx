@@ -29,10 +29,10 @@ const foundationCards = [
 
 const solutions = [
   {
-    title: "Full Stack",
-    desc: "End-to-end web applications with robust backends, real time frontends, APIs, and cloud infrastructure, built to last.",
-    tags: ["React", "Node.js", "API"],
-    icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
+    title: "E-Commerce",
+    desc: "High converting custom storefronts and online stores built to scale, fast checkout, smart product pages, and seamless payments.",
+    tags: ["Custom Store", "Payments", "Cart"],
+    icon: "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z",
   },
   {
     title: "Shopify",
@@ -41,18 +41,17 @@ const solutions = [
     icon: "M16 11c0 2.209-1.791 4-4 4s-4-1.791-4-4 1.791-4 4-4 4 1.791 4 4zm5-5H3v13a2 2 0 002 2h14a2 2 0 002-2V6zm-9-4H3v2h18V2h-9z",
   },
   {
-    title: "Wordpress",
-    desc: "High converting custom storefronts and online stores built to scale, fast checkout, smart product pages, and seamless payments.",
-    tags: ["Custom Store", "Payments", "Cart"],
-    icon: "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z",
-  },
-  {
     title: "Framer",
     desc: "Stunning, interactive websites built in Framer, pixel perfect animations, no code CMS, and blazing fast delivery.",
     tags: ["Framer", "Motion", "CMS"],
     icon: "M5 3h14l-7 7-7-7zm7 7l7 11H5l7-11z",
   },
-
+  {
+    title: "Full Stack",
+    desc: "End to end web applications with robust backends, real time frontends, APIs, and cloud infrastructure, built to last.",
+    tags: ["React", "Node.js", "API"],
+    icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
+  },
 ];
 
 const blueprint = [
