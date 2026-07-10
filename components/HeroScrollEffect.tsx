@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import ReviewsCarousel from "./ReviewsCarousel";
 
 /* ═══════════════════════════════════════════════════════
@@ -465,63 +465,24 @@ function AllProjectsSection() {
         }}
       />
       <div style={{ maxWidth: 1024, margin: "0 auto", padding: mobile ? "0 20px" : "0 24px", boxSizing: "border-box" }}>
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const }}
-        >
-          <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 8, flexWrap: "wrap" }}>
-            <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.15em", color: t.textMuted, textTransform: "uppercase", margin: 0 }}>Browse all work</p>
-          </div>
-          <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: 12, marginBottom: 32 }}>
-            <h2 style={{ fontSize: 38, fontWeight: 700, color: t.text, margin: 0, letterSpacing: "-0.02em" }}>All Projects</h2>
-            <AnimatePresence mode="wait">
-              <motion.span
-                key={filtered.length}
-                initial={{ opacity: 0, y: 4 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.25 }}
-                style={{ fontSize: 13, color: t.textMuted, fontWeight: 500 }}
-              >
-                {filtered.length} project{filtered.length === 1 ? "" : "s"}
-              </motion.span>
-            </AnimatePresence>
-          </div>
-          <div style={{ display: "flex", gap: 8, marginBottom: 36, flexWrap: "wrap" }}>
-            {cats.map(c => (
-              <button key={c} onClick={() => setActive(c)} style={{
-                position: "relative", padding: "9px 20px", borderRadius: 999, fontSize: 13, fontWeight: 500, cursor: "pointer",
-                color: c === active ? "#fff" : t.pillText,
-                border: "none", background: "transparent", overflow: "hidden",
-              }}>
-                {c === active ? (
-                  <motion.span
-                    layoutId="xpx-cat-pill"
-                    transition={{ type: "spring", stiffness: 420, damping: 34 }}
-                    style={{
-                      position: "absolute", inset: 0, borderRadius: 999, zIndex: 0,
-                      background: "linear-gradient(135deg,#667eea,#764ba2)",
-                      boxShadow: "0 4px 16px rgba(102,126,234,0.30)",
-                    }}
-                  />
-                ) : (
-                  <span style={{ position: "absolute", inset: 0, borderRadius: 999, zIndex: 0, background: t.pillBg }} />
-                )}
-                <span style={{ position: "relative", zIndex: 1 }}>{c}</span>
-              </button>
-            ))}
-          </div>
-        </motion.div>
+        <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.15em", color: t.textMuted, textTransform: "uppercase", margin: "0 0 8px" }}>Browse all work</p>
+        <h2 style={{ fontSize: 38, fontWeight: 700, color: t.text, margin: "0 0 32px", letterSpacing: "-0.02em" }}>All Projects</h2>
+        <div style={{ display: "flex", gap: 8, marginBottom: 36, flexWrap: "wrap" }}>
+          {cats.map(c => (
+            <button key={c} onClick={() => setActive(c)} style={{
+              padding: "9px 20px", borderRadius: 999, fontSize: 13, fontWeight: 500, cursor: "pointer",
+              background: c === active ? "linear-gradient(135deg,#667eea,#764ba2)" : t.pillBg,
+              color: c === active ? "#fff" : t.pillText,
+              border: "none", transition: "all 0.2s",
+              boxShadow: c === active ? "0 4px 16px rgba(102,126,234,0.30)" : "none",
+            }}>{c}</button>
+          ))}
+        </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))", gap: 24 }}>
-          <AnimatePresence mode="popLayout">
-            {filtered.map((p, i) => (
+          {filtered.map(p => (
             <motion.div key={p.id} layout
-              initial={{ opacity: 0, y: 18, scale: 0.96 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              exit={{ opacity: 0, scale: 0.92, transition: { duration: 0.2 } }}
-              transition={{ duration: 0.4, delay: i * 0.05, ease: [0.25, 0.1, 0.25, 1] as const }}
+              initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] as const }}
               className="xpx-pcard"
               style={{
                 position: "relative", borderRadius: 20, overflow: "hidden",
@@ -580,8 +541,7 @@ function AllProjectsSection() {
                 />
               )}
             </motion.div>
-            ))}
-          </AnimatePresence>
+          ))}
         </div>
       </div>
     </section>
