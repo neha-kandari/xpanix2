@@ -66,7 +66,7 @@ export default function Features() {
           </div> */}
           <h2 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 dark:text-white max-w-3xl mx-auto leading-tight mb-5">
            Why{" "}
-            <span className="gradient-text">Choose</span>Us
+            <span className="gradient-text">Choose</span> Us
           </h2>
           <p className="text-center text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-16 text-lg">
             See how our digital services elevate your brand online, boosting visibility,
