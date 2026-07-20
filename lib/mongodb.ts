@@ -7,7 +7,10 @@ declare global {
 }
 
 function createClientPromise(): Promise<MongoClient> {
-  const uri = process.env.MONGODB_URI;
+  // Vercel's MongoDB Atlas integration names its auto-generated variable
+  // MONGODB_URI_MONGODB_URI instead of MONGODB_URI. Accept either so the
+  // connection keeps working if the integration re-syncs that variable.
+  const uri = process.env.MONGODB_URI || process.env.MONGODB_URI_MONGODB_URI;
   if (!uri) {
     throw new Error(
       "MONGODB_URI environment variable is not set. Add it to .env.local (see .env.example)."
