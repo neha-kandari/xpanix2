@@ -1,6 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogsContent from "@/components/BlogsContent";
+import { getAllPosts } from "@/lib/blogStore";
+import { blogCategories } from "@/components/blogsData";
+
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Blog, Growth, Design & Engineering Insights | Xpanix",
@@ -9,11 +13,12 @@ export const metadata = {
   alternates: { canonical: "/blogs" },
 };
 
-export default function BlogsPage() {
+export default async function BlogsPage() {
+  const posts = await getAllPosts();
   return (
     <>
       <Navbar />
-      <BlogsContent />
+      <BlogsContent posts={posts} categories={blogCategories} />
       <Footer />
     </>
   );

@@ -2,15 +2,13 @@ import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogPostContent from "@/components/BlogPostContent";
-import { blogPosts, getBlogPost } from "@/components/blogsData";
+import { getAllPosts, getPostBySlug } from "@/lib/blogStore";
 
-export function generateStaticParams() {
-  return blogPosts.map((p) => ({ slug: p.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getPostBySlug(slug);
   if (!post) return { title: "Article, Xpanix" };
   return {
     title: `${post.title} | Xpanix Blog`,
@@ -35,13 +33,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getPostBySlug(slug);
   if (!post) notFound();
+
+  const allPosts = await getAllPosts();
+  const related = allPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   return (
     <>
       <Navbar />
-      <BlogPostContent post={post!} />
+      <BlogPostContent post={post} related={related} />
       <Footer />
     </>
   );

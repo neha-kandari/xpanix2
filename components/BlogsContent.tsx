@@ -1,7 +1,7 @@
 ﻿"use client";
 import { useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
-import { blogPosts, blogCategories } from "./blogsData";
+import type { BlogPost } from "./blogsData";
 
 function CategoryPill({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
   return (
@@ -18,14 +18,14 @@ function CategoryPill({ label, active, onClick }: { label: string; active: boole
   );
 }
 
-export default function BlogsContent() {
+export default function BlogsContent({ posts, categories }: { posts: BlogPost[]; categories: string[] }) {
   const [activeCat, setActiveCat] = useState("All");
-  const featured = blogPosts[0];
+  const featured = posts[0];
   const filtered =
     activeCat === "All"
-      ? blogPosts.filter((p) => p.slug !== featured.slug)
-      : blogPosts.filter((p) => p.category === activeCat);
-  const showFeatured = activeCat === "All";
+      ? posts.filter((p) => p.slug !== featured?.slug)
+      : posts.filter((p) => p.category === activeCat);
+  const showFeatured = activeCat === "All" && !!featured;
 
   return (
     <main className="bg-white dark:bg-[#0a0a0f]">
@@ -82,23 +82,12 @@ export default function BlogsContent() {
                     {featured.title}
                   </h2>
                   <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-7">{featured.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <span className={`w-10 h-10 rounded-full bg-gradient-to-br ${featured.author.color} flex items-center justify-center text-white text-xs font-bold`}>
-                        {featured.author.initials}
-                      </span>
-                      <div>
-                        <p className="text-sm font-bold text-gray-900 dark:text-white">{featured.author.name}</p>
-                        <p className="text-xs text-gray-400 dark:text-gray-500">{featured.author.role}</p>
-                      </div>
-                    </div>
-                    <span className="inline-flex items-center gap-2 text-sm font-semibold gradient-text group-hover:gap-3 transition-all">
-                      Read article
-                      <svg className="w-4 h-4 text-[#764ba2] dark:text-[#667eea]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </span>
-                  </div>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold gradient-text group-hover:gap-3 transition-all">
+                    Read article
+                    <svg className="w-4 h-4 text-[#764ba2] dark:text-[#667eea]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </span>
                 </div>
               </a>
             </AnimateOnScroll>
@@ -111,7 +100,7 @@ export default function BlogsContent() {
         <div className="max-w-5xl mx-auto px-6">
           <AnimateOnScroll>
             <div className="flex flex-wrap gap-2 mb-12">
-              {blogCategories.map((c) => (
+              {categories.map((c) => (
                 <CategoryPill key={c} label={c} active={c === activeCat} onClick={() => setActiveCat(c)} />
               ))}
             </div>
@@ -151,14 +140,13 @@ export default function BlogsContent() {
                       <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 line-clamp-3 flex-1">
                         {post.excerpt}
                       </p>
-                      <div className="flex items-center gap-2.5 pt-4 border-t border-gray-100 dark:border-gray-800">
-                        <span className={`w-8 h-8 rounded-full bg-gradient-to-br ${post.author.color} flex items-center justify-center text-white text-[10px] font-bold`}>
-                          {post.author.initials}
+                      <div className="flex items-center pt-4 border-t border-gray-100 dark:border-gray-800">
+                        <span className="inline-flex items-center gap-2 text-sm font-semibold gradient-text opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all">
+                          Read article
+                          <svg className="w-4 h-4 text-[#764ba2] dark:text-[#667eea]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                          </svg>
                         </span>
-                        <span className="text-xs font-semibold text-gray-700 dark:text-gray-300">{post.author.name}</span>
-                        <svg className="w-4 h-4 ml-auto text-[#764ba2] dark:text-[#667eea] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
                       </div>
                     </div>
                   </a>

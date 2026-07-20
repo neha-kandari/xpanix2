@@ -1,7 +1,7 @@
 ﻿"use client";
 import { useEffect, useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
-import { blogPosts, type BlogPost, type BlogBlock } from "./blogsData";
+import type { BlogPost, BlogBlock } from "./blogsData";
 
 /* Reading progress bar pinned under the navbar */
 function ReadingProgress() {
@@ -65,9 +65,7 @@ function Block({ block }: { block: BlogBlock }) {
   }
 }
 
-export default function BlogPostContent({ post }: { post: BlogPost }) {
-  const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
-
+export default function BlogPostContent({ post, related }: { post: BlogPost; related: BlogPost[] }) {
   return (
     <main className="bg-white dark:bg-[#0a0a0f]">
       <ReadingProgress />
@@ -98,16 +96,6 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
             <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-[1.15] mb-7">
               {post.title}
             </h1>
-
-            <div className="flex items-center gap-3 pb-2">
-              <span className={`w-11 h-11 rounded-full bg-gradient-to-br ${post.author.color} flex items-center justify-center text-white text-xs font-bold`}>
-                {post.author.initials}
-              </span>
-              <div>
-                <p className="text-sm font-bold text-gray-900 dark:text-white">{post.author.name}</p>
-                <p className="text-xs text-gray-400 dark:text-gray-500">{post.author.role}, Xpanix</p>
-              </div>
-            </div>
           </AnimateOnScroll>
         </div>
       </section>
@@ -135,18 +123,12 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
             </div>
           </AnimateOnScroll>
 
-          {/* Author footer card */}
+          {/* CTA footer card */}
           <AnimateOnScroll>
-            <div className="mt-14 flex items-center gap-5 p-7 rounded-2xl bg-gray-50 dark:bg-[#131320] border border-gray-200 dark:border-gray-800">
-              <span className={`w-14 h-14 rounded-full bg-gradient-to-br ${post.author.color} flex items-center justify-center text-white text-sm font-bold flex-shrink-0`}>
-                {post.author.initials}
-              </span>
-              <div className="flex-1">
-                <p className="text-base font-bold text-gray-900 dark:text-white">{post.author.name}</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {post.author.role} at Xpanix, writing from the trenches of real client projects.
-                </p>
-              </div>
+            <div className="mt-14 flex items-center justify-between gap-5 p-7 rounded-2xl bg-gray-50 dark:bg-[#131320] border border-gray-200 dark:border-gray-800">
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                Written from the trenches of real client projects at Xpanix.
+              </p>
               <a
                 href="/#contact"
                 className="hidden sm:inline-flex items-center gap-2 gradient-bg text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 hover:-translate-y-0.5 transition-all whitespace-nowrap"
