@@ -1,8 +1,10 @@
 "use client";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { blogCategories, type BlogBlock, type BlogPost } from "@/components/blogsData";
 import { slugify } from "@/lib/slugify";
+import DatePicker from "@/components/admin/DatePicker";
+import ImageUploader from "@/components/admin/ImageUploader";
 
 const CATEGORY_OPTIONS = blogCategories.filter((c) => c !== "All");
 
@@ -85,10 +87,10 @@ function BlockEditor({
 
 export default function BlogForm({ mode, initialPost }: { mode: "create" | "edit"; initialPost?: BlogPost }) {
   const router = useRouter();
-  const fileInputRef = useRef<HTMLInputElement>(null);
   const [post, setPost] = useState<BlogPost>(initialPost ?? emptyPost());
   const [slugTouched, setSlugTouched] = useState(mode === "edit");
   const [error, setError] = useState("");
+  const [uploadError, setUploadError] = useState("");
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
 
@@ -119,16 +121,13 @@ export default function BlogForm({ mode, initialPost }: { mode: "create" | "edit
     setPost((p) => ({ ...p, content: [...p.content, block] }));
   }
 
-  async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  async function handleUploadFile(file: File) {
     if (file.type !== "image/webp") {
-      setError("Only .webp images are allowed");
-      if (fileInputRef.current) fileInputRef.current.value = "";
+      setUploadError("Only .webp images are allowed");
       return;
     }
     setUploading(true);
-    setError("");
+    setUploadError("");
     try {
       const formData = new FormData();
       formData.append("file", file);
@@ -137,10 +136,9 @@ export default function BlogForm({ mode, initialPost }: { mode: "create" | "edit
       if (!res.ok) throw new Error(data?.error || "Upload failed");
       updateField("img", data.url);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Upload failed");
+      setUploadError(err instanceof Error ? err.message : "Upload failed");
     } finally {
       setUploading(false);
-      if (fileInputRef.current) fileInputRef.current.value = "";
     }
   }
 
@@ -154,6 +152,16 @@ export default function BlogForm({ mode, initialPost }: { mode: "create" | "edit
         .map((b) => (b.type === "list" ? { ...b, items: b.items.map((i) => i.trim()).filter(Boolean) } : b))
         .filter((b) => (b.type === "list" ? b.items.length > 0 : b.text.trim().length > 0)),
     };
+
+    if (!cleaned.date.trim()) {
+      setError("Pick a publish date");
+      return;
+    }
+
+    if (!cleaned.img.trim()) {
+      setError("Add a cover image");
+      return;
+    }
 
     if (!cleaned.content.length) {
       setError("Add at least one content block");
@@ -238,13 +246,7 @@ export default function BlogForm({ mode, initialPost }: { mode: "create" | "edit
           </div>
           <div>
             <label className={labelClass}>Date</label>
-            <input
-              required
-              placeholder="June 2, 2026"
-              value={post.date}
-              onChange={(e) => updateField("date", e.target.value)}
-              className={inputClass}
-            />
+            <DatePicker value={post.date} onChange={(date) => updateField("date", date)} />
           </div>
           <div>
             <label className={labelClass}>Read time</label>
@@ -260,26 +262,13 @@ export default function BlogForm({ mode, initialPost }: { mode: "create" | "edit
 
         <div>
           <label className={labelClass}>Cover image</label>
-          <div className="flex items-start gap-4">
-            {post.img && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={post.img} alt="" className="w-28 h-20 rounded-lg object-cover flex-shrink-0 bg-gray-100 dark:bg-gray-900" />
-            )}
-            <div className="flex-1 space-y-2">
-              <input
-                required
-                placeholder="https://..."
-                value={post.img}
-                onChange={(e) => updateField("img", e.target.value)}
-                className={inputClass}
-              />
-              <div className="flex items-center gap-3">
-                <input ref={fileInputRef} type="file" accept="image/webp" onChange={handleUpload} className="text-xs text-gray-500 dark:text-gray-400" />
-                {uploading && <span className="text-xs text-gray-400">Uploading...</span>}
-              </div>
-              <p className="text-xs text-gray-400 dark:text-gray-500">Only .webp images can be uploaded.</p>
-            </div>
-          </div>
+          <ImageUploader
+            value={post.img}
+            onChange={(url) => updateField("img", url)}
+            onUploadFile={handleUploadFile}
+            uploading={uploading}
+            error={uploadError}
+          />
         </div>
       </section>
 
