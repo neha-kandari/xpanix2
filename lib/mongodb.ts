@@ -13,21 +13,32 @@ function createClientPromise(): Promise<MongoClient> {
       "MONGODB_URI environment variable is not set. Add it to .env.local (see .env.example)."
     );
   }
-  return new MongoClient(uri).connect();
+  // family: 4 forces IPv4, which avoids a known TLS handshake failure
+  // ("tlsv1 alert internal error" / SSL alert 80) between Atlas and
+  // serverless platforms like Vercel when the connection resolves over IPv6.
+  return new MongoClient(uri, { family: 4 }).connect();
 }
 
 let prodClientPromise: Promise<MongoClient> | undefined;
 
 function getClientPromise(): Promise<MongoClient> {
   // Reuse the connection across HMR reloads in dev, and across invocations in prod.
+  // If a connection attempt fails, clear the cache so the next call retries
+  // fresh instead of returning the same rejected promise forever.
   if (process.env.NODE_ENV === "development") {
     if (!global._mongoClientPromise) {
-      global._mongoClientPromise = createClientPromise();
+      global._mongoClientPromise = createClientPromise().catch((err) => {
+        global._mongoClientPromise = undefined;
+        throw err;
+      });
     }
     return global._mongoClientPromise;
   }
   if (!prodClientPromise) {
-    prodClientPromise = createClientPromise();
+    prodClientPromise = createClientPromise().catch((err) => {
+      prodClientPromise = undefined;
+      throw err;
+    });
   }
   return prodClientPromise;
 }
