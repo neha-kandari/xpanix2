@@ -159,3 +159,46 @@ html {
 * {
   box-sizing: border-box;
 }
+
+.prose-editor p {
+  margin: 0.75em 0;
+  line-height: 1.7;
+}
+
+.prose-editor h2 {
+  font-size: 1.35em;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 1em 0 0.5em;
+}
+
+.prose-editor blockquote {
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid #764ba2;
+  font-style: italic;
+  color: #6b7280;
+}
+
+.prose-editor ul {
+  margin: 0.75em 0;
+  padding-left: 1.25em;
+  list-style: disc;
+}
+
+.prose-editor li {
+  margin: 0.35em 0;
+}
+
+.prose-editor li p {
+  margin: 0;
+}
+
+.prose-editor a {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.prose-editor:focus {
+  outline: none;
+}

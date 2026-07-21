@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 import type { BlogPost, BlogBlock } from "./blogsData";
+import { sanitizeInlineHtml } from "@/lib/sanitizeHtml";
 
 /* Reading progress bar pinned under the navbar */
 function ReadingProgress() {
@@ -32,21 +33,22 @@ function Block({ block }: { block: BlogBlock }) {
   switch (block.type) {
     case "h2":
       return (
-        <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mt-12 mb-5">
-          {block.text}
-        </h2>
+        <h2
+          className="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mt-12 mb-5"
+          dangerouslySetInnerHTML={{ __html: sanitizeInlineHtml(block.text) }}
+        />
       );
     case "list":
       return (
         <ul className="my-6 flex flex-col gap-3">
-          {block.items.map((item) => (
-            <li key={item} className="flex items-start gap-3 text-gray-600 dark:text-gray-300 leading-relaxed">
+          {block.items.map((item, i) => (
+            <li key={i} className="flex items-start gap-3 text-gray-600 dark:text-gray-300 leading-relaxed">
               <span className="w-5 h-5 mt-1 rounded-full gradient-bg flex items-center justify-center flex-shrink-0">
                 <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                 </svg>
               </span>
-              {item}
+              <span dangerouslySetInnerHTML={{ __html: sanitizeInlineHtml(item) }} />
             </li>
           ))}
         </ul>
@@ -55,13 +57,19 @@ function Block({ block }: { block: BlogBlock }) {
       return (
         <blockquote className="my-10 relative rounded-2xl bg-gray-50 dark:bg-[#131320] border border-gray-200 dark:border-gray-800 p-7 pl-9">
           <span aria-hidden className="absolute left-0 top-4 bottom-4 w-1 rounded-full bg-gradient-to-b from-[#667eea] to-[#764ba2]" />
-          <p className="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-100 leading-relaxed italic">
-            &ldquo;{block.text}&rdquo;
-          </p>
+          <p
+            className="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-100 leading-relaxed italic"
+            dangerouslySetInnerHTML={{ __html: `&ldquo;${sanitizeInlineHtml(block.text)}&rdquo;` }}
+          />
         </blockquote>
       );
     default:
-      return <p className="text-gray-600 dark:text-gray-300 leading-[1.85] my-5 text-[17px]">{block.text}</p>;
+      return (
+        <p
+          className="text-gray-600 dark:text-gray-300 leading-[1.85] my-5 text-[17px]"
+          dangerouslySetInnerHTML={{ __html: sanitizeInlineHtml(block.text) }}
+        />
+      );
   }
 }
 

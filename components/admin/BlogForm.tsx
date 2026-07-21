@@ -1,10 +1,12 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { blogCategories, type BlogBlock, type BlogPost } from "@/components/blogsData";
+import { blogCategories, type BlogPost } from "@/components/blogsData";
 import { slugify } from "@/lib/slugify";
+import { blocksToHtml } from "@/lib/blogContent";
 import DatePicker from "@/components/admin/DatePicker";
 import ImageUploader from "@/components/admin/ImageUploader";
+import RichTextEditor from "@/components/admin/RichTextEditor";
 
 const CATEGORY_OPTIONS = blogCategories.filter((c) => c !== "All");
 
@@ -19,72 +21,6 @@ const emptyPost = (): BlogPost => ({
   content: [{ type: "p", text: "" }],
 });
 
-function BlockEditor({
-  block,
-  onChange,
-  onRemove,
-  onMove,
-  isFirst,
-  isLast,
-}: {
-  block: BlogBlock;
-  onChange: (block: BlogBlock) => void;
-  onRemove: () => void;
-  onMove: (direction: -1 | 1) => void;
-  isFirst: boolean;
-  isLast: boolean;
-}) {
-  return (
-    <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-[#0d0d15] p-4">
-      <div className="flex items-center justify-between mb-3">
-        <select
-          value={block.type}
-          onChange={(e) => {
-            const type = e.target.value as BlogBlock["type"];
-            if (type === "list") onChange({ type: "list", items: [""] });
-            else onChange({ type, text: "" });
-          }}
-          className="text-xs font-bold uppercase tracking-wider bg-white dark:bg-[#131320] border border-gray-300 dark:border-gray-700 rounded-md px-2 py-1 text-gray-700 dark:text-gray-300"
-        >
-          <option value="p">Paragraph</option>
-          <option value="h2">Heading</option>
-          <option value="quote">Quote</option>
-          <option value="list">List</option>
-        </select>
-        <div className="flex items-center gap-3">
-          <button type="button" disabled={isFirst} onClick={() => onMove(-1)} className="text-xs text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 disabled:opacity-30">
-            ↑
-          </button>
-          <button type="button" disabled={isLast} onClick={() => onMove(1)} className="text-xs text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 disabled:opacity-30">
-            ↓
-          </button>
-          <button type="button" onClick={onRemove} className="text-xs font-semibold text-red-500 hover:text-red-600">
-            Remove
-          </button>
-        </div>
-      </div>
-
-      {block.type === "list" ? (
-        <textarea
-          value={block.items.join("\n")}
-          onChange={(e) => onChange({ type: "list", items: e.target.value.split("\n") })}
-          placeholder="One item per line"
-          rows={4}
-          className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#131320] px-3 py-2 text-sm text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#764ba2]/50"
-        />
-      ) : (
-        <textarea
-          value={block.text}
-          onChange={(e) => onChange({ ...block, text: e.target.value } as BlogBlock)}
-          placeholder={block.type === "h2" ? "Heading text" : block.type === "quote" ? "Quote text" : "Paragraph text"}
-          rows={block.type === "p" ? 4 : 2}
-          className="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#131320] px-3 py-2 text-sm text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-[#764ba2]/50"
-        />
-      )}
-    </div>
-  );
-}
-
 export default function BlogForm({ mode, initialPost }: { mode: "create" | "edit"; initialPost?: BlogPost }) {
   const router = useRouter();
   const [post, setPost] = useState<BlogPost>(initialPost ?? emptyPost());
@@ -94,31 +30,10 @@ export default function BlogForm({ mode, initialPost }: { mode: "create" | "edit
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
 
+  const [initialContent] = useState(() => blocksToHtml((initialPost ?? emptyPost()).content));
+
   function updateField<K extends keyof BlogPost>(key: K, value: BlogPost[K]) {
     setPost((p) => ({ ...p, [key]: value }));
-  }
-
-  function updateBlock(index: number, block: BlogBlock) {
-    setPost((p) => ({ ...p, content: p.content.map((b, i) => (i === index ? block : b)) }));
-  }
-
-  function removeBlock(index: number) {
-    setPost((p) => ({ ...p, content: p.content.filter((_, i) => i !== index) }));
-  }
-
-  function moveBlock(index: number, direction: -1 | 1) {
-    setPost((p) => {
-      const next = [...p.content];
-      const target = index + direction;
-      if (target < 0 || target >= next.length) return p;
-      [next[index], next[target]] = [next[target], next[index]];
-      return { ...p, content: next };
-    });
-  }
-
-  function addBlock(type: BlogBlock["type"]) {
-    const block: BlogBlock = type === "list" ? { type: "list", items: [""] } : { type, text: "" };
-    setPost((p) => ({ ...p, content: [...p.content, block] }));
   }
 
   async function handleUploadFile(file: File) {
@@ -273,32 +188,13 @@ export default function BlogForm({ mode, initialPost }: { mode: "create" | "edit
       </section>
 
       <section className="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#131320] p-6 space-y-4">
-        <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Content</h2>
-        <div className="space-y-4">
-          {post.content.map((block, i) => (
-            <BlockEditor
-              key={i}
-              block={block}
-              onChange={(b) => updateBlock(i, b)}
-              onRemove={() => removeBlock(i)}
-              onMove={(dir) => moveBlock(i, dir)}
-              isFirst={i === 0}
-              isLast={i === post.content.length - 1}
-            />
-          ))}
+        <div>
+          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Content</h2>
+          <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+            Write or paste your post here — pasted bold text and paragraph breaks carry over automatically. Use the toolbar for headings, quotes, links and lists.
+          </p>
         </div>
-        <div className="flex flex-wrap gap-2">
-          {(["p", "h2", "quote", "list"] as const).map((type) => (
-            <button
-              key={type}
-              type="button"
-              onClick={() => addBlock(type)}
-              className="text-xs font-semibold px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:border-[#764ba2]/50 hover:text-[#764ba2] dark:hover:text-[#667eea] transition-colors"
-            >
-              + {type === "p" ? "Paragraph" : type === "h2" ? "Heading" : type === "quote" ? "Quote" : "List"}
-            </button>
-          ))}
-        </div>
+        <RichTextEditor content={initialContent} onChange={(content) => updateField("content", content)} />
       </section>
 
       {error && <p className="text-sm text-red-500">{error}</p>}

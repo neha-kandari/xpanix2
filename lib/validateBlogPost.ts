@@ -1,4 +1,5 @@
 import { blogCategories, type BlogBlock, type BlogPost } from "@/components/blogsData";
+import { sanitizeInlineHtml } from "@/lib/sanitizeHtml";
 
 type ValidationResult = { post: BlogPost } | { error: string };
 
@@ -30,13 +31,14 @@ export function validateBlogPostInput(data: unknown): ValidationResult {
     if (typeof raw !== "object" || raw === null) continue;
     const b = raw as Record<string, unknown>;
     if (b.type === "p" || b.type === "h2" || b.type === "quote") {
-      const text = typeof b.text === "string" ? b.text.trim() : "";
+      const text = typeof b.text === "string" ? sanitizeInlineHtml(b.text.trim()) : "";
       if (text) content.push({ type: b.type, text });
     } else if (b.type === "list") {
       const items = Array.isArray(b.items)
         ? b.items
             .filter((it): it is string => typeof it === "string" && it.trim().length > 0)
-            .map((it) => it.trim())
+            .map((it) => sanitizeInlineHtml(it.trim()))
+            .filter(Boolean)
         : [];
       if (items.length) content.push({ type: "list", items });
     }
